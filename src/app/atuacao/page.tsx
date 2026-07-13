@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Scale, ShieldCheck, Heart, Landmark, HelpCircle, ArrowRight } from "lucide-react";
 import WhatsAppCTAButton from "@/components/WhatsAppCTAButton";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Áreas de Atuação | Stussi & Reis Consultoria Jurídica",
@@ -79,14 +80,14 @@ export default function Atuacao() {
         
         {/* Title Section */}
         <div className="text-center max-w-3xl mx-auto mb-20 animate-fade-in-down reveal-hidden">
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-white tracking-wide">
+          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-navy-base tracking-wide">
             Nossas Áreas de Atuação
           </h1>
           <p className="text-sm sm:text-base text-gold-muted mt-2 uppercase tracking-widest font-semibold">
             Serviços Jurídicos Especializados
           </p>
           <div className="mt-4 h-0.5 w-20 bg-gold-base mx-auto" />
-          <p className="mt-6 text-gray-400 leading-relaxed text-base">
+          <p className="mt-6 text-slate-600 leading-relaxed text-base">
             O escritório Stussi & Reis atua de forma especializada com foco na resolução célere e eficiente de conflitos. Conheça as principais demandas que atendemos.
           </p>
         </div>
@@ -97,73 +98,79 @@ export default function Atuacao() {
             const Icon = area.icon;
             const delays = ["delay-100", "delay-200", "delay-300", "delay-400"];
             return (
-              <div
+              <ScrollReveal
                 key={area.title}
-                className={`relative overflow-hidden rounded-3xl border border-gold-base/15 bg-navy-card p-6 md:p-10 shadow-xl animate-fade-in-up reveal-hidden ${delays[index % 4]}`}
+                animation="fade-in-up"
+                delayClass={delays[index % 4]}
+                className="flex"
               >
-                {/* Visual background accents */}
-                <div className="absolute top-0 right-0 h-32 w-32 rounded-full bg-gold-base/5 blur-2xl" />
-                
-                <div className="flex flex-col lg:flex-row gap-8 items-start">
+                <div
+                  className="relative overflow-hidden rounded-3xl border border-gold-base/15 bg-white p-6 md:p-10 shadow-[0_12px_40px_-12px_rgba(10,17,40,0.06)] hover:scale-[1.01] hover:border-gold-base/30 transition-all duration-300 w-full"
+                >
+                  {/* Visual background accents */}
+                  <div className="absolute top-0 right-0 h-32 w-32 rounded-full bg-gold-base/5 blur-2xl" />
                   
-                  {/* Left Column: Description */}
-                  <div className="lg:w-1/2 space-y-4">
-                    <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-gold-base/20 bg-navy-light text-gold-base">
-                      <Icon className="h-7 w-7" />
-                    </div>
-                    <div>
-                      <h2 className="font-serif text-2xl md:text-3xl font-bold text-white">
-                        {area.title}
-                      </h2>
-                      <p className="text-xs font-bold uppercase tracking-wider text-gold-muted mt-1">
-                        {area.subtitle}
+                  <div className="flex flex-col lg:flex-row gap-8 items-start">
+                    
+                    {/* Left Column: Description */}
+                    <div className="lg:w-1/2 space-y-4">
+                      <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-gold-base/20 bg-gold-base/5 text-gold-base">
+                        <Icon className="h-7 w-7" />
+                      </div>
+                      <div>
+                        <h2 className="font-serif text-2xl md:text-3xl font-bold text-navy-base">
+                          {area.title}
+                        </h2>
+                        <p className="text-xs font-bold uppercase tracking-wider text-gold-muted mt-1">
+                          {area.subtitle}
+                        </p>
+                      </div>
+                      <p className="text-sm md:text-base text-slate-600 leading-relaxed pt-2">
+                        {area.description}
                       </p>
+                      <div className="pt-6">
+                        <WhatsAppCTAButton className="px-8 py-3.5 text-sm" variant="outline">
+                          Agendar Consulta nesta Área
+                        </WhatsAppCTAButton>
+                      </div>
                     </div>
-                    <p className="text-sm md:text-base text-gray-400 leading-relaxed pt-2">
-                      {area.description}
-                    </p>
-                    <div className="pt-6">
-                      <WhatsAppCTAButton className="px-8 py-3.5 text-sm" variant="outline">
-                        Agendar Consulta nesta Área
-                      </WhatsAppCTAButton>
+
+                    {/* Right Column: Typical Issues (Topics) */}
+                    <div className="lg:w-1/2 w-full rounded-2xl p-6 md:p-8 space-y-4 shadow-sm border bg-slate-50 border-slate-200/60">
+                      <h3 className="text-xs font-bold uppercase tracking-wider border-b pb-2 text-navy-base border-slate-200/60">
+                        Principais Demandas Atendidas:
+                      </h3>
+                      <ul className="space-y-3">
+                        {area.topics.map((topic, idx) => (
+                          <li key={idx} className="flex items-start gap-3 text-sm text-slate-600">
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-base" />
+                            <span className="leading-relaxed">{topic}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                  </div>
 
-                  {/* Right Column: Typical Issues (Topics) */}
-                  <div className="lg:w-1/2 w-full rounded-2xl bg-navy-base border border-gold-base/10 p-6 md:p-8 space-y-4 shadow-inner shadow-black/25">
-                    <h3 className="text-xs font-bold uppercase tracking-wider text-white border-b border-white/5 pb-2">
-                      Principais Demandas Atendidas:
-                    </h3>
-                    <ul className="space-y-3">
-                      {area.topics.map((topic, idx) => (
-                        <li key={idx} className="flex items-start gap-3 text-sm text-gray-300">
-                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-base" />
-                          <span className="leading-relaxed">{topic}</span>
-                        </li>
-                      ))}
-                    </ul>
                   </div>
-
                 </div>
-              </div>
+              </ScrollReveal>
             );
           })}
         </div>
 
         {/* Dynamic FAQ prompt */}
-        <div className="mt-24 text-center max-w-2xl mx-auto rounded-3xl border border-gold-base/15 bg-navy-card p-8 shadow-xl shadow-black/40">
+        <div className="mt-24 text-center max-w-2xl mx-auto rounded-3xl border border-gold-base/20 bg-gradient-to-br from-navy-dark to-navy-base p-8 shadow-2xl">
           <HelpCircle className="mx-auto h-8 w-8 text-gold-base mb-4" />
           <h3 className="font-serif text-xl font-bold text-white mb-2">
             Seu problema jurídico não está listado?
           </h3>
-          <p className="text-sm text-gray-400 leading-relaxed mb-6">
+          <p className="text-sm text-gray-300 leading-relaxed mb-6">
             O Direito abrange diversas situações específicas. Nossos advogados podem realizar uma análise preliminar do seu caso para verificar se podemos ajudá-lo ou encaminhá-lo ao profissional correto.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <WhatsAppCTAButton className="px-6 py-3 text-xs" />
             <Link
               href="/contato"
-              className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.02] px-6 py-3 text-xs font-semibold tracking-wide text-white hover:border-gold-base/30 hover:bg-gold-glow transition-all duration-300"
+              className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-6 py-3 text-xs font-semibold tracking-wide text-white hover:border-gold-base/30 hover:bg-gold-base/10 transition-all duration-300"
             >
               Envie um E-mail
             </Link>

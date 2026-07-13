@@ -20,12 +20,12 @@ export default function Footer() {
           {/* Logo & About Column */}
           <div className="md:col-span-1 lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="relative h-12 w-12 overflow-hidden rounded-full border border-gold-base/30 bg-navy-light">
+              <div className="relative h-12 w-12 overflow-hidden rounded-full border border-gold-base/30 bg-navy-light flex items-center justify-center">
                 <Image
-                  src="/logo_rounded.jpeg"
+                  src="/logo1.svg"
                   alt="Stussi & Reis Logo"
                   fill
-                  className="object-cover"
+                  className="object-contain p-1.5"
                   sizes="48px"
                 />
               </div>

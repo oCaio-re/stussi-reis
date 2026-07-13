@@ -24,8 +24,9 @@ As especialidades jurídicas nas quais o escritório presta consultoria e repres
 
 ### Identidade Visual
 A estética e sistema de design adotados para o website, consistentes com a marca física (cartão e logo):
-*   **Esquema de Cores**: Predominância de azul-marinho profundo (midnight/navy) e dourado metálico (gold).
+*   **Esquema de Cores**: Predominância de fundo claro (branco-gelo/slate-50), com elementos estruturais e textos em azul-marinho profundo (navy) e acentos em dourado metálico escuro (gold).
 *   **Tipografia**: Fontes serifadas elegantes para títulos importantes (ex: Playfair Display) e sans-serif limpa para legibilidade (ex: Inter).
+
 *   **Tom**: Sofisticado, confiável, premium e focado em autoridade.
 
 ### Canais de Contato

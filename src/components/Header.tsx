@@ -22,23 +22,23 @@ export default function Header() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-gold-base/10 bg-navy-dark/85 backdrop-blur-md">
+    <header className="sticky top-0 z-40 w-full border-b border-gold-base/10 bg-white/90 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative h-12 w-12 overflow-hidden rounded-full border border-gold-base/30 bg-navy-light transition-transform duration-300 group-hover:scale-105">
+            <div className="relative h-12 w-12 overflow-hidden rounded-full border border-gold-base/30 bg-navy-light transition-transform duration-300 group-hover:scale-105 flex items-center justify-center">
               <Image
-                src="/logo_rounded.jpeg"
+                src="/logo1.svg"
                 alt="Stussi & Reis Logo"
                 fill
-                className="object-cover"
+                className="object-contain p-1.5"
                 sizes="48px"
                 priority
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-serif text-lg font-bold tracking-wider text-white sm:text-xl">
+              <span className="font-serif text-lg font-bold tracking-wider text-navy-base sm:text-xl">
                 STUSSI & REIS
               </span>
               <span className="text-[9px] font-semibold tracking-[0.25em] text-gold-muted sm:text-[10px]">
@@ -56,7 +56,7 @@ export default function Header() {
                 className={`relative py-2 text-sm font-medium tracking-wide transition-colors duration-200 hover:text-gold-base ${
                   isActive(link.href)
                     ? "text-gold-base font-semibold"
-                    : "text-gray-300"
+                    : "text-slate-600 hover:text-navy-base"
                 }`}
               >
                 {link.name}
@@ -68,7 +68,7 @@ export default function Header() {
 
             <button
               onClick={openWhatsApp}
-              className="flex items-center gap-2 rounded-full border border-gold-base/30 bg-gold-base/10 px-5 py-2 text-sm font-semibold tracking-wide text-gold-light transition-all duration-300 hover:bg-gold-base hover:text-navy-dark hover:border-gold-base cursor-pointer"
+              className="flex items-center gap-2 rounded-full border border-gold-base/40 bg-gold-base/5 px-5 py-2 text-sm font-semibold tracking-wide text-gold-light transition-all duration-300 hover:bg-gold-base hover:text-white hover:border-gold-base cursor-pointer"
             >
               <Phone className="h-4 w-4" />
               <span>Fale Conosco</span>
@@ -79,7 +79,7 @@ export default function Header() {
           <div className="flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-none"
+              className="inline-flex items-center justify-center rounded-md p-2 text-slate-600 hover:bg-slate-100 hover:text-slate-900 focus:outline-none"
               aria-expanded={isOpen}
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -90,7 +90,7 @@ export default function Header() {
 
       {/* Mobile Nav Menu */}
       {isOpen && (
-        <div className="md:hidden border-t border-gold-base/10 bg-navy-card">
+        <div className="md:hidden border-t border-gold-base/10 bg-white shadow-xl">
           <div className="space-y-1 px-2 pb-4 pt-3">
             {navLinks.map((link) => (
               <Link
@@ -100,7 +100,7 @@ export default function Header() {
                 className={`block rounded-md px-3 py-2 text-base font-medium transition-colors ${
                   isActive(link.href)
                     ? "bg-gold-base/10 text-gold-base"
-                    : "text-gray-300 hover:bg-white/5 hover:text-white"
+                    : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
                 }`}
               >
                 {link.name}
@@ -112,7 +112,7 @@ export default function Header() {
                   setIsOpen(false);
                   openWhatsApp();
                 }}
-                className="flex w-full items-center justify-center gap-2 rounded-lg bg-gold-base px-4 py-2.5 text-base font-bold text-navy-dark shadow-lg shadow-gold-glow transition-all hover:bg-gold-light cursor-pointer"
+                className="flex w-full items-center justify-center gap-2 rounded-lg bg-gold-base px-4 py-2.5 text-base font-bold text-white shadow-lg shadow-gold-glow transition-all hover:bg-gold-light cursor-pointer"
               >
                 <Phone className="h-5 w-5" />
                 <span>Atendimento WhatsApp</span>

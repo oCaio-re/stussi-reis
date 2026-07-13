@@ -20,9 +20,9 @@ export default function WhatsAppCTAButton({
   const baseStyles = "flex items-center justify-center gap-2 rounded-full font-semibold tracking-wide transition-all duration-300 active:scale-[0.98] cursor-pointer";
   
   const variants = {
-    primary: "bg-gradient-to-r from-gold-dark via-gold-base to-gold-light text-navy-dark shadow-lg shadow-gold-glow hover:opacity-95",
-    secondary: "bg-white/[0.04] text-white border border-white/10 hover:border-gold-base/30 hover:bg-gold-glow",
-    outline: "border border-gold-base/30 bg-gold-base/10 text-gold-light hover:bg-gold-base hover:text-navy-dark hover:border-gold-base",
+    primary: "bg-gradient-to-r from-gold-dark via-gold-base to-gold-light text-white shadow-lg shadow-gold-glow hover:opacity-95",
+    secondary: "bg-white text-slate-700 border border-slate-200 hover:border-gold-base/30 hover:bg-gold-base/5",
+    outline: "border border-gold-base/40 bg-gold-base/5 text-gold-light hover:bg-gold-base hover:text-white hover:border-gold-base",
   };
 
   return (

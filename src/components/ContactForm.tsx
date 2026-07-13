@@ -16,8 +16,8 @@ export default function ContactForm() {
   );
 
   return (
-    <div className="rounded-2xl border border-gold-base/15 bg-navy-card p-6 shadow-xl sm:p-8">
-      <h3 className="text-xl font-serif font-bold text-white tracking-wide mb-6">
+    <div className="rounded-2xl border border-gold-base/15 bg-navy-card p-6 shadow-[0_12px_40px_-12px_rgba(10,17,40,0.06)] sm:p-8">
+      <h3 className="text-xl font-serif font-bold text-slate-900 tracking-wide mb-6">
         Envie uma Mensagem
       </h3>
 
@@ -26,8 +26,8 @@ export default function ContactForm() {
           <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-green-500/10 text-green-400">
             <CheckCircle className="h-8 w-8" />
           </div>
-          <h4 className="text-lg font-bold text-white mb-2">Mensagem Enviada!</h4>
-          <p className="text-sm text-gray-400 max-w-sm leading-relaxed">
+          <h4 className="text-lg font-bold text-slate-900 mb-2">Mensagem Enviada!</h4>
+          <p className="text-sm text-slate-500 max-w-sm leading-relaxed">
             {state.message}
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function ContactForm() {
 
           {/* Name Field */}
           <div>
-            <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
+            <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
               Nome Completo
             </label>
             <input
@@ -52,10 +52,10 @@ export default function ContactForm() {
               id="name"
               required
               disabled={isPending}
-              className={`w-full rounded-lg border bg-white/[0.02] px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-gold-base ${
+              className={`w-full rounded-lg border bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-gold-base ${
                 state?.errors?.name
                   ? "border-red-500/50 focus:border-red-500"
-                  : "border-white/10 focus:border-gold-base"
+                  : "border-slate-200 focus:border-gold-base"
               }`}
               placeholder="Ex: João da Silva"
             />
@@ -67,7 +67,7 @@ export default function ContactForm() {
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
             {/* Email Field */}
             <div>
-              <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
+              <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
                 E-mail
               </label>
               <input
@@ -76,10 +76,10 @@ export default function ContactForm() {
                 id="email"
                 required
                 disabled={isPending}
-                className={`w-full rounded-lg border bg-white/[0.02] px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-gold-base ${
+                className={`w-full rounded-lg border bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-gold-base ${
                   state?.errors?.email
                     ? "border-red-500/50 focus:border-red-500"
-                    : "border-white/10 focus:border-gold-base"
+                    : "border-slate-200 focus:border-gold-base"
                 }`}
                 placeholder="Ex: joao@email.com"
               />
@@ -90,7 +90,7 @@ export default function ContactForm() {
 
             {/* Phone Field */}
             <div>
-              <label htmlFor="phone" className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
+              <label htmlFor="phone" className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
                 Telefone / WhatsApp
               </label>
               <input
@@ -99,10 +99,10 @@ export default function ContactForm() {
                 id="phone"
                 required
                 disabled={isPending}
-                className={`w-full rounded-lg border bg-white/[0.02] px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-gold-base ${
+                className={`w-full rounded-lg border bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-gold-base ${
                   state?.errors?.phone
                     ? "border-red-500/50 focus:border-red-500"
-                    : "border-white/10 focus:border-gold-base"
+                    : "border-slate-200 focus:border-gold-base"
                 }`}
                 placeholder="Ex: (21) 99999-9999"
               />
@@ -114,14 +114,14 @@ export default function ContactForm() {
 
           {/* Subject Field */}
           <div>
-            <label htmlFor="subject" className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
+            <label htmlFor="subject" className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
               Assunto
             </label>
             <select
               name="subject"
               id="subject"
               disabled={isPending}
-              className="w-full rounded-lg border border-white/10 bg-navy-card px-4 py-3 text-sm text-white focus:outline-none focus:ring-1 focus:ring-gold-base focus:border-gold-base"
+              className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-800 focus:outline-none focus:ring-1 focus:ring-gold-base focus:border-gold-base"
             >
               <option value="Dúvida Geral">Dúvida Geral</option>
               <option value="Direito Cível">Direito Cível</option>
@@ -133,7 +133,7 @@ export default function ContactForm() {
 
           {/* Message Field */}
           <div>
-            <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
+            <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
               Sua Mensagem
             </label>
             <textarea
@@ -142,10 +142,10 @@ export default function ContactForm() {
               required
               rows={4}
               disabled={isPending}
-              className={`w-full rounded-lg border bg-white/[0.02] px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:ring-1 focus:ring-gold-base ${
+              className={`w-full rounded-lg border bg-slate-50 px-4 py-3 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-gold-base ${
                 state?.errors?.message
                   ? "border-red-500/50 focus:border-red-500"
-                  : "border-white/10 focus:border-gold-base"
+                  : "border-slate-200 focus:border-gold-base"
               }`}
               placeholder="Descreva brevemente o seu caso para podermos analisar..."
             />
@@ -158,7 +158,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={isPending}
-            className="flex w-full items-center justify-center gap-2.5 rounded-lg bg-gradient-to-r from-gold-dark via-gold-base to-gold-light px-5 py-3.5 text-sm font-bold text-navy-dark shadow-lg shadow-gold-glow hover:opacity-95 active:scale-[0.99] transition-all disabled:opacity-50"
+            className="flex w-full items-center justify-center gap-2.5 rounded-lg bg-gradient-to-r from-gold-dark via-gold-base to-gold-light px-5 py-3.5 text-sm font-bold text-white shadow-lg shadow-gold-glow hover:opacity-95 active:scale-[0.99] transition-all disabled:opacity-50 cursor-pointer"
           >
             {isPending ? (
               <>

@@ -70,10 +70,10 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
             <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-gold-base/10 text-gold-base">
               <MessageSquare className="h-6 w-6" />
             </div>
-            <h3 className="text-xl font-serif font-bold text-white tracking-wide">
+            <h3 className="text-xl font-serif font-bold text-slate-900 tracking-wide">
               Atendimento via WhatsApp
             </h3>
-            <p className="text-sm text-gray-400 mt-1">
+            <p className="text-sm text-slate-500 mt-1">
               Escolha com qual de nossos sócios deseja falar:
             </p>
           </div>
@@ -85,19 +85,19 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
                 href={lawyer.waLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-4 p-4 rounded-xl border border-white/5 bg-white/[0.02] hover:border-gold-base/40 hover:bg-gold-glow transition-all duration-300"
+                className="group flex items-center gap-4 p-4 rounded-xl border border-slate-100 bg-slate-50/50 hover:border-gold-base/40 hover:bg-gold-glow transition-all duration-300"
               >
                 {/* Custom Avatar placeholder */}
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gold-base/30 bg-navy-light text-gold-base font-serif font-bold group-hover:scale-105 transition-transform duration-300">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gold-base/30 bg-gold-base/5 text-gold-base font-serif font-bold group-hover:scale-105 transition-transform duration-300">
                   {lawyer.avatarInitials}
                 </div>
 
                 <div className="flex-1 min-w-0">
-                  <h4 className="text-sm font-semibold text-white truncate group-hover:text-gold-light transition-colors">
+                  <h4 className="text-sm font-semibold text-slate-800 truncate group-hover:text-gold-light transition-colors">
                     {lawyer.name}
                   </h4>
                   <p className="text-xs text-gold-muted mt-0.5">{lawyer.role}</p>
-                  <div className="flex items-center gap-1.5 text-xs text-gray-400 mt-1">
+                  <div className="flex items-center gap-1.5 text-xs text-slate-500 mt-1">
                     <Phone className="h-3 w-3" />
                     <span>{lawyer.phoneText}</span>
                   </div>

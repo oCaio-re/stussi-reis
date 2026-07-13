@@ -1,35 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  /* Fundo quase preto/navy extremamente profundo para criar alto contraste com os elementos */
-  --background: #02050f;
-  --foreground: #f8fafc;
+  /* Fundo claro premium (branco-gelo) e texto escuro de alta legibilidade */
+  --background: #f8fafc;
+  --foreground: #0f172a;
 }
 
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   
-  /* Cores revisadas para maior contraste e profundidade visual */
-  --color-navy-dark: #010307;
-  --color-navy-base: #02050f;
-  --color-navy-light: #0b1126;
+  /* Cores de suporte para Light Mode com foco em contraste e elegância */
+  --color-navy-dark: #070b19;
+  --color-navy-base: #0a1128;
+  --color-navy-light: #f1f5f9;
   
-  /* Cor dos Cards significativamente mais clara que o fundo para criar relevo tridimensional */
-  --color-navy-card: #0f1836;
-  --color-navy-card-hover: #16224d;
+  /* Cards em branco puro com bordas douradas e sombras suaves */
+  --color-navy-card: #ffffff;
+  --color-navy-card-hover: #fcfcfd;
   
-  --color-gold-light: #f7e3ab;
-  --color-gold-base: #d4af37;
-  --color-gold-dark: #aa7c11;
-  --color-gold-muted: #c5a880;
-  --color-gold-glow: rgba(212, 175, 55, 0.25);
+  /* Paleta de dourados ajustada para contraste em fundos claros (tons mais terrosos/bronze) */
+  --color-gold-light: #aa7c11;
+  --color-gold-base: #8c7653;
+  --color-gold-dark: #6e5b3f;
+  --color-gold-muted: #64748b;
+  --color-gold-glow: rgba(140, 118, 83, 0.05);
   
   /* Fontes */
   --font-sans: var(--font-sans), sans-serif;
   --font-serif: var(--font-serif), serif;
 
-  /* Animações fluidas integradas ao Tailwind CSS v4 */
+  /* Animações fluidas */
   --animate-fade-in: fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   --animate-fade-in-up: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   --animate-fade-in-down: fade-in-down 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -78,12 +79,12 @@ body {
   overflow-x: hidden;
 }
 
-/* Comportamento de scroll e barra de rolagem */
+/* Comportamento de scroll e barra de rolagem para Light Mode */
 html {
   scroll-behavior: smooth;
 }
 
-/* Transição suave de navegação de páginas (efeito de transição global) */
+/* Transição suave de navegação */
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation-duration: 0.3s;
@@ -93,37 +94,37 @@ html {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #010307;
+  background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #0f1836;
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  background: #cbd5e1;
+  border: 1px solid rgba(140, 118, 83, 0.2);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #d4af37;
+  background: #8c7653;
 }
 
-/* Gradiente Dourado Premium para Textos */
+/* Gradiente Dourado Premium para Textos (adaptado para fundos claros) */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #f7e3ab 0%, #d4af37 50%, #aa7c11 100%);
+  background: linear-gradient(135deg, #aa7c11 0%, #8c7653 50%, #52432e 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Cards com Efeito de Vidro (Glassmorphism) Otimizados para Alto Contraste */
+/* Cards com Efeito de Vidro (Glassmorphism) para Light Mode */
 .glass-panel {
-  background: rgba(15, 24, 54, 0.85);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(212, 175, 55, 0.18);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(140, 118, 83, 0.18);
+  box-shadow: 0 10px 30px -10px rgba(10, 17, 40, 0.08), 0 1px 3px 0 rgba(0, 0, 0, 0.02);
 }
 
 .glass-panel-hover:hover {
-  background: rgba(22, 34, 77, 0.95);
-  border: 1px solid rgba(212, 175, 55, 0.45);
-  box-shadow: 0 15px 35px -5px rgba(212, 175, 55, 0.15), 0 5px 15px -5px rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(140, 118, 83, 0.45);
+  box-shadow: 0 15px 35px -5px rgba(140, 118, 83, 0.15), 0 5px 15px -5px rgba(10, 17, 40, 0.1);
   transform: translateY(-2px);
 }
 

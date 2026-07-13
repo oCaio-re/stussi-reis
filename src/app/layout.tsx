@@ -63,7 +63,7 @@ export default function RootLayout({
     "name": "Stussi & Reis Consultoria Jurídica",
     "description": "Escritório de advocacia em Niterói especializado em Direito Cível, Consumidor, Família e Previdenciário.",
     "url": "https://stussiereis.com.br",
-    "logo": "https://stussiereis.com.br/logo_rounded.jpeg",
+    "logo": "https://stussiereis.com.br/logo1.svg",
     "telephone": ["+55-21-98896-1729", "+55-21-98731-0837"],
     "address": {
       "@type": "PostalAddress",
@@ -97,7 +97,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-navy-base text-gray-200">
+      <body className="min-h-full flex flex-col bg-background text-foreground">
         <AppLayoutWrapper>{children}</AppLayoutWrapper>
       </body>
     </html>
