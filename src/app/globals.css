@@ -1,26 +1,141 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Fundo quase preto/navy extremamente profundo para criar alto contraste com os elementos */
+  --background: #02050f;
+  --foreground: #f8fafc;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  
+  /* Cores revisadas para maior contraste e profundidade visual */
+  --color-navy-dark: #010307;
+  --color-navy-base: #02050f;
+  --color-navy-light: #0b1126;
+  
+  /* Cor dos Cards significativamente mais clara que o fundo para criar relevo tridimensional */
+  --color-navy-card: #0f1836;
+  --color-navy-card-hover: #16224d;
+  
+  --color-gold-light: #f7e3ab;
+  --color-gold-base: #d4af37;
+  --color-gold-dark: #aa7c11;
+  --color-gold-muted: #c5a880;
+  --color-gold-glow: rgba(212, 175, 55, 0.25);
+  
+  /* Fontes */
+  --font-sans: var(--font-sans), sans-serif;
+  --font-serif: var(--font-serif), serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Animações fluidas integradas ao Tailwind CSS v4 */
+  --animate-fade-in: fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in-up: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in-down: fade-in-down 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-scale-in: scale-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Comportamento de scroll e barra de rolagem */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Transição suave de navegação de páginas (efeito de transição global) */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.3s;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #010307;
+}
+::-webkit-scrollbar-thumb {
+  background: #0f1836;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Gradiente Dourado Premium para Textos */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f7e3ab 0%, #d4af37 50%, #aa7c11 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Cards com Efeito de Vidro (Glassmorphism) Otimizados para Alto Contraste */
+.glass-panel {
+  background: rgba(15, 24, 54, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(22, 34, 77, 0.95);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 15px 35px -5px rgba(212, 175, 55, 0.15), 0 5px 15px -5px rgba(0, 0, 0, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Classes utilitárias de atraso de animação */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-700 { animation-delay: 700ms; }
+
+/* Mantém o elemento invisível antes do início da animação */
+.reveal-hidden {
+  opacity: 0;
 }
