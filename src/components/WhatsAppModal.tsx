@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { X, MessageSquare, Phone, UserCheck } from "lucide-react";
+import React, { useEffect } from "react";
+import { X, MessageSquare, Phone } from "lucide-react";
 import Image from "next/image";
 
 interface WhatsAppModalProps {
@@ -33,6 +33,7 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
       phoneText: "(21) 98896-1729",
       waLink: "https://wa.me/5521988961729?text=Ol%C3%A1%20Dr.%20Felipe%2C%20gostaria%20de%20solicitar%20uma%20consulta%20jur%C3%ADdica.",
       avatarInitials: "FR",
+      photo: "/foto felipe.jpeg",
     },
     {
       name: "Saulo Pedroso Stussi Júnior",
@@ -40,6 +41,7 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
       phoneText: "(21) 98731-0837",
       waLink: "https://wa.me/5521987310837?text=Ol%C3%A1%20Dr.%20Saulo%2C%20gostaria%20de%20solicitar%20uma%20consulta%20jur%C3%ADdica.",
       avatarInitials: "SS",
+      photo: "/saulo.png",
     },
   ];
 
@@ -52,9 +54,9 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
       />
 
       {/* Modal Content */}
-      <div className="relative w-full max-w-md overflow-hidden rounded-2xl border border-gold-base/20 bg-navy-card shadow-2xl transition-all duration-300">
+      <div className="relative w-full max-w-md overflow-hidden rounded-none border border-gold-base/20 bg-navy-card shadow-2xl transition-all duration-300">
         {/* Decorative Top Accent line */}
-        <div className="h-1.5 w-full bg-gradient-to-r from-gold-dark via-gold-base to-gold-light" />
+        <div className="h-[1.5px] w-full bg-gold-base" />
         
         {/* Close Button */}
         <button 
@@ -67,7 +69,7 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
 
         <div className="p-6">
           <div className="text-center mb-6">
-            <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-gold-base/10 text-gold-base">
+            <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-none border border-gold-base/30 bg-gold-base/5 text-gold-base">
               <MessageSquare className="h-6 w-6" />
             </div>
             <h3 className="text-xl font-serif font-bold text-slate-900 tracking-wide">
@@ -85,11 +87,17 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
                 href={lawyer.waLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-4 p-4 rounded-xl border border-slate-100 bg-slate-50/50 hover:border-gold-base/40 hover:bg-gold-glow transition-all duration-300"
+                className="group flex items-center gap-4 p-4 rounded-none border border-slate-100 bg-slate-50/50 hover:border-gold-base/40 hover:bg-gold-glow transition-all duration-300"
               >
-                {/* Custom Avatar placeholder */}
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gold-base/30 bg-gold-base/5 text-gold-base font-serif font-bold group-hover:scale-105 transition-transform duration-300">
-                  {lawyer.avatarInitials}
+                {/* Lawyer Photo */}
+                <div className="relative h-12 w-12 shrink-0 overflow-hidden border border-gold-base/30 bg-slate-100 group-hover:scale-105 transition-transform duration-300">
+                  <Image
+                    src={lawyer.photo}
+                    alt={lawyer.name}
+                    fill
+                    className="object-cover"
+                    sizes="48px"
+                  />
                 </div>
 
                 <div className="flex-1 min-w-0">
@@ -103,7 +111,7 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
                   </div>
                 </div>
 
-                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-green-500/10 text-green-400 group-hover:bg-green-500 group-hover:text-white transition-colors duration-300">
+                <div className="flex h-8 w-8 items-center justify-center rounded-none bg-green-500/10 text-green-400 group-hover:bg-green-500 group-hover:text-white transition-colors duration-300">
                   <MessageSquare className="h-4 w-4" />
                 </div>
               </a>

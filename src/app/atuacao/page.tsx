@@ -1,14 +1,15 @@
 import React from "react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { Scale, ShieldCheck, Heart, Landmark, HelpCircle, ArrowRight } from "lucide-react";
+import { Scale, ShieldCheck, Landmark, HelpCircle, ArrowRight } from "lucide-react";
 import WhatsAppCTAButton from "@/components/WhatsAppCTAButton";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Áreas de Atuação | Stussi & Reis Consultoria Jurídica",
+  title: "Áreas de Atuação | Stussi & Reis Advocacia",
   description:
-    "Conheça em detalhes nossos serviços nas áreas de Direito Cível, Direito do Consumidor, Família e Previdenciário em Niterói - RJ.",
+    "Serviços jurídicos especializados em Direito Previdenciário (INSS), Direito do Consumidor e Direito Cível em Niterói - RJ. Atendimento focado em ética e conformidade.",
   alternates: {
     canonical: "/atuacao",
   },
@@ -17,162 +18,211 @@ export const metadata: Metadata = {
 export default function Atuacao() {
   const areas = [
     {
-      title: "Direito Cível",
-      subtitle: "Resolução de Litígios e Assessoria Contratual",
-      icon: Scale,
+      title: "Direito Previdenciário (INSS)",
+      subtitle: "Planejamento, Concessão e Revisão de Benefícios",
+      icon: Landmark,
       description:
-        "Atuamos de forma estratégica para solucionar conflitos civis de variadas complexidades, tanto judicial quanto extrajudicialmente. Buscamos resguardar seus bens, garantir direitos de propriedade e estabelecer relações contratuais seguras.",
+        "Foco principal de nossa atuação jurídica. Prestamos orientação consultiva e representação litigiosa para garantir que o trabalhador e o segurado recebam os proventos estabelecidos em lei. Atuamos de forma a simplificar o trâmite junto ao INSS.",
       topics: [
-        "Elaboração, análise e revisão de Contratos diversos",
-        "Ações de Indenização por Danos Morais e Materiais",
-        "Cobrança de dívidas, execução de títulos e recuperação de créditos",
-        "Questões de posse, propriedade e locação de imóveis (despejo, reintegração)",
-        "Notificações extrajudiciais e acordos amigáveis preventivos",
+        "Aposentadoria por idade (urbana e rural)",
+        "Aposentadoria por tempo de contribuição e especial",
+        "Aposentadoria por incapacidade permanente (invalidez)",
+        "Auxílio por incapacidade temporária (antigo auxílio-doença)",
+        "Benefício de Prestação Continuada (BPC/LOAS) para idosos e PCD",
+        "Pensão por morte e salário-maternidade",
+        "Revisão detalhada de benefícios concedidos",
+        "Elaboração de Recursos Administrativos perante o INSS",
+        "Ações judiciais previdenciárias de alta complexidade",
       ],
+      whatsappCustom: "Olá Dr. Felipe, gostaria de agendar uma consulta sobre benefício previdenciário/INSS.",
     },
     {
       title: "Direito do Consumidor",
-      subtitle: "Defesa do Cidadão contra Práticas Abusivas",
+      subtitle: "Proteção Ativa e Combate a Práticas Abusivas",
       icon: ShieldCheck,
       description:
-        "O Código de Defesa do Consumidor protege os cidadãos contra abusos cometidos por fornecedores de produtos e serviços. Garantimos que seus direitos sejam plenamente respeitados frente a bancos, operadoras, varejo e concessionárias.",
+        "O Código de Defesa do Consumidor assegura o equilíbrio nas relações entre cidadãos e fornecedores. Nosso escritório atua de forma energética para cessar cobranças abusivas, fraudes sistêmicas e restabelecer o direito de contratantes vulneráveis.",
       topics: [
-        "Ações decorrentes de negativação indevida nos órgãos de proteção ao crédito (SPC/Serasa)",
-        "Indenizações por falha na prestação de serviços ou produtos com defeito",
-        "Problemas com operadoras de telefonia, internet e fornecimento de energia/água",
-        "Ações contra abusos de Planos de Saúde (negativas de exames, cirurgias e reajustes)",
-        "Problemas em transportes aéreos (atraso/cancelamento de voo e extravio de bagagem)",
+        "Golpes e fraudes bancárias diversos (incluindo golpes via Pix)",
+        "Contratação de empréstimos consignados indevidos",
+        "Indenizações por negativação indevida (SPC e Serasa)",
+        "Cobranças abusivas e duplicidade de faturamento",
+        "Ações decorrentes de TOI (Termo de Ocorrência e Inspeção)",
+        "Cancelamento indevido de contratos e planos de saúde",
+        "Problemas com companhias aéreas (atrasos, extravios e cancelamentos)",
+        "Interrupção abusiva no fornecimento de energia elétrica e água",
+        "Atrasos em entregas de produtos e defeitos não sanados",
+        "Indenizações por danos morais e materiais decorrentes do consumo",
       ],
+      whatsappCustom: "Olá, gostaria de conversar sobre um problema de Direito do Consumidor.",
     },
     {
-      title: "Direito de Família e Sucessões",
-      subtitle: "Atendimento Humanizado em Questões Familiares",
-      icon: Heart,
+      title: "Direito Cível",
+      subtitle: "Consultoria Contratual e Reparação de Danos",
+      icon: Scale,
       description:
-        "Entendemos que conflitos familiares exigem sensibilidade, discrição e acolhimento. Conduzimos cada caso buscando preservar os laços afetivos e assegurar soluções dignas e justas na partilha de patrimônio e proteção de menores.",
+        "Assessoria voltada para regular relações civis privadas, garantir cumprimento de obrigações firmadas e buscar indenizações justas por ilícitos civis. Atuação estratégica focada na prevenção de litígios.",
       topics: [
-        "Divórcio consensual ou litigioso (judicial e em cartório)",
-        "Pacto antenupcial, união estável e dissolução de união",
-        "Regulamentação de guarda de filhos, regime de visitas e convivência familiar",
-        "Fixação, revisão, exoneração e execução de Pensão Alimentícia",
-        "Inventários judiciais e extrajudiciais, testamentos e planejamento sucessório",
+        "Elaboração, análise técnica e revisão de contratos",
+        "Ações de indenização por responsabilidade civil",
+        "Execução de títulos, cobranças de dívidas e recuperação de crédito",
+        "Ações de obrigação de fazer e não fazer em relações civis",
+        "Notificações extrajudiciais para acordos amigáveis preventivos",
+        "Mediação e resolução de conflitos patrimoniais contratuais",
       ],
-    },
-    {
-      title: "Direito Previdenciário",
-      subtitle: "Planejamento e Concessão de Benefícios previdenciários",
-      icon: Landmark,
-      description:
-        "Asseguramos que o trabalhador e o segurado do INSS recebam os benefícios a que têm direito legal por lei. Atuamos desde o planejamento preventivo da aposentadoria até a judicialização contra indeferimentos administrativos indevidos.",
-      topics: [
-        "Planejamento Previdenciário (cálculo de tempo de contribuição e simulação de valor)",
-        "Encaminhamento e concessão de Aposentadorias (idade, tempo de contribuição, especial e invalidez)",
-        "Concessão de auxílios (auxílio-doença, auxílio-acidente) e pensão por morte",
-        "Requerimento de BPC/LOAS (Benefício de Prestação Continuada para idosos e portadores de deficiência)",
-        "Revisão de benefícios previdenciários concedidos incorretamente pelo INSS",
-      ],
+      whatsappCustom: "Olá, gostaria de agendar uma consulta na área de Direito Cível.",
     },
   ];
 
   return (
-    <div className="py-16 md:py-24">
+    <div className="py-20 md:py-28 bg-[#fcfdfd]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* Title Section */}
         <div className="text-center max-w-3xl mx-auto mb-20 animate-fade-in-down reveal-hidden">
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-navy-base tracking-wide">
-            Nossas Áreas de Atuação
+          <div className="inline-flex items-center gap-2 mb-3">
+            <span className="h-px w-6 bg-gold-light" />
+            <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-gold-light">
+              Nossa Atuação Especializada
+            </span>
+          </div>
+          <h1 className="font-serif text-4xl sm:text-5xl font-normal text-navy-base">
+            Áreas de Atuação Jurídica
           </h1>
-          <p className="text-sm sm:text-base text-gold-muted mt-2 uppercase tracking-widest font-semibold">
-            Serviços Jurídicos Especializados
-          </p>
-          <div className="mt-4 h-0.5 w-20 bg-gold-base mx-auto" />
-          <p className="mt-6 text-slate-600 leading-relaxed text-base">
-            O escritório Stussi & Reis atua de forma especializada com foco na resolução célere e eficiente de conflitos. Conheça as principais demandas que atendemos.
+          <div className="mt-4 h-[1px] w-20 bg-gold-base mx-auto" />
+          <p className="mt-6 text-sm text-slate-500 leading-relaxed font-light">
+            O escritório Stussi & Reis presta assessoria informativa e representação estratégica focada em soluções ágeis. Nossos textos e pareceres são redigidos de forma clara para que o cliente compreenda perfeitamente cada etapa processual.
           </p>
         </div>
 
-        {/* Detailed Areas List */}
-        <div className="space-y-16">
-          {areas.map((area, index) => {
-            const Icon = area.icon;
-            const delays = ["delay-100", "delay-200", "delay-300", "delay-400"];
-            return (
-              <ScrollReveal
-                key={area.title}
-                animation="fade-in-up"
-                delayClass={delays[index % 4]}
-                className="flex"
-              >
-                <div
-                  className="relative overflow-hidden rounded-3xl border border-gold-base/15 bg-white p-6 md:p-10 shadow-[0_12px_40px_-12px_rgba(10,17,40,0.06)] hover:scale-[1.01] hover:border-gold-base/30 transition-all duration-300 w-full"
+        {/* Detailed Layout: 2 Columns (Decorative image left, Areas right) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          {/* Left Column: Fixed/Floating Card with Stock Photo */}
+          <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-6">
+            <div className="border border-slate-200 p-4 bg-white shadow-md">
+              <div className="relative w-full h-56 bg-slate-100 border border-slate-200 overflow-hidden mb-6">
+                <Image
+                  src="/legal_desk.jpg"
+                  alt="Mesa de trabalho de Direito"
+                  fill
+                  className="object-cover"
+                  sizes="(max-w-1024px) 100vw, 350px"
+                />
+              </div>
+              <h3 className="font-serif text-base font-bold text-navy-base uppercase tracking-wider mb-2">
+                Advocacia Ética & Informativa
+              </h3>
+              <p className="text-xs text-slate-500 font-light leading-relaxed">
+                Todas as consultas e análises de viabilidade são pautadas nas regras de deontologia da OAB. Não garantimos êxitos antecipados em processos judiciais, mas nos comprometemos com o rigor técnico de cada tese.
+              </p>
+              <div className="mt-6 pt-6 border-t border-slate-100">
+                <p className="text-[10px] font-bold text-gold-light uppercase tracking-wider mb-1">
+                  Atendimento Direto
+                </p>
+                <p className="text-xs text-slate-600 font-semibold mb-3">
+                  Debate conjunto dos sócios em todas as causas.
+                </p>
+                <WhatsAppCTAButton className="w-full text-xs font-bold uppercase tracking-wider py-3" />
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Detailed list of Areas */}
+          <div className="lg:col-span-8 space-y-12">
+            {areas.map((area, index) => {
+              const Icon = area.icon;
+              return (
+                <ScrollReveal
+                  key={area.title}
+                  animation="fade-in-up"
+                  className="w-full"
                 >
-                  {/* Visual background accents */}
-                  <div className="absolute top-0 right-0 h-32 w-32 rounded-full bg-gold-base/5 blur-2xl" />
-                  
-                  <div className="flex flex-col lg:flex-row gap-8 items-start">
+                  <div
+                    className={`relative overflow-hidden border bg-white p-6 md:p-8 hover:border-gold-base/35 transition-all duration-300 ${
+                      index === 0
+                        ? "border-gold-base/30 shadow-md ring-1 ring-gold-base/5"
+                        : "border-slate-200"
+                    }`}
+                  >
+                    {/* Visual gold corner element for Previdenciário to give top highlight */}
+                    {index === 0 && (
+                      <div className="absolute top-0 right-0 bg-gold-base text-[#070b19] text-[8px] font-bold uppercase tracking-widest px-3 py-1">
+                        Destaque
+                      </div>
+                    )}
                     
-                    {/* Left Column: Description */}
-                    <div className="lg:w-1/2 space-y-4">
-                      <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-gold-base/20 bg-gold-base/5 text-gold-base">
-                        <Icon className="h-7 w-7" />
+                    <div className="flex flex-col gap-6">
+                      <div className="flex items-start gap-4">
+                        <div className="flex h-11 w-11 shrink-0 items-center justify-center border border-gold-base/20 bg-gold-base/5 text-gold-light">
+                          <Icon className="h-5 w-5" />
+                        </div>
+                        <div>
+                          <h2 className="font-serif text-xl sm:text-2xl font-bold text-navy-base">
+                            {area.title}
+                          </h2>
+                          <p className="text-[10px] font-bold uppercase tracking-wider text-gold-light mt-0.5">
+                            {area.subtitle}
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <h2 className="font-serif text-2xl md:text-3xl font-bold text-navy-base">
-                          {area.title}
-                        </h2>
-                        <p className="text-xs font-bold uppercase tracking-wider text-gold-muted mt-1">
-                          {area.subtitle}
-                        </p>
-                      </div>
-                      <p className="text-sm md:text-base text-slate-600 leading-relaxed pt-2">
+
+                      <p className="text-xs sm:text-sm text-slate-500 font-light leading-relaxed">
                         {area.description}
                       </p>
-                      <div className="pt-6">
-                        <WhatsAppCTAButton className="px-8 py-3.5 text-sm" variant="outline">
-                          Agendar Consulta nesta Área
+
+                      <div className="p-6 bg-slate-50 border border-slate-100">
+                        <h3 className="text-[10px] font-bold uppercase tracking-widest text-navy-base border-b border-slate-200/60 pb-2 mb-4">
+                          Escopo de Serviços / Principais Demandas:
+                        </h3>
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5">
+                          {area.topics.map((topic, idx) => (
+                            <li key={idx} className="flex items-start gap-2 text-xs text-slate-600 font-light">
+                              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-gold-light" />
+                              <span className="leading-tight">{topic}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <p className="text-[10px] text-slate-400 font-light">
+                          * Análise documental de viabilidade inicial necessária.
+                        </p>
+                        <WhatsAppCTAButton 
+                          className="w-full sm:w-auto px-6 py-3 text-xs font-bold uppercase tracking-widest text-white bg-navy-base hover:bg-[#070b19]"
+                        >
+                          Conversar sobre esta Área
                         </WhatsAppCTAButton>
                       </div>
                     </div>
-
-                    {/* Right Column: Typical Issues (Topics) */}
-                    <div className="lg:w-1/2 w-full rounded-2xl p-6 md:p-8 space-y-4 shadow-sm border bg-slate-50 border-slate-200/60">
-                      <h3 className="text-xs font-bold uppercase tracking-wider border-b pb-2 text-navy-base border-slate-200/60">
-                        Principais Demandas Atendidas:
-                      </h3>
-                      <ul className="space-y-3">
-                        {area.topics.map((topic, idx) => (
-                          <li key={idx} className="flex items-start gap-3 text-sm text-slate-600">
-                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-base" />
-                            <span className="leading-relaxed">{topic}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
                   </div>
-                </div>
-              </ScrollReveal>
-            );
-          })}
+                </ScrollReveal>
+              );
+            })}
+          </div>
+
         </div>
 
-        {/* Dynamic FAQ prompt */}
-        <div className="mt-24 text-center max-w-2xl mx-auto rounded-3xl border border-gold-base/20 bg-gradient-to-br from-navy-dark to-navy-base p-8 shadow-2xl">
-          <HelpCircle className="mx-auto h-8 w-8 text-gold-base mb-4" />
-          <h3 className="font-serif text-xl font-bold text-white mb-2">
-            Seu problema jurídico não está listado?
+        {/* FAQ prompt */}
+        <div className="mt-28 text-center max-w-2xl mx-auto border border-slate-200 bg-white p-8 md:p-10 shadow-sm relative">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gold-base text-white p-2 rounded-none border border-gold-dark shadow-md">
+            <HelpCircle className="h-5 w-5" />
+          </div>
+          <h3 className="font-serif text-lg font-bold text-navy-base mt-4 mb-2">
+            Caso sua demanda não esteja explicitada acima
           </h3>
-          <p className="text-sm text-gray-300 leading-relaxed mb-6">
-            O Direito abrange diversas situações específicas. Nossos advogados podem realizar uma análise preliminar do seu caso para verificar se podemos ajudá-lo ou encaminhá-lo ao profissional correto.
+          <p className="text-xs text-slate-500 font-light leading-relaxed mb-6">
+            O ordenamento jurídico abrange uma gama extensa de situações. Fale conosco para uma orientação preliminar. Caso a matéria necessite de outro especialista, faremos a recomendação ética adequada.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <WhatsAppCTAButton className="px-6 py-3 text-xs" />
+            <WhatsAppCTAButton className="px-6 py-3 text-xs font-bold uppercase tracking-wider" />
             <Link
               href="/contato"
-              className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-6 py-3 text-xs font-semibold tracking-wide text-white hover:border-gold-base/30 hover:bg-gold-base/10 transition-all duration-300"
+              className="group flex items-center justify-center gap-2 border border-slate-200 bg-white px-6 py-3 text-xs font-bold uppercase tracking-wider text-slate-600 hover:border-gold-base transition-all"
             >
-              Envie um E-mail
+              <span>Enviar Mensagem Escrita</span>
+              <ArrowRight className="h-3.5 w-3.5 text-gold-light transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </div>
         </div>

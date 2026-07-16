@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Header from "./Header";
 import Footer from "./Footer";
 import WhatsAppModal from "./WhatsAppModal";
@@ -11,37 +12,70 @@ import Lenis from "lenis";
 function AppLayoutInner({ children }: { children: React.ReactNode }) {
   const { isOpen, open, close } = useWhatsApp();
   const lenisRef = useRef<Lenis | null>(null);
+  const pathname = usePathname();
 
+  // 1. Inicializar o Lenis Smooth Scroll uma única vez
   useEffect(() => {
-    // Inicializar o Lenis Smooth Scroll para rolagem suave inercial
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
+      // Evita travamentos calculando com base no scroll real do container
+      __experimental__naiveDimensions: true,
     });
 
     lenisRef.current = lenis;
 
+    let animationFrameId: number;
     function raf(time: number) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      animationFrameId = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
+    animationFrameId = requestAnimationFrame(raf);
 
-    // Ajustar o scroll do Lenis quando o modal de WhatsApp abre/fecha
-    if (isOpen) {
-      lenis.stop();
-    } else {
-      lenis.start();
-    }
+    // Forçar recalculação ao redimensionar ou carregar mídia
+    const handleResize = () => {
+      lenis.resize();
+    };
+
+    window.addEventListener("load", handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
+      cancelAnimationFrame(animationFrameId);
+      window.removeEventListener("load", handleResize);
+      window.removeEventListener("resize", handleResize);
       lenis.destroy();
     };
+  }, []);
+
+  // 2. Parar/Iniciar o scroll quando o modal de WhatsApp abre/fecha
+  useEffect(() => {
+    if (!lenisRef.current) return;
+    if (isOpen) {
+      lenisRef.current.stop();
+    } else {
+      lenisRef.current.start();
+    }
   }, [isOpen]);
+
+  // 3. Resetar o scroll para o topo e recalcular dimensões ao mudar de página
+  useEffect(() => {
+    if (!lenisRef.current) return;
+    
+    // Reset imediato do scroll para o topo da viewport
+    lenisRef.current.scrollTo(0, { immediate: true });
+    
+    // Pequeno delay para garantir que o DOM da nova rota terminou de montar
+    const timer = setTimeout(() => {
+      lenisRef.current?.resize();
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [pathname]);
 
   return (
     <>
@@ -57,7 +91,7 @@ function AppLayoutInner({ children }: { children: React.ReactNode }) {
       {/* Floating WhatsApp Action Button */}
       <button
         onClick={open}
-        className="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-green-650 text-white shadow-xl shadow-green-600/30 transition-all duration-300 hover:scale-115 hover:bg-green-500 focus:outline-none cursor-pointer"
+        className="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-none bg-green-600 text-white shadow-xl shadow-green-600/30 transition-all duration-300 hover:scale-110 hover:bg-green-500 focus:outline-none cursor-pointer"
         aria-label="Atendimento WhatsApp"
       >
         <MessageSquare className="h-6 w-6" />

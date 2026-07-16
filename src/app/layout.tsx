@@ -20,14 +20,15 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Stussi & Reis Consultoria Jurídica | Advogados em Niterói - RJ",
   description:
-    "Escritório de advocacia em Niterói especializado em Direito Cível, Consumidor, Família e Previdenciário. Atendimento ágil e consultoria jurídica de excelência com os sócios Dr. Felipe Reis e Dr. Saulo Stussi.",
+    "Escritório de advocacia em Niterói especializado em Direito Previdenciário, Consumidor e Cível. Atendimento ágil e consultoria jurídica de excelência com os sócios Dr. Felipe Reis e Dr. Saulo Stussi.",
   keywords: [
     "advogado niterói",
     "escritorio de advocacia niteroi",
     "direito civil niterói",
     "direito do consumidor niterói",
-    "direito de familia niterói",
     "advogado previdenciario niteroi",
+    "aposentadoria INSS niterói",
+    "benefício INSS niterói",
     "Felipe Reis da Silva Oliveira",
     "Saulo Pedroso Stussi Júnior",
     "Stussi e Reis",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Stussi & Reis Consultoria Jurídica | Advogados em Niterói - RJ",
     description:
-      "Consultoria especializada nas áreas Cível, Consumidor, Família e Previdenciário. Conte com a dedicação profissional dos sócios Dr. Felipe Reis e Dr. Saulo Stussi.",
+      "Consultoria especializada nas áreas de Direito Previdenciário, Consumidor e Cível. Conte com a dedicação profissional dos sócios Dr. Felipe Reis e Dr. Saulo Stussi.",
     url: "/",
     siteName: "Stussi & Reis",
     locale: "pt_BR",
@@ -56,14 +57,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Schema.org JSON-LD estructured data for SEO
+  // Schema.org JSON-LD structured data for SEO
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LegalService",
     "name": "Stussi & Reis Consultoria Jurídica",
-    "description": "Escritório de advocacia em Niterói especializado em Direito Cível, Consumidor, Família e Previdenciário.",
+    "description": "Escritório de advocacia em Niterói especializado em Direito Previdenciário, Consumidor e Cível.",
     "url": "https://stussiereis.com.br",
-    "logo": "https://stussiereis.com.br/logo1.svg",
+    "logo": "https://stussiereis.com.br/new_logo.svg",
     "telephone": ["+55-21-98896-1729", "+55-21-98731-0837"],
     "address": {
       "@type": "PostalAddress",

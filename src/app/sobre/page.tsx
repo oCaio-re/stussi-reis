@@ -1,14 +1,15 @@
 import React from "react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { Gavel, Award, ShieldAlert, GraduationCap, MapPin, Scale } from "lucide-react";
+import { GraduationCap, Scale, BookOpen, ShieldCheck, ArrowRight } from "lucide-react";
 import WhatsAppCTAButton from "@/components/WhatsAppCTAButton";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Quem Somos | Stussi & Reis Consultoria Jurídica",
+  title: "Quem Somos | Stussi & Reis Advocacia",
   description:
-    "Conheça a história dos sócios Dr. Felipe Reis e Dr. Saulo Stussi e a filosofia de responsabilidade compartilhada do nosso escritório de advocacia em Niterói - RJ.",
+    "Conheça a trajetória e os sócios Dr. Felipe Reis e Dr. Saulo Stussi. Descubra nossa filosofia de responsabilidade técnica conjunta em Niterói - RJ.",
   alternates: {
     canonical: "/sobre",
   },
@@ -17,193 +18,197 @@ export const metadata: Metadata = {
 export default function Sobre() {
   const lawyers = [
     {
-      name: "Felipe Reis da Silva Oliveira",
-      role: "Advogado Sócio",
+      name: "Dr. Felipe Reis da Silva Oliveira",
+      role: "Advogado Sócio Fundador",
       initials: "FR",
+      photo: "/foto felipe.jpeg",
       description:
-        "Profissional com sólida experiência em Direito Cível e do Consumidor. Focado em soluções de conflitos contratuais, indenizações e proteção do consumidor contra práticas comerciais abusivas de grandes corporações.",
+        "Especialista em Direito do Consumidor e Responsabilidade Civil, com sólida experiência prática voltada para causas de Direito Previdenciário (INSS) e Cível. Conduz ativamente o planejamento de aposentadorias e defesas contra práticas bancárias abusivas.",
       education: [
         "Bacharel em Direito",
         "Especialista em Direito do Consumidor e Responsabilidade Civil",
-        "Membro ativo da OAB/RJ",
+        "Membro Ativo da Seccional OAB/RJ",
       ],
+      areas: ["Direito Previdenciário", "Direito do Consumidor", "Direito Cível"],
     },
     {
-      name: "Saulo Pedroso Stussi Júnior",
-      role: "Advogado Sócio",
+      name: "Dr. Saulo Pedroso Stussi Júnior",
+      role: "Advogado Sócio Fundador",
       initials: "SS",
+      photo: "/saulo.png",
       description:
-        "Profissional com ampla atuação em Direito de Família e Direito Previdenciário. Dedicado à defesa e planejamento previdenciário, benefícios do INSS, além de conduzir mediações e processos de direito sucessório e familiar de forma humanizada.",
+        "Especialista em Direito Processual Civil, atuando de forma focada em demandas cíveis de alta complexidade e Direito do Consumidor. Dedicado à elaboração de defesas contratuais estratégicas, cobranças judiciais e litígios cíveis.",
       education: [
         "Bacharel em Direito",
-        "Especialista em Direito de Família, Sucessões e Direito Previdenciário",
-        "Membro ativo da OAB/RJ",
+        "Especialista em Direito Processual Civil e Obrigações",
+        "Membro Ativo da Seccional OAB/RJ",
       ],
+      areas: ["Direito do Consumidor", "Direito Cível"],
     },
   ];
 
   return (
-    <div className="relative">
+    <div className="relative bg-[#fcfdfd] min-h-screen">
       
       {/* Intro & Story Section */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-20 md:py-28 bg-white border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          
           {/* Title / Intro */}
           <div className="text-center max-w-3xl mx-auto mb-20 animate-fade-in-down reveal-hidden">
-            <h1 className="font-serif text-4xl sm:text-5xl font-bold text-navy-base tracking-wide">
+            <div className="inline-flex items-center gap-2 mb-3">
+              <span className="h-px w-6 bg-gold-light" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-gold-light">
+                História e Filosofia
+              </span>
+            </div>
+            <h1 className="font-serif text-4xl sm:text-5xl font-normal text-navy-base">
               Sobre o Escritório
             </h1>
-            <p className="text-sm sm:text-base text-gold-muted mt-2 uppercase tracking-widest font-semibold">
-              Nossa História e Filosofia
-            </p>
-            <div className="mt-4 h-0.5 w-20 bg-gold-base mx-auto" />
-            <p className="mt-6 text-slate-600 leading-relaxed text-base">
-              Buscamos redefinir o conceito de prestação de serviço jurídico através de um atendimento ágil, comunicação direta e técnica de alto nível.
+            <div className="mt-4 h-[1px] w-20 bg-gold-base mx-auto" />
+            <p className="mt-6 text-sm text-slate-500 leading-relaxed font-light">
+              Fundado em 2017, o Stussi & Reis Consultoria Jurídica nasceu com o compromisso inegociável de prestar serviços pautados na transparência técnica e no atendimento pessoal.
             </p>
           </div>
 
           {/* Story Section */}
-          <ScrollReveal animation="fade-in-up" delayClass="delay-100">
-            <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center mb-12">
-              <div className="space-y-6">
-                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-navy-base">
-                  Compromisso com a Justiça e a Transparência
+          <ScrollReveal animation="fade-in-up">
+            <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 items-start">
+              
+              {/* Left Column: Text */}
+              <div className="lg:col-span-7 space-y-6 text-sm text-slate-600 font-light leading-relaxed">
+                <h2 className="font-serif text-2xl font-normal text-navy-base leading-tight">
+                  Atendimento Próximo e Sem Intermediários
                 </h2>
-                <p className="text-slate-600 leading-relaxed">
-                  O escritório <strong className="text-navy-base font-bold">Stussi & Reis Consultoria Jurídica</strong> nasceu com o objetivo de preencher a lacuna deixada pela advocacia tradicional de massa. Acreditamos que cada cliente possui necessidades únicas que exigem soluções cirúrgicas e individualizadas.
+                <p>
+                  Diferente de modelos de advocacia em massa, que distribuem processos de forma fria por diversos setores corporativos, o <strong className="text-navy-base font-semibold">Stussi & Reis</strong> foi concebido para atuar de forma artesanal. Nossos clientes tratam de suas demandas diretamente com os sócios responsáveis, garantindo clareza e acessibilidade em todas as etapas da causa.
                 </p>
-                <p className="text-slate-600 leading-relaxed">
-                  Sediados estrategicamente no Centro de <strong className="text-navy-base font-bold">Niterói, RJ</strong>, estruturamos nossa prática operacional para garantir total acessibilidade. Nossos clientes não conversam com intermediários ou estagiários; eles tratam diretamente com os advogados sócios responsáveis por suas causas.
+                <p>
+                  Com sede física estrategicamente localizada no Centro de <strong className="text-navy-base font-semibold">Niterói, RJ</strong>, nosso escritório unifica a excelência profissional com ferramentas tecnológicas de atendimento célere. Oferecemos comunicação clara, simples e direta — adequada para sanar dúvidas e resolver demandas de pessoas físicas sem termos técnicos incompreensíveis.
                 </p>
-                <p className="text-slate-600 leading-relaxed">
-                  Pautamos nossa atuação na ética inegociável, no estudo aprofundado da jurisprudência mais recente e na clareza de comunicação. Nossos relatórios são simples de compreender e nossas decisões são tomadas de comum acordo com o cliente.
+                <p>
+                  Todo parecer e tese defensiva elaborados passam pela análise cruzada de ambos os sócios. Acreditamos que a responsabilidade colegiada mitiga riscos processuais e eleva as chances de êxito nas instâncias administrativas ou judiciais.
                 </p>
               </div>
               
-              <div className="rounded-2xl border border-gold-base/15 bg-white p-8 shadow-xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 h-32 w-32 rounded-full bg-gold-base/5 blur-2xl" />
-                <Scale className="h-10 w-10 text-gold-base mb-6" />
-                <h3 className="text-lg font-serif font-bold text-navy-base mb-4">
-                  Nossa Missão, Visão e Valores
+              {/* Right Column: Mission/Vision/Values inside a formal card */}
+              <div className="lg:col-span-5 border border-slate-200 bg-slate-50/50 p-8 shadow-sm relative overflow-hidden">
+                <div className="absolute top-0 right-0 h-32 w-32 rounded-full bg-gold-base/5 blur-3xl" />
+                <div className="flex h-10 w-10 items-center justify-center border border-gold-base/20 bg-gold-base/5 text-gold-light mb-6">
+                  <Scale className="h-5 w-5" />
+                </div>
+                
+                <h3 className="text-xs font-bold text-navy-base uppercase tracking-widest mb-6 border-b border-slate-200 pb-2">
+                  Diretrizes Institucionais:
                 </h3>
                 <ul className="space-y-6">
                   <li className="flex items-start gap-4">
-                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-base/10 text-gold-base font-bold text-xs">
-                      M
-                    </div>
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center border border-gold-light bg-white text-[10px] font-bold text-gold-light font-serif">M</span>
                     <div>
-                      <h4 className="font-bold text-navy-base text-sm">Missão</h4>
-                      <p className="text-xs text-slate-600 mt-1">Prestar assistência jurídica com excelência, fornecendo estratégias preventivas e contenciosas ágeis e eficazes para resguardar os interesses de nossos clientes.</p>
+                      <h4 className="text-xs font-bold text-navy-base uppercase tracking-wider">Missão</h4>
+                      <p className="text-[11px] text-slate-500 font-light mt-1">Prestar assessoria jurídica pautada na ética e na exatidão técnica, fornecendo estratégias que resguardem direitos e deêm segurança jurídica ao cliente.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-base/10 text-gold-base font-bold text-xs">
-                      V
-                    </div>
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center border border-gold-light bg-white text-[10px] font-bold text-gold-light font-serif">V</span>
                     <div>
-                      <h4 className="font-bold text-navy-base text-sm">Visão</h4>
-                      <p className="text-xs text-slate-600 mt-1">Ser referência em advocacia personalizada e humanizada no estado do Rio de Janeiro, reconhecidos pela integridade técnica e transparência absoluta.</p>
+                      <h4 className="text-xs font-bold text-navy-base uppercase tracking-wider">Visão</h4>
+                      <p className="text-[11px] text-slate-500 font-light mt-1">Consolidar o escritório como referência em atendimento personalizado e direito previdenciário no estado do Rio de Janeiro, com foco em resultados lícitos.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold-base/10 text-gold-base font-bold text-xs">
-                      V
-                    </div>
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center border border-gold-light bg-white text-[10px] font-bold text-gold-light font-serif">V</span>
                     <div>
-                      <h4 className="font-bold text-navy-base text-sm">Valores</h4>
-                      <p className="text-xs text-slate-600 mt-1">Ética inegociável, dedicação integral à causa, clareza verbal, atendimento ágil direto pelo celular e responsabilidade mútua.</p>
+                      <h4 className="text-xs font-bold text-navy-base uppercase tracking-wider">Valores</h4>
+                      <p className="text-[11px] text-slate-500 font-light mt-1">Transparência deontológica (regras OAB), respeito ao cliente, análise técnica minuciosa de contratos/leis, dedicação direta e constante atualização.</p>
                     </div>
                   </li>
                 </ul>
               </div>
+
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Method of Work Section */}
-      <section className="py-20 bg-[#f8fafc] border-b border-slate-200/60">
+      {/* Sócio / Advogado Profiles Section */}
+      <section className="py-24 bg-[#fcfdfd]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <ScrollReveal animation="fade-in-up" delayClass="delay-200">
-            <div className="rounded-3xl border border-gold-base/20 bg-white p-8 md:p-12 shadow-[0_12px_40px_-12px_rgba(10,17,40,0.06)]">
-              <div className="text-center max-w-2xl mx-auto mb-10">
-                <h3 className="font-serif text-2xl font-bold text-navy-base tracking-wide">
-                  Como Trabalhamos: Responsabilidade Compartilhada
-                </h3>
-                <p className="text-sm text-gold-muted mt-1 uppercase tracking-wider font-semibold">
-                  Um Método Diferenciado
-                </p>
-              </div>
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 text-sm leading-relaxed text-slate-600">
-                <p>
-                  Em muitos escritórios grandes, os processos são distribuídos de forma fria e divididos entre diferentes setores. No <strong className="text-navy-base font-bold">Stussi & Reis</strong>, acreditamos no poder da colaboração. Embora cada advogado conduza ativamente certas demandas, adotamos a revisão cruzada e análise em comitê interno para cada tese de defesa ou contrato redigido.
-                </p>
-                <p>
-                  Isso significa que quando você contrata nosso escritório, você conta com o intelecto e a experiência de ambos os advogados sócios. O Dr. Felipe e o Dr. Saulo debatem os principais marcos do seu processo, reduzindo margens de erro e potencializando as chances de êxito na causa.
-                </p>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Profiles Section */}
-      <section className="py-20 bg-[#f8fafc] border-b border-slate-200/60">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="font-serif text-3xl font-bold text-navy-base tracking-wide">
+          
+          <div className="text-center max-w-2xl mx-auto mb-20">
+            <span className="text-[10px] font-bold text-gold-light uppercase tracking-[0.25em]">
+              Corpo Jurídico do Escritório
+            </span>
+            <h2 className="font-serif text-3xl font-normal text-navy-base mt-2">
               Os Advogados Sócios
             </h2>
-            <p className="text-sm text-gold-muted mt-1 uppercase tracking-wider font-semibold">
-              Corpo Jurídico de Elite
-            </p>
-            <div className="mt-4 h-0.5 w-16 bg-gold-base mx-auto" />
+            <div className="h-[1px] w-12 bg-gold-base mx-auto mt-4" />
           </div>
 
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {lawyers.map((lawyer, index) => {
-              const delays = ["delay-100", "delay-200"];
               return (
                 <ScrollReveal
                   key={lawyer.name}
                   animation="fade-in-up"
-                  delayClass={delays[index]}
+                  delayClass={index === 1 ? "delay-200" : ""}
                   className="flex"
                 >
-                  <div
-                    className={`rounded-2xl border border-gold-base/15 bg-white p-6 md:p-8 flex flex-col md:flex-row gap-6 relative shadow-[0_12px_40px_-12px_rgba(10,17,40,0.06)] overflow-hidden hover:scale-[1.03] hover:border-gold-base/35 transition-all duration-300 w-full`}
-                  >
-                    {/* Visual initials badge */}
-                    <div className="flex h-20 w-20 md:h-24 md:w-24 shrink-0 items-center justify-center rounded-2xl border-2 border-gold-base bg-gold-base/5 font-serif text-2xl font-bold text-gold-base shadow-xl">
-                      {lawyer.initials}
+                  <div className="border border-slate-200 bg-white p-8 flex flex-col md:flex-row gap-6 hover:border-gold-base/30 transition-all duration-300 w-full relative">
+                    
+                    {/* Photo Badge */}
+                    <div className="relative h-20 w-20 shrink-0 overflow-hidden border border-gold-base/40 bg-slate-50 shadow-sm">
+                      <Image
+                        src={lawyer.photo}
+                        alt={lawyer.name}
+                        fill
+                        className="object-cover"
+                        sizes="80px"
+                      />
                     </div>
 
                     <div className="flex-1 space-y-4">
                       <div>
-                        <h3 className="text-xl font-serif font-bold text-navy-base">
+                        <h3 className="font-serif text-lg font-bold text-navy-base">
                           {lawyer.name}
                         </h3>
-                        <p className="text-sm text-gold-muted font-medium">{lawyer.role}</p>
+                        <p className="text-[10px] text-gold-light font-bold uppercase tracking-widest mt-0.5">{lawyer.role}</p>
                       </div>
 
-                      <p className="text-sm text-slate-600 leading-relaxed">
+                      <p className="text-xs text-slate-500 font-light leading-relaxed">
                         {lawyer.description}
                       </p>
 
-                      <div className="pt-2 border-t border-slate-100">
-                        <h4 className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-800 mb-2">
-                          <GraduationCap className="h-4 w-4 text-gold-base" />
-                          Qualificações & Foco
-                        </h4>
-                        <ul className="space-y-1.5 text-xs text-slate-500">
-                          {lawyer.education.map((item, idx) => (
-                            <li key={idx} className="flex items-center gap-2">
-                              <span className="h-1 w-1 rounded-full bg-gold-base" />
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
+                      <div className="pt-4 border-t border-slate-100 space-y-3">
+                        <div>
+                          <h4 className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                            <GraduationCap className="h-3.5 w-3.5 text-gold-light" />
+                            Formação & Títulos:
+                          </h4>
+                          <ul className="space-y-1 pl-5">
+                            {lawyer.education.map((item, idx) => (
+                              <li key={idx} className="list-disc text-[11px] text-slate-500 font-light leading-snug">
+                                {item}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        
+                        <div>
+                          <h4 className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                            <BookOpen className="h-3.5 w-3.5 text-gold-light" />
+                            Áreas de Foco no Escritório:
+                          </h4>
+                          <div className="flex flex-wrap gap-2">
+                            {lawyer.areas.map((area, idx) => (
+                              <span key={idx} className="text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 border border-slate-100 bg-slate-50 text-slate-600">
+                                {area}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
                       </div>
+
                     </div>
                   </div>
                 </ScrollReveal>
@@ -213,24 +218,27 @@ export default function Sobre() {
         </div>
       </section>
 
-      {/* Bottom Call to Action */}
-      <section className="py-20 bg-background">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center bg-gradient-to-br from-navy-dark to-navy-base border border-gold-base/20 rounded-3xl p-8 md:p-12 max-w-4xl mx-auto shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 left-0 h-32 w-32 rounded-full bg-gold-base/5 blur-2xl" />
-            <h3 className="font-serif text-2xl font-bold text-white mb-4">
-              Deseja conversar com nossos advogados?
+      {/* Philosophy of Joint Responsibility Block */}
+      <section className="py-20 bg-white border-t border-slate-200">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+          <div className="border border-slate-200 p-8 md:p-12 bg-slate-50/50 shadow-sm relative">
+            <div className="flex h-10 w-10 items-center justify-center border border-gold-base/20 bg-gold-base/5 text-gold-light mx-auto mb-6">
+              <ShieldCheck className="h-5 w-5" />
+            </div>
+            <h3 className="font-serif text-2xl font-normal text-navy-base mb-4">
+              Atuação Conjunta e Compromisso com a Causa
             </h3>
-            <p className="text-sm text-gray-300 max-w-xl mx-auto mb-8 leading-relaxed">
-              Estamos prontos para entender seu problema e atuar na defesa de seus direitos. Fale diretamente conosco agora mesmo por WhatsApp.
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-light max-w-2xl mx-auto">
+              Ao escolher o escritório <strong className="text-navy-base font-semibold">Stussi & Reis</strong>, seu caso não é abandonado nas mãos de terceiros. Nós garantimos que ambos os sócios debatem cada ponto estratégico, unindo visões para assegurar a melhor tese e a máxima precisão de conduta legal.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <WhatsAppCTAButton className="px-8 py-3.5 text-sm" />
+            <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+              <WhatsAppCTAButton className="px-8 py-3.5 text-xs font-bold uppercase tracking-widest text-white bg-navy-base hover:bg-[#070b19]" />
               <Link
                 href="/contato"
-                className="flex items-center justify-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-8 py-3.5 text-sm font-semibold tracking-wide text-white hover:border-gold-base/30 hover:bg-gold-base/10 transition-all duration-300"
+                className="group flex items-center justify-center gap-2 border border-slate-200 bg-white px-8 py-3.5 text-xs font-bold uppercase tracking-widest text-slate-600 hover:border-gold-base transition-all"
               >
-                Formulário de Contato
+                <span>Canais de Contato</span>
+                <ArrowRight className="h-3.5 w-3.5 text-gold-light transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </div>
           </div>

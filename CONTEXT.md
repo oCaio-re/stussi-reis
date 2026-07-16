@@ -9,25 +9,22 @@ A entidade principal que representa a marca **Stussi & Reis Consultoria Jurídic
 
 ### Sócio / Advogado
 Os profissionais fundadores e prestadores de serviços jurídicos do escritório. Atualmente composto por:
-*   **Felipe Reis da Silva Oliveira** (atuação geral nas 4 áreas do escritório)
-*   **Saulo Pedroso Stussi Júnior** (atuação geral nas 4 áreas do escritório)
+*   **Felipe Reis da Silva Oliveira**: Atuação em Direito Previdenciário, Direito do Consumidor e Direito Cível.
+*   **Saulo Pedroso Stussi Júnior**: Atuação em Direito do Consumidor e Direito Cível.
 
-Ambos os sócios trabalham de forma colaborativa e conjunta, atendendo a todas as demandas de direito Cível, Consumidor, Família e Previdenciário do escritório.
-
+Ambos os sócios compartilham a responsabilidade técnica pelas causas, mas o atendimento e condução de áreas específicas são divididos conforme suas especialidades.
 
 ### Área de Atuação
-As especialidades jurídicas nas quais o escritório presta consultoria e representação legal. São elas:
-*   **Cível**: Litígios e consultoria de direito civil geral.
-*   **Consumidor**: Defesa e consultoria nas relações de consumo.
-*   **Família**: Questões de direito de família (divórcio, pensão, guarda, inventários, etc.).
-*   **Previdenciário**: Direitos de aposentadoria, benefícios e previdência social.
+As especialidades jurídicas nas quais o escritório presta consultoria e representação legal. A área de Direito de Família foi descontinuada. As áreas de atuação são:
+*   **Previdenciário**: Foco principal do escritório, com planejamento de aposentadoria, concessão e revisão de benefícios do INSS (aposentadorias, auxílios e BPC/LOAS). Esta área deve ser apresentada em primeiro lugar com maior destaque.
+*   **Consumidor**: Defesa nas relações de consumo, incluindo fraudes bancárias, PIX, consignados indevidos, planos de saúde e danos morais.
+*   **Cível**: Litígios civis gerais, contratos, execuções e responsabilidade civil.
 
 ### Identidade Visual
-A estética e sistema de design adotados para o website, consistentes com a marca física (cartão e logo):
-*   **Esquema de Cores**: Predominância de fundo claro (branco-gelo/slate-50), com elementos estruturais e textos em azul-marinho profundo (navy) e acentos em dourado metálico escuro (gold).
-*   **Tipografia**: Fontes serifadas elegantes para títulos importantes (ex: Playfair Display) e sans-serif limpa para legibilidade (ex: Inter).
-
-*   **Tom**: Sofisticado, confiável, premium e focado em autoridade.
+A estética e sistema de design adotados para o website, focados em formalidade e prestígio corporativo:
+*   **Esquema de Cores**: Fundo claro predominante (branco-gelo/off-white) nas seções internas para manter a clareza e formalidade. A seção Hero utiliza azul-marinho profundo (navy) para um forte impacto institucional inicial de autoridade, com acentos em dourado metálico terroso (gold) e linhas divisórias ultrafinas.
+*   **Tipografia**: Fontes serifadas elegantes para títulos importantes (ex: Playfair Display ou Cormorant Garamond) e sans-serif limpa para legibilidade (ex: Inter).
+*   **Tom**: Formal, de alto prestígio, sóbrio, corporativo e focado em autoridade institucional, mantendo linguagem clara e direta para pessoas físicas.
 
 ### Canais de Contato
 Os meios integrados no website para comunicação dos potenciais clientes com o escritório:
@@ -37,7 +34,7 @@ Os meios integrados no website para comunicação dos potenciais clientes com o 
 ### Estratégia de SEO e Metadados
 O site deve seguir práticas avançadas de SEO técnico e semântico para posicionamento orgânico (especialmente em buscas locais de Niterói/RJ):
 *   **Structured Data (JSON-LD)**: Implementação de esquemas `LegalService` ou `Attorney` da Schema.org em todas as páginas com endereço, telefones, logotipo e áreas de atuação.
-*   **Metadados por Página**: Títulos e descrições otimizados com palavras-chave relevantes (ex: "Advogado de Família em Niterói", "Consultoria Jurídica Cível Niterói").
+*   **Metadados por Página**: Títulos e descrições otimizados com palavras-chave relevantes (ex: "Advogado Previdenciário em Niterói", "Consultoria Jurídica Cível Niterói").
 *   **Semântica HTML**: Uso correto de tags estruturais (`header`, `main`, `footer`, `section`) e hierarquia de títulos (`h1`, `h2`, `h3`).
 
 

@@ -79,10 +79,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Comportamento de scroll e barra de rolagem para Light Mode */
-html {
-  scroll-behavior: smooth;
-}
+/* Comportamento de barra de rolagem para Light Mode */
 
 /* Transição suave de navegação */
 ::view-transition-old(root),
@@ -99,7 +96,6 @@ html {
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
   border: 1px solid rgba(140, 118, 83, 0.2);
-  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #8c7653;
