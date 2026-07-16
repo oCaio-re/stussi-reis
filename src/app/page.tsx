@@ -75,7 +75,7 @@ export default function Home() {
         </>
       ),
       description: "Dr. Felipe Reis e Dr. Saulo Stussi debatem conjuntamente as teses de cada causa. Atendimento direto pelos sócios fundadores, sem intermediários ou estagiários.",
-      image: "/saulo e felipe.png",
+      image: "/saulo e felipe.jpeg",
       imageAlt: "Sócios Felipe Reis e Saulo Stussi",
       isSeal: false,
       ctaText: "Falar com os Sócios",
@@ -558,7 +558,7 @@ export default function Home() {
                 <div className="absolute top-0 right-0 w-24 h-24 bg-gold-base/5 blur-2xl z-0" />
                 <div className="relative w-full h-full overflow-hidden border border-slate-200">
                   <Image
-                    src="/saulo e felipe.png"
+                    src="/saulo e felipe.jpeg"
                     alt="Advogados Felipe Reis e Saulo Stussi"
                     fill
                     className="object-cover transition-transform duration-700 hover:scale-103"
