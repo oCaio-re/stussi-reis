@@ -189,62 +189,48 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Right Column: Visual carousel (Symmetric borders) */}
+            {/* Right Column: Visual carousel replaced by Staggered Triptych Mosaic */}
             <div className="lg:col-span-5 flex justify-center items-center w-full">
-              <div className="relative w-full max-w-md xl:max-w-lg h-72 sm:h-80 border border-gold-base/20 p-2 sm:p-3 bg-white shadow-lg overflow-hidden flex items-center justify-center">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-gold-base/5 blur-2xl z-0" />
-                
-                {slides.map((slide, idx) => (
-                  <div
-                    key={idx}
-                    className={`absolute inset-3 transition-all duration-700 ${
-                      idx === activeSlide
-                        ? "opacity-100 scale-100 pointer-events-auto z-10"
-                        : "opacity-0 scale-95 pointer-events-none z-0"
-                    }`}
-                  >
-                    {slide.isSeal ? (
-                      <div className="w-full h-full flex flex-col items-center justify-center bg-slate-900/90 backdrop-blur-sm border border-gold-base/30 relative p-4">
-                        <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-gold-base" />
-                        <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-gold-base" />
-                        <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-gold-base" />
-                        <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-gold-base" />
-                        
-                        <div className="relative w-20 h-20 mx-auto mb-4 flex items-center justify-center border border-gold-base/30 bg-[#0a1128] shadow-inner">
-                          <Image
-                            src={slide.image}
-                            alt={slide.imageAlt}
-                            fill
-                            priority
-                            className="object-contain p-2.5"
-                            sizes="80px"
-                          />
-                        </div>
-                        <h3 className="font-serif text-base font-bold text-white tracking-widest uppercase">
-                          Stussi & Reis
-                        </h3>
-                        <p className="text-[8px] text-gold-light tracking-[0.2em] font-semibold uppercase mt-0.5">
-                          Consultoria Jurídica
-                        </p>
-                        <div className="h-[1px] w-16 bg-gold-base/20 mx-auto my-3" />
-                        <p className="text-[10px] text-gray-400 font-light leading-relaxed px-2 text-center">
-                          Atendimento personalizado, ético e comprometido com a excelência jurídica em Niterói - RJ.
-                        </p>
-                      </div>
-                    ) : (
-                      <div className="relative w-full h-full overflow-hidden border border-slate-200 bg-slate-50">
-                        <Image
-                          src={slide.image}
-                          alt={slide.imageAlt}
-                          fill
-                          className="object-cover transition-transform duration-700 hover:scale-103"
-                          sizes="(max-w-1024px) 100vw, 320px"
-                          priority={idx === 0}
-                        />
-                      </div>
-                    )}
+              <div className="flex items-end justify-center gap-3 sm:gap-4 w-full max-w-md xl:max-w-lg h-[340px] sm:h-[400px] px-2">
+                {/* Column 1: Saulo (Left - Shorter) */}
+                <div className="relative w-[30%] h-[75%] border border-gold-base/20 p-1 bg-white shadow-md transition-all duration-500 hover:border-gold-base/60 hover:shadow-lg group/trip overflow-hidden rounded-sm">
+                  <div className="relative w-full h-full overflow-hidden border border-slate-100">
+                    <Image
+                      src="/saulo.png"
+                      alt="Dr. Saulo Stussi"
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover/trip:scale-105"
+                      sizes="150px"
+                    />
                   </div>
-                ))}
+                </div>
+
+                {/* Column 2: Both together (Center - Taller & Wider) */}
+                <div className="relative w-[40%] h-[100%] border border-gold-base/25 p-1.5 bg-white shadow-xl transition-all duration-500 hover:border-gold-base/70 hover:shadow-2xl group/trip overflow-hidden rounded-sm z-10">
+                  <div className="relative w-full h-full overflow-hidden border border-slate-100">
+                    <Image
+                      src="/saulo e felipe.jpeg"
+                      alt="Felipe Reis e Saulo Stussi"
+                      fill
+                      priority
+                      className="object-cover transition-transform duration-700 group-hover/trip:scale-105"
+                      sizes="220px"
+                    />
+                  </div>
+                </div>
+
+                {/* Column 3: Felipe (Right - Medium) */}
+                <div className="relative w-[30%] h-[85%] border border-gold-base/20 p-1 bg-white shadow-md transition-all duration-500 hover:border-gold-base/60 hover:shadow-lg group/trip overflow-hidden rounded-sm">
+                  <div className="relative w-full h-full overflow-hidden border border-slate-100">
+                    <Image
+                      src="/foto felipe.jpeg"
+                      alt="Dr. Felipe Reis"
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover/trip:scale-105"
+                      sizes="150px"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
 
