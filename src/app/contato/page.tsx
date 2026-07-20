@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function Contato() {
   const contacts = [
     {
-      name: "Dr. Felipe Reis da Silva Oliveira",
+      name: "Dr. Felipe Reis da Silva Oliveira (OAB/RJ 211.932)",
       phone: "(21) 98896-1729",
       email: "felipefrso@gmail.com",
       focus: "Previdenciário, Consumidor e Cível",
@@ -25,7 +25,7 @@ export default function Contato() {
       waLink: "https://wa.me/5521988961729?text=Ol%C3%A1%20Dr.%20Felipe%2C%20gostaria%20de%20conversar%20sobre%20um%20caso%20jur%C3%ADdico.",
     },
     {
-      name: "Dr. Saulo Pedroso Stussi Júnior",
+      name: "Dr. Saulo Pedroso Stussi Júnior (OAB/RJ 144.040)",
       phone: "(21) 98731-0837",
       email: "Saulostussi.adv@gmail.com",
       focus: "Consumidor e Cível",

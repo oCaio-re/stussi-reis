@@ -24,15 +24,15 @@ export default function Atuacao() {
       description:
         "Foco principal de nossa atuação jurídica. Prestamos orientação consultiva e representação litigiosa para garantir que o trabalhador e o segurado recebam os proventos estabelecidos em lei. Atuamos de forma a simplificar o trâmite junto ao INSS.",
       topics: [
-        "Aposentadoria por idade (urbana e rural)",
-        "Aposentadoria por tempo de contribuição e especial",
-        "Aposentadoria por incapacidade permanente (invalidez)",
-        "Auxílio por incapacidade temporária (antigo auxílio-doença)",
-        "Benefício de Prestação Continuada (BPC/LOAS) para idosos e PCD",
-        "Pensão por morte e salário-maternidade",
-        "Revisão detalhada de benefícios concedidos",
-        "Elaboração de Recursos Administrativos perante o INSS",
-        "Ações judiciais previdenciárias de alta complexidade",
+        "Aposentadoria por idade, tempo de contribuição e especial",
+        "Revisão de benefícios",
+        "Auxílio por incapacidade temporária (auxílio-doença)",
+        "Aposentadoria por incapacidade permanente",
+        "Pensão por morte",
+        "Salário-maternidade",
+        "BPC/LOAS para idosos e pessoas com deficiência",
+        "Recursos administrativos perante o INSS",
+        "Ações judiciais previdenciárias",
       ],
       whatsappCustom: "Olá Dr. Felipe, gostaria de agendar uma consulta sobre benefício previdenciário/INSS.",
     },
@@ -43,16 +43,19 @@ export default function Atuacao() {
       description:
         "O Código de Defesa do Consumidor assegura o equilíbrio nas relações entre cidadãos e fornecedores. Nosso escritório atua de forma energética para cessar cobranças abusivas, fraudes sistêmicas e restabelecer o direito de contratantes vulneráveis.",
       topics: [
-        "Golpes e fraudes bancárias diversos (incluindo golpes via Pix)",
-        "Contratação de empréstimos consignados indevidos",
-        "Indenizações por negativação indevida (SPC e Serasa)",
-        "Cobranças abusivas e duplicidade de faturamento",
-        "Ações decorrentes de TOI (Termo de Ocorrência e Inspeção)",
-        "Cancelamento indevido de contratos e planos de saúde",
-        "Problemas com companhias aéreas (atrasos, extravios e cancelamentos)",
-        "Interrupção abusiva no fornecimento de energia elétrica e água",
-        "Atrasos em entregas de produtos e defeitos não sanados",
-        "Indenizações por danos morais e materiais decorrentes do consumo",
+        "Golpes e fraudes bancárias (incluindo Pix)",
+        "Empréstimos consignados indevidos",
+        "Cobranças abusivas",
+        "Negativação indevida",
+        "Problemas com bancos e instituições financeiras",
+        "Cancelamento de contratos",
+        "Interrupção no fornecimento de energia elétrica",
+        "Atraso na entrega de produto",
+        "TOI (Termo de Ocorrência e Inspeção)",
+        "Defeito em produtos e serviços",
+        "Indenizações por danos materiais e morais",
+        "Planos de saúde",
+        "Companhias aéreas",
       ],
       whatsappCustom: "Olá, gostaria de conversar sobre um problema de Direito do Consumidor.",
     },
@@ -63,12 +66,11 @@ export default function Atuacao() {
       description:
         "Assessoria voltada para regular relações civis privadas, garantir cumprimento de obrigações firmadas e buscar indenizações justas por ilícitos civis. Atuação estratégica focada na prevenção de litígios.",
       topics: [
-        "Elaboração, análise técnica e revisão de contratos",
-        "Ações de indenização por responsabilidade civil",
-        "Execução de títulos, cobranças de dívidas e recuperação de crédito",
-        "Ações de obrigação de fazer e não fazer em relações civis",
-        "Notificações extrajudiciais para acordos amigáveis preventivos",
-        "Mediação e resolução de conflitos patrimoniais contratuais",
+        "Ações de indenização",
+        "Cobranças e execuções",
+        "Responsabilidade civil",
+        "Obrigações de fazer e não fazer",
+        "Conflitos contratuais",
       ],
       whatsappCustom: "Olá, gostaria de agendar uma consulta na área de Direito Cível.",
     },
@@ -114,7 +116,7 @@ export default function Atuacao() {
                 Advocacia Ética & Informativa
               </h3>
               <p className="text-xs text-slate-500 font-light leading-relaxed">
-                Todas as consultas e análises de viabilidade são pautadas nas regras de deontologia da OAB. Não garantimos êxitos antecipados em processos judiciais, mas nos comprometemos com o rigor técnico de cada tese.
+                Todas as consultas e análises de viabilidade são pautadas no Código de Ética e Disciplina da OAB. Não garantimos êxitos antecipados em processos judiciais, mas nos comprometemos com o rigor técnico de cada tese.
               </p>
               <div className="mt-6 pt-6 border-t border-slate-100">
                 <p className="text-[10px] font-bold text-gold-light uppercase tracking-wider mb-1">

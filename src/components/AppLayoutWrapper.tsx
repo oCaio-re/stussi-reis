@@ -91,10 +91,12 @@ function AppLayoutInner({ children }: { children: React.ReactNode }) {
       {/* Floating WhatsApp Action Button */}
       <button
         onClick={open}
-        className="fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-none bg-green-600 text-white shadow-xl shadow-green-600/30 transition-all duration-300 hover:scale-110 hover:bg-green-500 focus:outline-none cursor-pointer"
+        className="fixed bottom-6 right-6 z-40 flex h-14 items-center gap-2 px-4 rounded-none bg-green-600 text-white shadow-xl shadow-green-600/30 transition-all duration-300 hover:scale-105 hover:bg-green-500 focus:outline-none cursor-pointer"
         aria-label="Atendimento WhatsApp"
       >
-        <MessageSquare className="h-6 w-6" />
+        <MessageSquare className="h-5 w-5 shrink-0" />
+        <span className="text-[11px] font-bold uppercase tracking-widest hidden sm:inline">WhatsApp: Dúvidas sobre INSS</span>
+        <span className="text-[11px] font-bold uppercase tracking-widest sm:hidden">Falar Conosco</span>
       </button>
 
       {/* WhatsApp Choose Lawyer Modal */}

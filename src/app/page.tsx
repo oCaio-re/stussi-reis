@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Scale, ShieldCheck, Gavel, Award, Clock, ArrowRight, BookOpen, Phone } from "lucide-react";
+import { Scale, ShieldCheck, Gavel, Award, Clock, ArrowRight, BookOpen, Phone, MessageSquare, Video, FileText, PenTool } from "lucide-react";
 import WhatsAppCTAButton from "@/components/WhatsAppCTAButton";
 import ScrollReveal from "@/components/ScrollReveal";
 import { useWhatsApp } from "@/context/WhatsAppContext";
@@ -15,18 +15,18 @@ export default function Home() {
 
   const slides = [
     {
-      badge: "Advocacia e Consultoria Jurídica",
+      badge: "Direito Previdenciário & INSS",
       title: (
         <>
-          Defesa técnica de excelência sob a égide da{" "}
-          <span className="text-gold-light italic">ética e transparência</span>
+          Aposentadoria e Benefícios do INSS de forma{" "}
+          <span className="text-gold-light italic">simples e sem burocracia</span>
         </>
       ),
-      description: "Com sede corporativa em Niterói - RJ, o escritório Stussi & Reis atua de forma estratégica nas áreas de Direito Previdenciário, Consumidor e Cível, oferecendo soluções personalizadas e acompanhamento próximo.",
-      image: "/sr_monogram.svg",
-      imageAlt: "Selo Stussi & Reis",
-      isSeal: true,
-      ctaText: "Agendar Consulta Técnica",
+      description: "Ajudamos você a conseguir o melhor benefício ou aposentadoria perante o INSS. Cuidamos de toda a papelada para você receber seu pagamento o quanto antes, com atendimento direto dos advogados sócios.",
+      image: "/saulo e felipe.jpeg",
+      imageAlt: "Sócios Felipe Reis e Saulo Stussi",
+      isSeal: false,
+      ctaText: "Falar com Advogado pelo WhatsApp",
       ctaType: "modal",
       secondaryText: "Conhecer Áreas de Atuação",
       secondaryHref: "/atuacao",
@@ -74,7 +74,7 @@ export default function Home() {
           <span className="text-gold-light italic">responsabilidade cruzada</span>
         </>
       ),
-      description: "Dr. Felipe Reis e Dr. Saulo Stussi debatem conjuntamente as teses de cada causa. Atendimento direto pelos sócios fundadores, sem intermediários ou estagiários.",
+      description: "O primeiro atendimento virtual realiza uma triagem inicial para direcionar seu caso. Em seguida, os sócios avaliam a demanda de forma personalizada e definem as estratégias em conjunto.",
       image: "/saulo e felipe.jpeg",
       imageAlt: "Sócios Felipe Reis e Saulo Stussi",
       isSeal: false,
@@ -97,18 +97,18 @@ export default function Home() {
 
   const highlights = [
     {
-      title: "Atendimento Directo e Pessoal",
-      description: "Você fala diretamente com os advogados sócios responsáveis pela sua causa, sem intermediários ou estagiários.",
+      title: "Atendimento Direto e Personalizado",
+      description: "Você é atendido diretamente pelos advogados sócios, que acompanham pessoalmente todas as etapas do seu caso, garantindo proximidade, transparência e uma atuação estratégica.",
       icon: Clock,
     },
     {
-      title: "Colegiado Técnico Interno",
-      description: "Todas as teses e defesas são discutidas conjuntamente pelos sócios, multiplicando a precisão técnica.",
+      title: "Atuação Técnica e Estratégica",
+      description: "Cada demanda é analisada pelos sócios do escritório, combinando conhecimento técnico, planejamento jurídico e soluções personalizadas para oferecer a melhor condução possível ao caso.",
       icon: Gavel,
     },
     {
-      title: "Rigor Ético (OAB)",
-      description: "Atuação de caráter estritamente informativo, pautada na transparência total e sem falsas promessas de resultado.",
+      title: "Ética, Transparência e Compromisso",
+      description: "Nossa atuação é pautada pelos princípios éticos da advocacia, com comunicação clara, transparência em todas as etapas e absoluto compromisso com a defesa dos direitos de nossos clientes.",
       icon: Award,
     },
   ];
@@ -190,8 +190,8 @@ export default function Home() {
             </div>
 
             {/* Right Column: Visual carousel (Symmetric borders) */}
-            <div className="lg:col-span-5 flex justify-center items-center">
-              <div className="relative w-80 h-80 border border-gold-base/20 p-3 bg-white shadow-lg overflow-hidden flex items-center justify-center">
+            <div className="lg:col-span-5 flex justify-center items-center w-full">
+              <div className="relative w-full max-w-md xl:max-w-lg h-72 sm:h-80 border border-gold-base/20 p-2 sm:p-3 bg-white shadow-lg overflow-hidden flex items-center justify-center">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-gold-base/5 blur-2xl z-0" />
                 
                 {slides.map((slide, idx) => (
@@ -224,11 +224,11 @@ export default function Home() {
                           Stussi & Reis
                         </h3>
                         <p className="text-[8px] text-gold-light tracking-[0.2em] font-semibold uppercase mt-0.5">
-                          Registro OAB/RJ
+                          Consultoria Jurídica
                         </p>
                         <div className="h-[1px] w-16 bg-gold-base/20 mx-auto my-3" />
                         <p className="text-[10px] text-gray-400 font-light leading-relaxed px-2 text-center">
-                          Consultoria estritamente alinhada ao Código de Ética e Disciplina da OAB.
+                          Atendimento personalizado, ético e comprometido com a excelência jurídica em Niterói - RJ.
                         </p>
                       </div>
                     ) : (
@@ -311,32 +311,32 @@ export default function Home() {
               </div>
               
               <h2 className="font-serif text-3xl sm:text-4xl font-normal text-navy-base leading-tight">
-                Direito Previdenciário: Planejamento & Concessão de Benefícios
+                Direito Previdenciário: Conquiste sua Aposentadoria e Benefício
               </h2>
               
               <div className="h-[1px] w-20 bg-gold-base" />
               
-              <p className="text-sm text-slate-600 leading-relaxed font-light">
-                Com o objetivo de atuar futuramente de forma exclusiva nesta área, nosso escritório estruturou uma prática altamente eficiente voltada para o segurado do INSS. Prestamos assistência informativa para viabilizar direitos consolidados por lei, atuando com máxima celeridade nas vias administrativas e judiciais.
+              <p className="text-base text-slate-750 leading-relaxed font-normal">
+                Cuidamos de todo o processo para você obter seu benefício do INSS com segurança. Analisamos seu caso e indicamos o caminho mais rápido e vantajoso, tanto no posto do INSS quanto na Justiça, tirando todas as suas dúvidas.
               </p>
               
-              <div className="border border-slate-100 bg-white p-6 relative">
-                <h4 className="text-xs font-bold text-navy-base uppercase tracking-wider mb-4 border-b border-slate-100 pb-2">
-                  Atendimento voltado a pessoas físicas para:
+              <div className="border border-slate-200 bg-white p-6 relative shadow-sm">
+                <h4 className="text-sm font-bold text-navy-base uppercase tracking-wider mb-4 border-b border-slate-100 pb-2">
+                  Como ajudamos você a garantir seus direitos:
                 </h4>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   {[
-                    "Aposentadoria por idade e tempo",
-                    "Aposentadoria especial e invalidez",
-                    "Revisão detalhada de benefícios",
-                    "BPC/LOAS (Idoso e PCD)",
-                    "Auxílio-doença e acidentário",
-                    "Pensão por morte e auxílios",
-                    "Recursos perante o INSS",
-                    "Ações judiciais de concessão",
+                    "Aposentadoria (por Idade, Tempo ou Especial)",
+                    "Revisão de Valor de Aposentadorias",
+                    "Auxílio-Doença (Incapacidade Temporária)",
+                    "Aposentadoria por Invalidez",
+                    "Pensão por Morte e Salário-Maternidade",
+                    "BPC/LOAS (Idosos ou deficientes que não contribuíram)",
+                    "Recurso caso o INSS negue o seu benefício",
+                    "Processo na Justiça contra o INSS",
                   ].map((topic, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-xs text-slate-500 font-light">
-                      <span className="h-1 w-1 bg-gold-light" />
+                    <li key={idx} className="flex items-center gap-2 text-sm text-slate-755 font-semibold">
+                      <span className="h-1.5 w-1.5 shrink-0 bg-gold-light rounded-full" />
                       <span>{topic}</span>
                     </li>
                   ))}
@@ -345,13 +345,13 @@ export default function Home() {
 
               <div className="pt-2 flex flex-col sm:flex-row gap-4">
                 <WhatsAppCTAButton className="px-8 py-3.5 text-xs font-bold uppercase tracking-widest text-white bg-navy-base hover:bg-navy-dark shadow-sm">
-                  Consultar Meu Caso (INSS)
+                  Consultar Meu Caso no WhatsApp
                 </WhatsAppCTAButton>
                 <Link
                   href="/atuacao"
-                  className="group inline-flex items-center justify-center gap-1.5 border border-slate-200 bg-white px-8 py-3.5 text-xs font-bold uppercase tracking-widest text-slate-600 hover:border-gold-base transition-all"
+                  className="group inline-flex items-center justify-center gap-1.5 border border-slate-300 bg-white px-8 py-3.5 text-xs font-bold uppercase tracking-widest text-slate-700 hover:border-gold-base transition-all"
                 >
-                  <span>Detalhes dos Serviços</span>
+                  <span>Ver Todos os Serviços</span>
                   <ArrowRight className="h-3 w-3 text-gold-light transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
               </div>
@@ -413,22 +413,23 @@ export default function Home() {
                     Direito do Consumidor
                   </h3>
                   <p className="text-xs text-gold-light font-bold uppercase tracking-widest mt-1">
-                    Defesa Ativa Contra Práticas Abusivas
+                    Defesa Contra Abusos e Fraudes
                   </p>
-                  <p className="mt-4 text-xs text-slate-500 font-light leading-relaxed">
-                    Atuação em litígios de consumo cotidianos e complexos, defendendo o cliente pessoa física contra abusos bancários, fraudes e falhas de prestação de serviços.
+                  <p className="mt-4 text-sm text-slate-750 font-normal leading-relaxed">
+                    Protegemos você contra abusos de bancos, operadoras e planos de saúde. Agimos rápido em casos de fraudes no Pix, empréstimos indevidos e cobranças erradas.
                   </p>
                   
-                  <ul className="mt-6 space-y-2 border-t border-slate-100 pt-4">
+                  <ul className="mt-6 space-y-2.5 border-t border-slate-200 pt-4">
                     {[
-                      "Golpes bancários e fraudes via PIX",
+                      "Golpes e fraudes bancárias (incluindo Pix)",
                       "Empréstimos consignados indevidos",
-                      "Negativação indevida (SPC e Serasa) e cobranças abusivas",
-                      "Problemas com Planos de Saúde e Concessionárias",
-                      "Danos morais por problemas em cias aéreas e produtos",
+                      "Cobranças abusivas e nome no SPC/Serasa",
+                      "Problemas com bancos e planos de saúde",
+                      "TOI (Cobrança abusiva na conta de luz)",
+                      "Indenizações por danos materiais e morais",
                     ].map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-xs text-slate-600 font-light">
-                        <span className="mt-1.5 h-1 w-1 shrink-0 bg-gold-light" />
+                      <li key={idx} className="flex items-start gap-2 text-sm text-slate-750 font-medium">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-gold-light rounded-full" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -444,7 +445,7 @@ export default function Home() {
                     <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                   <WhatsAppCTAButton className="px-5 py-2.5 text-[10px] font-bold uppercase tracking-wider" variant="outline">
-                    Falar com Dr. Felipe
+                    Falar com Dr. Felipe (OAB/RJ 211.932)
                   </WhatsAppCTAButton>
                 </div>
               </div>
@@ -461,22 +462,22 @@ export default function Home() {
                     Direito Cível
                   </h3>
                   <p className="text-xs text-gold-light font-bold uppercase tracking-widest mt-1">
-                    Resolução de Litígios e Contratos
+                    Ações de Danos e Contratos
                   </p>
-                  <p className="mt-4 text-xs text-slate-500 font-light leading-relaxed">
-                    Consultoria preventiva e contencioso civil para assegurar cumprimento de obrigações, confecção de contratos sólidos e reparação de danos civis.
+                  <p className="mt-4 text-sm text-slate-750 font-normal leading-relaxed">
+                    Garantimos os seus direitos em disputas civis, cobranças de dívidas, problemas em contratos e ações para exigir o cumprimento de obrigações.
                   </p>
                   
-                  <ul className="mt-6 space-y-2 border-t border-slate-100 pt-4">
+                  <ul className="mt-6 space-y-2.5 border-t border-slate-200 pt-4">
                     {[
-                      "Elaboração e revisão de contratos civis",
-                      "Responsabilidade civil e indenizações por danos",
-                      "Ações de cobrança, execuções de títulos e créditos",
-                      "Notificações extrajudiciais e acordos preventivos",
-                      "Obrigações de fazer/não fazer e conflitos diversos",
+                      "Ações de indenização por danos",
+                      "Cobranças judiciais e execução de dívidas",
+                      "Indenizações por danos morais ou materiais",
+                      "Exigir cumprimento de contratos e acordos",
+                      "Elaboração e análise de contratos seguros",
                     ].map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-xs text-slate-600 font-light">
-                        <span className="mt-1.5 h-1 w-1 shrink-0 bg-gold-light" />
+                      <li key={idx} className="flex items-start gap-2 text-sm text-slate-750 font-medium">
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-gold-light rounded-full" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -492,7 +493,7 @@ export default function Home() {
                     <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                   <WhatsAppCTAButton className="px-5 py-2.5 text-[10px] font-bold uppercase tracking-wider" variant="outline">
-                    Falar com Dr. Saulo
+                    Falar com Dr. Saulo (OAB/RJ 144.040)
                   </WhatsAppCTAButton>
                 </div>
               </div>
@@ -517,25 +518,25 @@ export default function Home() {
               </div>
               
               <h2 className="font-serif text-3xl sm:text-4xl font-normal text-navy-base">
-                Advocacia Pessoal e Responsabilidade Cruzada
+                Advocacia Próxima: Atendimento Direto com os Sócios
               </h2>
               
               <div className="h-[1px] w-20 bg-gold-base mt-4 mb-6" />
               
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-light">
-                O escritório foi fundado por <strong className="text-navy-base font-semibold">Felipe Reis da Silva Oliveira</strong> e <strong className="text-navy-base font-semibold">Saulo Pedroso Stussi Júnior</strong> em 2017, pautado no princípio do atendimento individualizado. Aqui, as estratégias e teses defensivas são analisadas em conjunto por ambos os sócios, garantindo dupla verificação técnica para resguardar a segurança dos processos.
+              <p className="text-sm sm:text-base text-slate-750 leading-relaxed font-normal">
+                O escritório foi fundado em 2017 pelos advogados <strong className="text-navy-base font-semibold">Felipe Reis (OAB/RJ 211.932)</strong> e <strong className="text-navy-base font-semibold">Saulo Stussi (OAB/RJ 144.040)</strong>. Diferente de grandes escritórios, aqui você é atendido diretamente pelos donos. Cada caso é analisado em conjunto pelos dois sócios, garantindo dupla verificação para a segurança da sua causa.
               </p>
               
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="border-l border-gold-light pl-4 py-1">
-                  <p className="text-sm font-bold text-navy-base">Dr. Felipe Reis</p>
-                  <p className="text-[10px] text-gold-light uppercase tracking-wider mt-0.5">Previdenciário, Consumidor e Cível</p>
-                  <p className="text-xs text-slate-500 font-light mt-2">Especialista em Direito do Consumidor e Responsabilidade Civil com foco em INSS.</p>
+                  <p className="text-sm font-bold text-navy-base">Dr. Felipe Reis (OAB/RJ 211.932)</p>
+                  <p className="text-[10px] text-gold-light uppercase tracking-wider mt-0.5">Previdenciário (INSS), Consumidor e Cível</p>
+                  <p className="text-sm text-slate-750 font-normal mt-2">Como sócio do escritório, é especialista em Direito Previdenciário (INSS), atuando na concessão, revisão e defesa de benefícios de forma ágil e próxima. Também atua nas áreas de Direito do Consumidor e Cível.</p>
                 </div>
                 <div className="border-l border-gold-light pl-4 py-1">
-                  <p className="text-sm font-bold text-navy-base">Dr. Saulo Stussi</p>
-                  <p className="text-[10px] text-gold-light uppercase tracking-wider mt-0.5">Consumidor e Cível</p>
-                  <p className="text-xs text-slate-500 font-light mt-2">Especialista em Direito Processual Civil com atuação preventiva e contenciosa corporativa.</p>
+                  <p className="text-sm font-bold text-navy-base">Dr. Saulo Stussi (OAB/RJ 144.040)</p>
+                  <p className="text-[10px] text-gold-light uppercase tracking-wider mt-0.5">Consumidor e Civil</p>
+                  <p className="text-sm text-slate-750 font-normal mt-2">Como sócio do escritório, é especialista em Direito do Consumidor e Direito Civil. Atua focado em proteger seus direitos contra abusos de empresas e buscar indenizações justas por prejuízos sofridos.</p>
                 </div>
               </div>
 
@@ -572,30 +573,136 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Bottom Section - Deep Navy elegant prompt */}
-      <section className="py-20 bg-[#070b19] border-t border-slate-800 text-white relative">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(140,118,83,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(140,118,83,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+      {/* How it Works Section - "Como funciona nosso atendimento" */}
+      <section className="py-24 bg-gradient-to-b from-[#0c1530] via-[#091026] to-[#070b19] border-t border-slate-800/60 text-white relative overflow-hidden">
+        {/* Subtle grid pattern for corporate high-end look */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(140,118,83,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(140,118,83,0.03)_1px,transparent_1px)] bg-[size:4.5rem_4.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_80%,transparent_100%)]" />
         
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="max-w-2xl mx-auto flex flex-col items-center">
-            <Scale className="h-8 w-8 text-gold-light mb-6" />
-            <h2 className="font-serif text-3xl font-normal text-white">
-              Precisa de Orientação Jurídica?
+        {/* Glowing radial circles for premium depth */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-gold-base/5 blur-[120px] pointer-events-none" />
+        <div className="absolute top-0 right-10 h-72 w-72 rounded-full bg-blue-900/10 blur-[80px] pointer-events-none" />
+        
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Header */}
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-[10px] font-bold text-gold-light uppercase tracking-[0.3em]">
+              Assessoria Jurídica
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-normal text-white mt-3">
+              Como funciona <span className="text-gold-light italic">nosso atendimento</span>
             </h2>
-            <p className="mt-4 text-xs sm:text-sm text-gray-300 font-light leading-relaxed">
-              Consulte seu caso diretamente com os sócios fundadores. Realizamos análise preliminar de viabilidade e orientamos sobre a documentação necessária para INSS ou ações civis.
-            </p>
-            
-            <div className="mt-8 flex flex-col sm:flex-row items-center gap-4 w-full justify-center">
-              <WhatsAppCTAButton className="w-full sm:w-auto px-8 py-4 text-xs font-bold uppercase tracking-widest text-white bg-gold-base hover:bg-gold-dark shadow-md transition-all">
-                Iniciar Atendimento no WhatsApp
+            <div className="h-[1px] w-16 bg-gold-base/30 mx-auto mt-4" />
+          </div>
+ 
+          {/* Cards Grid with Connecting Line */}
+          <div className="relative">
+            {/* Horizontal Connecting Line (visible on lg screens) */}
+            <div className="absolute top-1/2 left-[12%] right-[12%] h-[1px] bg-gold-base/15 -translate-y-1/2 hidden lg:block z-0" />
+ 
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+              {[
+                {
+                  step: 1,
+                  title: "Contato inicial",
+                  description: "Entre em contato pelo WhatsApp para uma breve apresentação do seu caso e esclarecimento das primeiras dúvidas.",
+                  icon: MessageSquare,
+                  active: true, // First card highlighted as in the image
+                },
+                {
+                  step: 2,
+                  title: "Atendimento agendado",
+                  description: "Agendamos uma consulta presencial ou por videochamada, conforme sua preferência e disponibilidade.",
+                  icon: Video,
+                },
+                {
+                  step: 3,
+                  title: "Análise documental",
+                  description: "Após o atendimento, organizamos a documentação necessária para análise técnica do seu caso.",
+                  icon: FileText,
+                },
+                {
+                  step: 4,
+                  title: "Protocolo do processo",
+                  description: "Realizamos o protocolo administrativo ou judicial e mantemos você informado sobre cada etapa.",
+                  icon: PenTool,
+                },
+              ].map((item, idx) => {
+                const Icon = item.icon;
+                return (
+                  <ScrollReveal key={idx} animation="fade-in-up" delayClass={idx === 0 ? "" : idx === 1 ? "delay-100" : idx === 2 ? "delay-200" : "delay-300"} className="flex">
+                    <div className={`relative w-full bg-[#111a36]/40 backdrop-blur-sm p-8 flex flex-col justify-between transition-all duration-300 group rounded-sm ${
+                      item.active 
+                        ? "border border-gold-base/80 shadow-[0_0_20px_rgba(197,160,89,0.12)]" 
+                        : "border border-slate-800/80 hover:border-gold-base/40"
+                    }`}>
+                      {/* Step Badge */}
+                      <div className="absolute -top-3 -right-3 w-6 h-6 rounded-full bg-gold-base text-[#070b19] flex items-center justify-center text-xs font-bold shadow-md z-20">
+                        {item.step}
+                      </div>
+ 
+                      <div>
+                        <div className="flex h-11 w-11 items-center justify-center border border-gold-base/20 bg-gold-base/5 text-gold-light mb-6 transition-all duration-300 group-hover:border-gold-base/40 group-hover:bg-gold-base/10">
+                          <Icon className="h-5 w-5" />
+                        </div>
+                        <h3 className="font-serif text-lg font-bold text-white tracking-wide">
+                          {item.title}
+                        </h3>
+                        <p className="mt-3 text-xs text-gray-300 leading-relaxed font-light">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  </ScrollReveal>
+                );
+              })}
+            </div>
+          </div>
+ 
+          {/* CTA Button */}
+          <div className="mt-16 flex justify-center">
+            <ScrollReveal animation="fade-in-up" delayClass="delay-400">
+              <WhatsAppCTAButton className="px-10 py-4 text-xs font-bold uppercase tracking-widest text-gold-light bg-[#0a1128] border border-gold-base/50 hover:bg-gold-base hover:text-[#070b19] hover:border-gold-base shadow-md transition-all duration-300">
+                Iniciar Atendimento
               </WhatsAppCTAButton>
-              <Link
-                href="/contato"
-                className="flex w-full sm:w-auto items-center justify-center gap-2 border border-slate-700 bg-white/5 px-8 py-4 text-xs font-bold uppercase tracking-widest text-white hover:border-gold-base hover:bg-white/10 transition-all duration-300"
-              >
-                Formulário de Contato
-              </Link>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+ 
+      {/* CTA Bottom Section - Premium Light Card Layout */}
+      <section className="py-24 bg-[#f8fafc] border-t border-slate-200 text-slate-800 relative overflow-hidden">
+        {/* Subtle grid pattern for corporate high-end look */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(140,118,83,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(140,118,83,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
+        
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="bg-white border border-gold-base/15 p-8 md:p-12 shadow-[0_20px_50px_rgba(140,118,83,0.06)] relative overflow-hidden text-center">
+            {/* Elegant corner decorative lines */}
+            <div className="absolute top-0 left-0 w-8 h-8 border-t border-l border-gold-base/30" />
+            <div className="absolute top-0 right-0 w-8 h-8 border-t border-r border-gold-base/30" />
+            <div className="absolute bottom-0 left-0 w-8 h-8 border-b border-l border-gold-base/30" />
+            <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-gold-base/30" />
+            
+            <div className="max-w-2xl mx-auto flex flex-col items-center">
+              <Scale className="h-8 w-8 text-gold-light mb-6" />
+              <h2 className="font-serif text-3xl font-normal text-navy-base">
+                Precisa de Orientação Jurídica?
+              </h2>
+              <div className="h-[1px] w-12 bg-gold-base/20 my-4" />
+              <p className="text-xs sm:text-sm text-slate-500 font-light leading-relaxed mb-8">
+                Consulte seu caso diretamente com os sócios fundadores. Realizamos análise preliminar de viabilidade e orientamos sobre a documentação necessária para INSS ou ações civis.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center">
+                <WhatsAppCTAButton className="w-full sm:w-auto px-8 py-4 text-xs font-bold uppercase tracking-widest text-white bg-navy-base border border-navy-base hover:bg-navy-dark hover:border-navy-dark shadow-md transition-all duration-300">
+                  Iniciar Atendimento no WhatsApp
+                </WhatsAppCTAButton>
+                <Link
+                  href="/contato"
+                  className="flex w-full sm:w-auto items-center justify-center gap-2 border border-gold-base/50 bg-white px-8 py-4 text-xs font-bold uppercase tracking-widest text-gold-light hover:bg-gold-base hover:text-white transition-all duration-300"
+                >
+                  Formulário de Contato
+                </Link>
+              </div>
             </div>
           </div>
         </div>

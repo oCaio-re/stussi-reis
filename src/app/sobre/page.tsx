@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { GraduationCap, Scale, BookOpen, ShieldCheck, ArrowRight } from "lucide-react";
+import { Scale, BookOpen, ShieldCheck, ArrowRight } from "lucide-react";
 import WhatsAppCTAButton from "@/components/WhatsAppCTAButton";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -20,10 +20,11 @@ export default function Sobre() {
     {
       name: "Dr. Felipe Reis da Silva Oliveira",
       role: "Advogado Sócio Fundador",
+      oab: "OAB/RJ 211.932",
       initials: "FR",
       photo: "/foto felipe.jpeg",
       description:
-        "Especialista em Direito do Consumidor e Responsabilidade Civil, com sólida experiência prática voltada para causas de Direito Previdenciário (INSS) e Cível. Conduz ativamente o planejamento de aposentadorias e defesas contra práticas bancárias abusivas.",
+        "Como sócio do escritório, é especialista em Direito Previdenciário (INSS), atuando na concessão, revisão e defesa de benefícios previdenciários, sempre com atendimento técnico e personalizado. Também exerce atuação nas áreas de Direito do Consumidor e Direito Cível, oferecendo soluções jurídicas seguras e eficientes.",
       education: [
         "Bacharel em Direito",
         "Especialista em Direito do Consumidor e Responsabilidade Civil",
@@ -34,10 +35,11 @@ export default function Sobre() {
     {
       name: "Dr. Saulo Pedroso Stussi Júnior",
       role: "Advogado Sócio Fundador",
+      oab: "OAB/RJ 144.040",
       initials: "SS",
       photo: "/saulo.png",
       description:
-        "Especialista em Direito Processual Civil, atuando de forma focada em demandas cíveis de alta complexidade e Direito do Consumidor. Dedicado à elaboração de defesas contratuais estratégicas, cobranças judiciais e litígios cíveis.",
+        "Como sócio do escritório, é especialista em Direito do Consumidor e Direito Civil, com atuação destacada em Responsabilidade Civil, buscando a reparação de danos materiais e morais decorrentes de falhas na prestação de serviços, acidentes, descumprimentos contratuais e demais situações que gerem prejuízos aos clientes, sempre com uma atuação técnica e estratégica.",
       education: [
         "Bacharel em Direito",
         "Especialista em Direito Processual Civil e Obrigações",
@@ -172,7 +174,7 @@ export default function Sobre() {
                         <h3 className="font-serif text-lg font-bold text-navy-base">
                           {lawyer.name}
                         </h3>
-                        <p className="text-[10px] text-gold-light font-bold uppercase tracking-widest mt-0.5">{lawyer.role}</p>
+                        <p className="text-[10px] text-gold-light font-bold uppercase tracking-widest mt-0.5">{lawyer.role} — {lawyer.oab}</p>
                       </div>
 
                       <p className="text-xs text-slate-500 font-light leading-relaxed">
@@ -180,20 +182,6 @@ export default function Sobre() {
                       </p>
 
                       <div className="pt-4 border-t border-slate-100 space-y-3">
-                        <div>
-                          <h4 className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-700 mb-1.5">
-                            <GraduationCap className="h-3.5 w-3.5 text-gold-light" />
-                            Formação & Títulos:
-                          </h4>
-                          <ul className="space-y-1 pl-5">
-                            {lawyer.education.map((item, idx) => (
-                              <li key={idx} className="list-disc text-[11px] text-slate-500 font-light leading-snug">
-                                {item}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        
                         <div>
                           <h4 className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-700 mb-1.5">
                             <BookOpen className="h-3.5 w-3.5 text-gold-light" />

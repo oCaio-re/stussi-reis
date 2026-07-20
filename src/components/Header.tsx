@@ -27,13 +27,13 @@ export default function Header() {
         <div className="flex h-22 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3.5 group">
-            <div className="relative h-13 w-13 overflow-hidden rounded-none border border-gold-base/40 bg-navy-base transition-transform duration-300 group-hover:scale-105 flex items-center justify-center shadow-sm">
+            <div className="relative h-16 w-16 overflow-hidden rounded-none border border-gold-base/40 bg-navy-base transition-transform duration-300 group-hover:scale-105 flex items-center justify-center shadow-sm">
               <Image
-                src="/new_logo.svg"
-                alt="Stussi & Reis Logo"
+                src="/sr_monogram.svg"
+                alt="Stussi & Reis Monograma"
                 fill
                 className="object-contain p-1.5 filter brightness-100"
-                sizes="52px"
+                sizes="64px"
                 priority
               />
             </div>
@@ -71,25 +71,26 @@ export default function Header() {
               href="https://www.instagram.com/stussi_reis_advocacia?utm_source=qr&igsh=OTg0eTd4ZzVlMWVk"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-500 hover:text-gold-light p-1.5 transition-colors"
+              className="flex items-center gap-1.5 text-slate-500 hover:text-gold-light p-1.5 transition-colors text-xs font-bold uppercase tracking-wider"
               title="Instagram do Escritório"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
+                width="18"
+                height="18"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="h-5 w-5"
+                className="h-4.5 w-4.5"
               >
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
               </svg>
+              <span className="hidden lg:inline">Instagram</span>
             </a>
 
             <button
@@ -155,6 +156,30 @@ export default function Header() {
               {link.name}
             </Link>
           ))}
+          <a
+            href="https://www.instagram.com/stussi_reis_advocacia?utm_source=qr&igsh=OTg0eTd4ZzVlMWVk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-none px-3 py-3 text-xs font-bold uppercase tracking-wider text-slate-600 hover:bg-slate-50 hover:text-navy-base"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="h-4.5 w-4.5 text-slate-500"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+            <span>Instagram</span>
+          </a>
           <div className="pt-4 border-t border-slate-100 mt-4">
             <button
               onClick={() => {

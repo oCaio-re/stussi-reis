@@ -28,7 +28,7 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
 
   const lawyers = [
     {
-      name: "Felipe Reis da Silva Oliveira",
+      name: "Felipe Reis da Silva Oliveira (OAB/RJ 211.932)",
       role: "Advogado Sócio",
       phoneText: "(21) 98896-1729",
       waLink: "https://wa.me/5521988961729?text=Ol%C3%A1%20Dr.%20Felipe%2C%20gostaria%20de%20solicitar%20uma%20consulta%20jur%C3%ADdica.",
@@ -36,7 +36,7 @@ export default function WhatsAppModal({ isOpen, onClose }: WhatsAppModalProps) {
       photo: "/foto felipe.jpeg",
     },
     {
-      name: "Saulo Pedroso Stussi Júnior",
+      name: "Saulo Pedroso Stussi Júnior (OAB/RJ 144.040)",
       role: "Advogado Sócio",
       phoneText: "(21) 98731-0837",
       waLink: "https://wa.me/5521987310837?text=Ol%C3%A1%20Dr.%20Saulo%2C%20gostaria%20de%20solicitar%20uma%20consulta%20jur%C3%ADdica.",
