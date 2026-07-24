@@ -69,7 +69,7 @@ export default function Sobre() {
             </h1>
             <div className="mt-4 h-[1px] w-20 bg-gold-base mx-auto" />
             <p className="mt-6 text-sm text-slate-500 leading-relaxed font-light">
-              Fundado em 2017, o Stussi & Reis Consultoria Jurídica nasceu com o compromisso inegociável de prestar serviços pautados na transparência técnica e no atendimento pessoal.
+              Desde 2017, o <strong>Stussi & Reis Consultoria Jurídica</strong> atua com um propósito claro: oferecer um atendimento jurídico próximo, transparente e estratégico, em que cada cliente seja acompanhado diretamente pelos advogados responsáveis pelo caso. Mais do que conduzir processos, buscamos orientar nossos clientes com clareza, segurança e responsabilidade, construindo soluções jurídicas personalizadas para cada situação.
             </p>
           </div>
 
@@ -78,22 +78,45 @@ export default function Sobre() {
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 items-start">
               
               {/* Left Column: Text */}
-              <div className="lg:col-span-7 space-y-6 text-sm text-slate-600 font-light leading-relaxed">
-                <h2 className="font-serif text-2xl font-normal text-navy-base leading-tight">
-                  Atendimento Próximo e Sem Intermediários
-                </h2>
-                <p>
-                  Diferente de modelos de advocacia em massa, que distribuem processos de forma fria por diversos setores corporativos, o <strong className="text-navy-base font-semibold">Stussi & Reis</strong> foi concebido para atuar de forma artesanal. Nossos clientes tratam de suas demandas diretamente com os sócios responsáveis, garantindo clareza e acessibilidade em todas as etapas da causa.
-                </p>
-                <p>
-                  Com sede física estrategicamente localizada no Centro de <strong className="text-navy-base font-semibold">Niterói, RJ</strong>, nosso escritório unifica a excelência profissional com ferramentas tecnológicas de atendimento célere. Oferecemos comunicação clara, simples e direta — adequada para sanar dúvidas e resolver demandas de pessoas físicas sem termos técnicos incompreensíveis.
-                </p>
-                <p>
-                  Todo parecer e tese defensiva elaborados passam pela análise cruzada de ambos os sócios. Acreditamos que a responsabilidade colegiada mitiga riscos processuais e eleva as chances de êxito nas instâncias administrativas ou judiciais.
-                </p>
+              <div className="lg:col-span-7 space-y-8 text-sm text-slate-600 font-light leading-relaxed">
+                <div>
+                  <h2 className="font-serif text-xl font-bold text-navy-base leading-tight mb-2">
+                    Atendimento próximo, sem intermediários.
+                  </h2>
+                  <p>
+                    Acreditamos que confiança se constrói com diálogo. Por isso, no Stussi & Reis você não passa por diversos setores ou profissionais diferentes para obter informações sobre o seu processo. O atendimento é realizado diretamente pelos sócios do escritório, que acompanham todas as etapas do caso, esclarecem dúvidas e definem a estratégia jurídica de forma individualizada.
+                  </p>
+                </div>
+                
+                <div>
+                  <h2 className="font-serif text-xl font-bold text-navy-base leading-tight mb-2">
+                    Experiência, estratégia e transparência.
+                  </h2>
+                  <p>
+                    Cada demanda é única e merece uma análise criteriosa. Antes de qualquer medida, avaliamos os fatos, documentos e as possibilidades jurídicas para orientar nossos clientes sobre o caminho mais adequado. Nossa atuação é pautada pela ética, transparência e comunicação clara, permitindo que você compreenda cada etapa do seu processo com segurança.
+                  </p>
+                </div>
+                
+                <div>
+                  <h2 className="font-serif text-xl font-bold text-navy-base leading-tight mb-2">
+                    Estrutura moderna, atendimento humano.
+                  </h2>
+                  <p>
+                    Com sede no Centro de Niterói/RJ, unimos a tradição da advocacia à tecnologia para oferecer um atendimento mais ágil, organizado e acessível. Utilizamos ferramentas que facilitam a comunicação e o acompanhamento dos processos, sem abrir mão do contato direto e da atenção personalizada que cada cliente merece.
+                  </p>
+                </div>
+                
+                <div>
+                  <h2 className="font-serif text-xl font-bold text-navy-base leading-tight mb-2">
+                    Compromisso com cada cliente.
+                  </h2>
+                  <p>
+                    Sabemos que quem procura um advogado geralmente enfrenta um momento importante da vida. Por isso, nosso compromisso é oferecer orientação jurídica responsável, atendimento próximo e atuação técnica, sempre respeitando as particularidades de cada caso. No Stussi & Reis Consultoria Jurídica, você encontra profissionais comprometidos em prestar um serviço jurídico sério, transparente e voltado à proteção dos seus direitos.
+                  </p>
+                </div>
               </div>
               
-              {/* Right Column: Mission/Vision/Values inside a formal card */}
+              {/* Right Column: Commitments instead of Mission/Vision/Values */}
               <div className="lg:col-span-5 border border-slate-200 bg-slate-50/50 p-8 shadow-sm relative overflow-hidden">
                 <div className="absolute top-0 right-0 h-32 w-32 rounded-full bg-gold-base/5 blur-3xl" />
                 <div className="flex h-10 w-10 items-center justify-center border border-gold-base/20 bg-gold-base/5 text-gold-light mb-6">
@@ -101,28 +124,28 @@ export default function Sobre() {
                 </div>
                 
                 <h3 className="text-xs font-bold text-navy-base uppercase tracking-widest mb-6 border-b border-slate-200 pb-2">
-                  Diretrizes Institucionais:
+                  NOSSOS COMPROMISSOS COM VOCÊ
                 </h3>
                 <ul className="space-y-6">
                   <li className="flex items-start gap-4">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center border border-gold-light bg-white text-[10px] font-bold text-gold-light font-serif">M</span>
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center border border-gold-light bg-white text-[10px] font-bold text-gold-light font-serif">1</span>
                     <div>
-                      <h4 className="text-xs font-bold text-navy-base uppercase tracking-wider">Missão</h4>
-                      <p className="text-[11px] text-slate-500 font-light mt-1">Prestar assessoria jurídica pautada na ética e na exatidão técnica, fornecendo estratégias que resguardem direitos e deêm segurança jurídica ao cliente.</p>
+                      <h4 className="text-xs font-bold text-navy-base uppercase tracking-wider">Atendimento Humanizado</h4>
+                      <p className="text-[11px] text-slate-500 font-light mt-1">Cada cliente é recebido com atenção, respeito e dedicação. Ouvimos sua história, esclarecemos suas dúvidas e buscamos compreender a realidade do seu caso antes de indicar qualquer medida jurídica.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center border border-gold-light bg-white text-[10px] font-bold text-gold-light font-serif">V</span>
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center border border-gold-light bg-white text-[10px] font-bold text-gold-light font-serif">2</span>
                     <div>
-                      <h4 className="text-xs font-bold text-navy-base uppercase tracking-wider">Visão</h4>
-                      <p className="text-[11px] text-slate-500 font-light mt-1">Consolidar o escritório como referência em atendimento personalizado e direito previdenciário no estado do Rio de Janeiro, com foco em resultados lícitos.</p>
+                      <h4 className="text-xs font-bold text-navy-base uppercase tracking-wider">Atuação Técnica e Transparente</h4>
+                      <p className="text-[11px] text-slate-500 font-light mt-1">Todas as estratégias são definidas com base na legislação e nas particularidades de cada caso. Explicamos cada etapa do processo de forma clara, para que você tenha segurança e confiança durante toda a atuação.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center border border-gold-light bg-white text-[10px] font-bold text-gold-light font-serif">V</span>
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center border border-gold-light bg-white text-[10px] font-bold text-gold-light font-serif">3</span>
                     <div>
-                      <h4 className="text-xs font-bold text-navy-base uppercase tracking-wider">Valores</h4>
-                      <p className="text-[11px] text-slate-500 font-light mt-1">Transparência deontológica (regras OAB), respeito ao cliente, análise técnica minuciosa de contratos/leis, dedicação direta e constante atualização.</p>
+                      <h4 className="text-xs font-bold text-navy-base uppercase tracking-wider">Ética e Compromisso</h4>
+                      <p className="text-[11px] text-slate-500 font-light mt-1">Nossa atuação é pautada pela ética, responsabilidade e respeito às normas da advocacia. Trabalhamos com comprometimento, comunicação transparente e foco na proteção dos direitos de nossos clientes.</p>
                     </div>
                   </li>
                 </ul>
@@ -214,18 +237,20 @@ export default function Sobre() {
               <ShieldCheck className="h-5 w-5" />
             </div>
             <h3 className="font-serif text-2xl font-normal text-navy-base mb-4">
-              Atuação Conjunta e Compromisso com a Causa
+              Seu caso merece uma análise jurídica especializada.
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-light max-w-2xl mx-auto">
-              Ao escolher o escritório <strong className="text-navy-base font-semibold">Stussi & Reis</strong>, seu caso não é abandonado nas mãos de terceiros. Nós garantimos que ambos os sócios debatem cada ponto estratégico, unindo visões para assegurar a melhor tese e a máxima precisão de conduta legal.
+              Cada situação possui características próprias e exige uma estratégia adequada. No <strong className="text-navy-base font-semibold">Stussi & Reis Advocacia e Consultoria</strong>, você conta com atendimento direto dos advogados do escritório, análise individualizada e acompanhamento próximo durante toda a condução do seu caso. Se você busca orientação jurídica com transparência, responsabilidade e atendimento personalizado, nossa equipe está pronta para ajudar.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-              <WhatsAppCTAButton className="px-8 py-3.5 text-xs font-bold uppercase tracking-widest text-white bg-navy-base hover:bg-[#070b19]" />
+              <WhatsAppCTAButton className="px-8 py-3.5 text-xs font-bold uppercase tracking-widest text-white bg-navy-base hover:bg-[#070b19]">
+                FALAR COM UM ADVOGADO
+              </WhatsAppCTAButton>
               <Link
                 href="/contato"
                 className="group flex items-center justify-center gap-2 border border-slate-200 bg-white px-8 py-3.5 text-xs font-bold uppercase tracking-widest text-slate-600 hover:border-gold-base transition-all"
               >
-                <span>Canais de Contato</span>
+                <span>CONHECER NOSSOS CANAIS DE CONTATO</span>
                 <ArrowRight className="h-3.5 w-3.5 text-gold-light transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </div>

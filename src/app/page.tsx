@@ -18,13 +18,13 @@ export default function Home() {
       badge: "Direito Previdenciário & INSS",
       title: (
         <>
-          Aposentadoria e Benefícios do INSS de forma{" "}
-          <span className="text-gold-light italic">simples e sem burocracia</span>
+          Seu benefício do INSS começa com a{" "}
+          <span className="text-gold-light font-bold">orientação certa.</span>
         </>
       ),
-      description: "Ajudamos você a conseguir o melhor benefício ou aposentadoria perante o INSS. Cuidamos de toda a papelada para você receber seu pagamento o quanto antes, com atendimento direto dos advogados sócios.",
-      image: "/saulo e felipe.jpeg",
-      imageAlt: "Sócios Felipe Reis e Saulo Stussi",
+      description: "Sabemos que lidar com o INSS pode ser complexo. Por isso, oferecemos atendimento jurídico especializado para analisar seu histórico previdenciário, esclarecer suas dúvidas e buscar a melhor estratégia para aposentadorias, benefícios e revisões, sempre com acompanhamento próximo e transparente.",
+      image: "/foto_clientes_idosos_felipe.jpg",
+      imageAlt: "Dr. Felipe Reis atendendo clientes idosos",
       isSeal: false,
       ctaText: "Falar com Advogado pelo WhatsApp",
       ctaType: "modal",
@@ -36,10 +36,10 @@ export default function Home() {
       title: (
         <>
           Direito Previdenciário:{" "}
-          <span className="text-gold-light italic">Planejamento e Concessão</span>
+          <span className="text-gold-light font-bold">Planejamento e Benefícios do INSS</span>
         </>
       ),
-      description: "Planejamento preventivo de aposentadoria e concessão de benefícios perante o INSS (BPC/LOAS, Auxílios, Pensões). Atuamos de forma a garantir celeridade administrativa e judicial.",
+      description: "Cada caso previdenciário exige uma análise cuidadosa. Nossa equipe avalia seu histórico de contribuições, identifica o benefício mais vantajoso e acompanha todo o procedimento perante o INSS, desde o pedido administrativo até a atuação judicial, quando necessária.",
       image: "/office_interior.jpg",
       imageAlt: "Interior do escritório",
       isSeal: false,
@@ -50,14 +50,14 @@ export default function Home() {
       secondaryHref: "/atuacao",
     },
     {
-      badge: "Defesa do Consumidor & Cível",
+      badge: "Defesa do Consumidor & Direito Cível",
       title: (
         <>
-          Proteção contra abusos e{" "}
-          <span className="text-gold-light italic">resolução de litígios</span>
+          Defesa jurídica para consumidores que tiveram seus{" "}
+          <span className="text-gold-light font-bold">direitos violados.</span>
         </>
       ),
-      description: "Combate ativo a golpes de Pix, empréstimos consignados indevidos, negativas de planos de saúde, TOI, cobranças abusivas, conflitos de contratos e indenizações por danos.",
+      description: "Atuamos na proteção de consumidores que enfrentam problemas com bancos, empresas e prestadores de serviços. Cada caso é analisado de forma individual para definir a estratégia jurídica mais adequada, buscando a defesa dos seus direitos com segurança e transparência. Prestamos assessoria em demandas envolvendo golpes do Pix, fraudes bancárias, empréstimos consignados indevidos, cobranças abusivas, negativação indevida, planos de saúde, responsabilidade civil e questões contratuais.",
       image: "/legal_desk.jpg",
       imageAlt: "Mesa de trabalho jurídica",
       isSeal: false,
@@ -97,19 +97,24 @@ export default function Home() {
 
   const highlights = [
     {
-      title: "Atendimento Direto e Personalizado",
-      description: "Você é atendido diretamente pelos advogados sócios, que acompanham pessoalmente todas as etapas do seu caso, garantindo proximidade, transparência e uma atuação estratégica.",
-      icon: Clock,
+      title: "Atendimento feito pelos Advogados",
+      description: "No Stussi & Reis, seu atendimento é realizado diretamente pelos advogados responsáveis pelo caso. Você recebe orientação jurídica personalizada, acompanhamento próximo e acesso direto aos profissionais durante toda a sua jornada.",
+      icon: Phone,
     },
     {
-      title: "Atuação Técnica e Estratégica",
-      description: "Cada demanda é analisada pelos sócios do escritório, combinando conhecimento técnico, planejamento jurídico e soluções personalizadas para oferecer a melhor condução possível ao caso.",
+      title: "Estratégia para cada caso",
+      description: "Antes de qualquer medida, analisamos cuidadosamente os fatos, documentos e possibilidades jurídicas para definir a estratégia mais adequada, sempre de forma individualizada e responsável.",
       icon: Gavel,
     },
     {
-      title: "Ética, Transparência e Compromisso",
-      description: "Nossa atuação é pautada pelos princípios éticos da advocacia, com comunicação clara, transparência em todas as etapas e absoluto compromisso com a defesa dos direitos de nossos clientes.",
+      title: "Confiança em cada etapa",
+      description: "Acreditamos que um bom atendimento vai além do conhecimento jurídico. Por isso, prezamos pela transparência, comunicação clara e compromisso em manter nossos clientes informados durante todo o andamento do caso.",
       icon: Award,
+    },
+    {
+      title: "Análise individualizada",
+      description: "Cada cliente possui uma realidade diferente. Antes de indicar qualquer medida jurídica, realizamos uma avaliação detalhada do caso para orientar você sobre as possibilidades, os procedimentos e a estratégia mais adequada.",
+      icon: Scale,
     },
   ];
 
@@ -132,14 +137,14 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Column: Hero Copy Carousel Container */}
-            <div className="lg:col-span-7 relative h-[480px] sm:h-[380px] lg:h-[340px] flex flex-col justify-center">
+            <div className="lg:col-span-7 relative min-h-[380px] flex flex-col justify-center">
               {slides.map((slide, idx) => (
                 <div
                   key={idx}
-                  className={`absolute inset-0 transition-all duration-700 flex flex-col justify-center ${
+                  className={`transition-all duration-700 flex flex-col justify-center ${
                     idx === activeSlide
-                      ? "opacity-100 translate-y-0 pointer-events-auto z-10"
-                      : "opacity-0 -translate-y-4 pointer-events-none z-0"
+                      ? "opacity-100 translate-y-0 pointer-events-auto z-10 relative"
+                      : "opacity-0 -translate-y-4 pointer-events-none z-0 absolute inset-0"
                   }`}
                 >
                   <div className="inline-flex items-center gap-2 mb-4">
@@ -189,48 +194,43 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Right Column: Visual carousel replaced by Staggered Triptych Mosaic */}
-            <div className="lg:col-span-5 flex justify-center items-center w-full">
-              <div className="flex items-end justify-center gap-3 sm:gap-4 w-full max-w-md xl:max-w-lg h-[340px] sm:h-[400px] px-2">
-                {/* Column 1: Saulo (Left - Shorter) */}
-                <div className="relative w-[30%] h-[75%] border border-gold-base/20 p-1 bg-white shadow-md transition-all duration-500 hover:border-gold-base/60 hover:shadow-lg group/trip overflow-hidden rounded-sm">
-                  <div className="relative w-full h-full overflow-hidden border border-slate-100">
-                    <Image
-                      src="/saulo.png"
-                      alt="Dr. Saulo Stussi"
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover/trip:scale-105"
-                      sizes="150px"
-                    />
+            {/* Right Column: Visual carousel (Single photo frame matching the active slide) */}
+            <div className="lg:col-span-5 flex justify-center items-center w-full mt-8 lg:mt-0">
+              <div className="relative w-full max-w-[340px] sm:max-w-[380px] aspect-square border border-gold-base/20 p-3 bg-white shadow-2xl rounded-sm overflow-hidden">
+                {/* Decorative glow */}
+                <div className="absolute top-0 right-0 w-24 h-24 bg-gold-base/5 blur-2xl z-0" />
+                
+                {slides.map((slide, idx) => (
+                  <div
+                    key={idx}
+                    className={`absolute inset-3 transition-all duration-700 ${
+                      idx === activeSlide
+                        ? "opacity-100 scale-100 pointer-events-auto z-10"
+                        : "opacity-0 scale-95 pointer-events-none z-0"
+                    }`}
+                  >
+                    <div className="relative w-full h-full overflow-hidden border border-slate-200 bg-slate-50">
+                      <Image
+                        src={slide.image}
+                        alt={slide.imageAlt}
+                        fill
+                        className="object-cover transition-transform duration-700 hover:scale-103"
+                        sizes="(max-w-1024px) 100vw, 380px"
+                        priority={idx === 0}
+                      />
+                      
+                      {/* Floating Badge */}
+                      <div className="absolute bottom-4 right-4 bg-[#070b19]/90 backdrop-blur-sm border border-gold-base/30 px-4 py-2 shadow-lg rounded-sm z-20 flex flex-col items-end">
+                        <span className="font-serif text-[11px] font-bold text-white tracking-wide">
+                          {slide.badge}
+                        </span>
+                        <span className="text-[7px] text-gold-light tracking-[0.2em] font-semibold uppercase mt-0.5">
+                          Stussi & Reis
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-
-                {/* Column 2: Both together (Center - Taller & Wider) */}
-                <div className="relative w-[40%] h-[100%] border border-gold-base/25 p-1.5 bg-white shadow-xl transition-all duration-500 hover:border-gold-base/70 hover:shadow-2xl group/trip overflow-hidden rounded-sm z-10">
-                  <div className="relative w-full h-full overflow-hidden border border-slate-100">
-                    <Image
-                      src="/saulo e felipe.jpeg"
-                      alt="Felipe Reis e Saulo Stussi"
-                      fill
-                      priority
-                      className="object-cover transition-transform duration-700 group-hover/trip:scale-105"
-                      sizes="220px"
-                    />
-                  </div>
-                </div>
-
-                {/* Column 3: Felipe (Right - Medium) */}
-                <div className="relative w-[30%] h-[85%] border border-gold-base/20 p-1 bg-white shadow-md transition-all duration-500 hover:border-gold-base/60 hover:shadow-lg group/trip overflow-hidden rounded-sm">
-                  <div className="relative w-full h-full overflow-hidden border border-slate-100">
-                    <Image
-                      src="/foto felipe.jpeg"
-                      alt="Dr. Felipe Reis"
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover/trip:scale-105"
-                      sizes="150px"
-                    />
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
 
@@ -258,11 +258,11 @@ export default function Home() {
       {/* Pillars Section - Clean Slate & Symmetrical Lines */}
       <section className="py-12 bg-white border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 lg:divide-y-0 lg:divide-x divide-slate-100">
             {highlights.map((highlight) => {
               const Icon = highlight.icon;
               return (
-                <div key={highlight.title} className="flex items-start gap-4 p-4 md:px-8">
+                <div key={highlight.title} className="flex items-start gap-4 p-4 lg:px-8">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center border border-gold-base/20 bg-gold-base/5 text-gold-light">
                     <Icon className="h-5 w-5" />
                   </div>
@@ -297,36 +297,62 @@ export default function Home() {
               </div>
               
               <h2 className="font-serif text-3xl sm:text-4xl font-normal text-navy-base leading-tight">
-                Direito Previdenciário: Conquiste sua Aposentadoria e Benefício
+                Direito Previdenciário
               </h2>
+              
+              <h3 className="font-serif text-lg md:text-xl font-medium text-gold-dark italic">
+                Especialistas em benefícios do INSS. Cuidamos do seu direito do início ao fim.
+              </h3>
               
               <div className="h-[1px] w-20 bg-gold-base" />
               
               <p className="text-base text-slate-750 leading-relaxed font-normal">
-                Cuidamos de todo o processo para você obter seu benefício do INSS com segurança. Analisamos seu caso e indicamos o caminho mais rápido e vantajoso, tanto no posto do INSS quanto na Justiça, tirando todas as suas dúvidas.
+                Sabemos que lidar com o INSS pode gerar muitas dúvidas e insegurança. Por isso, nossa equipe acompanha você em todas as etapas, desde a análise do caso até o requerimento administrativo ou, quando necessário, a atuação na Justiça.
+              </p>
+              
+              <p className="text-base text-slate-750 leading-relaxed font-normal">
+                Nosso objetivo é identificar o benefício mais vantajoso para a sua situação e buscar a melhor estratégia para que você exerça seus direitos com segurança e tranquilidade.
               </p>
               
               <div className="border border-slate-200 bg-white p-6 relative shadow-sm">
                 <h4 className="text-sm font-bold text-navy-base uppercase tracking-wider mb-4 border-b border-slate-100 pb-2">
-                  Como ajudamos você a garantir seus direitos:
+                  Como podemos ajudar você em questões relacionadas ao INSS:
                 </h4>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                <ul className="grid grid-cols-1 gap-3">
                   {[
-                    "Aposentadoria (por Idade, Tempo ou Especial)",
-                    "Revisão de Valor de Aposentadorias",
-                    "Auxílio-Doença (Incapacidade Temporária)",
-                    "Aposentadoria por Invalidez",
-                    "Pensão por Morte e Salário-Maternidade",
-                    "BPC/LOAS (Idosos ou deficientes que não contribuíram)",
-                    "Recurso caso o INSS negue o seu benefício",
-                    "Processo na Justiça contra o INSS",
+                    "Aposentadoria por Idade",
+                    "Aposentadoria por Tempo de Contribuição",
+                    "Aposentadoria Especial",
+                    "Aposentadoria por Incapacidade Permanente (Invalidez)",
+                    "Auxílio por Incapacidade Temporária (Auxílio-Doença)",
+                    "Pensão por Morte",
+                    "Salário-Maternidade",
+                    "Benefício de Prestação Continuada (BPC/LOAS)",
+                    "Revisão de Benefícios do INSS",
+                    "Recursos Administrativos contra decisões do INSS",
+                    "Ações Judiciais contra o INSS quando houver negativa indevida",
                   ].map((topic, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-sm text-slate-755 font-semibold">
-                      <span className="h-1.5 w-1.5 shrink-0 bg-gold-light rounded-full" />
+                    <li key={idx} className="flex items-start gap-2.5 text-sm text-slate-755 font-semibold">
+                      <span className="text-emerald-600 font-bold shrink-0">✔️</span>
                       <span>{topic}</span>
                     </li>
                   ))}
                 </ul>
+              </div>
+
+              <div className="border-l-2 border-gold-base pl-4 py-1 space-y-3">
+                <h4 className="text-sm font-bold text-navy-base uppercase tracking-wider">
+                  Cada caso merece uma análise individual.
+                </h4>
+                <p className="text-xs sm:text-sm text-slate-550 leading-relaxed font-light">
+                  Antes de solicitar qualquer benefício ao INSS, é importante verificar qual é a melhor estratégia para evitar prejuízos e aumentar as chances de reconhecimento do seu direito.
+                </p>
+                <p className="text-xs sm:text-sm text-slate-550 leading-relaxed font-light">
+                  Nossa equipe realiza uma análise completa do seu histórico previdenciário para orientar você com clareza e segurança.
+                </p>
+                <p className="text-sm text-gold-dark font-bold italic">
+                  Agende uma consulta e descubra qual é o melhor caminho para o seu caso.
+                </p>
               </div>
 
               <div className="pt-2 flex flex-col sm:flex-row gap-4">
@@ -399,19 +425,23 @@ export default function Home() {
                     Direito do Consumidor
                   </h3>
                   <p className="text-xs text-gold-light font-bold uppercase tracking-widest mt-1">
-                    Defesa Contra Abusos e Fraudes
+                    Protegemos seus direitos contra fraudes, abusos e cobranças indevidas.
                   </p>
-                  <p className="mt-4 text-sm text-slate-750 font-normal leading-relaxed">
-                    Protegemos você contra abusos de bancos, operadoras e planos de saúde. Agimos rápido em casos de fraudes no Pix, empréstimos indevidos e cobranças erradas.
+                  <p className="mt-4 text-sm text-slate-750 font-normal leading-relaxed mb-3">
+                    Se você foi vítima de um golpe, sofreu uma fraude bancária ou teve seus direitos desrespeitados por uma empresa, nossa equipe está preparada para analisar seu caso e orientar sobre as medidas jurídicas cabíveis.
+                  </p>
+                  <p className="text-sm text-slate-750 font-normal leading-relaxed">
+                    Atuamos de forma estratégica para buscar a defesa dos seus direitos, tanto na esfera administrativa quanto judicial, sempre com atendimento próximo e transparente.
                   </p>
                   
                   <ul className="mt-6 space-y-2.5 border-t border-slate-200 pt-4">
                     {[
-                      "Golpes e fraudes bancárias (incluindo Pix)",
-                      "Empréstimos consignados indevidos",
-                      "Cobranças abusivas e nome no SPC/Serasa",
-                      "Problemas com bancos e planos de saúde",
-                      "TOI (Cobrança abusiva na conta de luz)",
+                      "Golpes do Pix e fraudes bancárias",
+                      "Empréstimos consignados e financiamentos não contratados",
+                      "Cobranças abusivas e negativação indevida",
+                      "Fraudes e falhas na prestação de serviços bancários",
+                      "Negativa indevida de cobertura por planos de saúde",
+                      "TOI e cobranças indevidas de energia elétrica",
                       "Indenizações por danos materiais e morais",
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-sm text-slate-750 font-medium">
@@ -448,19 +478,19 @@ export default function Home() {
                     Direito Cível
                   </h3>
                   <p className="text-xs text-gold-light font-bold uppercase tracking-widest mt-1">
-                    Ações de Danos e Contratos
+                    Soluções jurídicas para conflitos patrimoniais, contratos e indenizações.
                   </p>
                   <p className="mt-4 text-sm text-slate-750 font-normal leading-relaxed">
-                    Garantimos os seus direitos em disputas civis, cobranças de dívidas, problemas em contratos e ações para exigir o cumprimento de obrigações.
+                    Conflitos envolvendo contratos, cobranças, descumprimento de obrigações e pedidos de indenização exigem uma análise jurídica cuidadosa. Nossa equipe atua na prevenção e na resolução de litígios, buscando a estratégia mais adequada para a proteção dos seus direitos, tanto por negociação quanto pela via judicial.
                   </p>
                   
                   <ul className="mt-6 space-y-2.5 border-t border-slate-200 pt-4">
                     {[
-                      "Ações de indenização por danos",
-                      "Cobranças judiciais e execução de dívidas",
-                      "Indenizações por danos morais ou materiais",
-                      "Exigir cumprimento de contratos e acordos",
-                      "Elaboração e análise de contratos seguros",
+                      "Indenizações por danos materiais, morais e lucros cessantes (quando cabível)",
+                      "Elaboração, análise e revisão de contratos",
+                      "Descumprimento de contratos e acordos",
+                      "Cobranças judiciais, execuções e recuperação de créditos",
+                      "Responsabilidade civil e reparação de prejuízos",
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-sm text-slate-750 font-medium">
                         <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-gold-light rounded-full" />
@@ -479,7 +509,7 @@ export default function Home() {
                     <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                   <WhatsAppCTAButton className="px-5 py-2.5 text-[10px] font-bold uppercase tracking-wider" variant="outline">
-                    Falar com Dr. Saulo (OAB/RJ 144.040)
+                    FALAR COM UM ADVOGADO
                   </WhatsAppCTAButton>
                 </div>
               </div>
@@ -499,30 +529,40 @@ export default function Home() {
               <div className="inline-flex items-center gap-2 mb-4">
                 <BookOpen className="h-4 w-4 text-gold-light" />
                 <span className="text-[10px] font-bold uppercase tracking-widest text-gold-light">
-                  Sobre os Sócios Fundadores
+                  SOBRE OS SÓCIOS FUNDADORES
                 </span>
               </div>
               
               <h2 className="font-serif text-3xl sm:text-4xl font-normal text-navy-base">
-                Advocacia Próxima: Atendimento Direto com os Sócios
+                Advocacia próxima, estratégica e conduzida pelos próprios sócios.
               </h2>
               
               <div className="h-[1px] w-20 bg-gold-base mt-4 mb-6" />
               
-              <p className="text-sm sm:text-base text-slate-750 leading-relaxed font-normal">
-                O escritório foi fundado em 2017 pelos advogados <strong className="text-navy-base font-semibold">Felipe Reis (OAB/RJ 211.932)</strong> e <strong className="text-navy-base font-semibold">Saulo Stussi (OAB/RJ 144.040)</strong>. Diferente de grandes escritórios, aqui você é atendido diretamente pelos donos. Cada caso é analisado em conjunto pelos dois sócios, garantindo dupla verificação para a segurança da sua causa.
+              <p className="text-sm sm:text-base text-slate-750 leading-relaxed font-normal mb-4">
+                No <strong className="text-navy-base font-semibold">Stussi & Reis Advocacia e Consultoria</strong>, acreditamos que cada cliente merece atenção individualizada. Por isso, desde o primeiro atendimento até a conclusão do caso, você é acompanhado diretamente pelos sócios do escritório.
               </p>
+              
+              <p className="text-sm sm:text-base text-slate-750 leading-relaxed font-normal">
+                Fundado em 2017 pelos advogados <strong className="text-navy-base font-semibold">Felipe Reis (OAB/RJ 211.932)</strong> e <strong className="text-navy-base font-semibold">Saulo Stussi (OAB/RJ 144.040)</strong>, o escritório atua com foco em soluções jurídicas personalizadas, unindo experiência, estratégia e atendimento próximo para oferecer segurança e transparência em cada etapa.
+              </p>
+
+              <div className="my-6 p-4 bg-slate-50 border-l-2 border-gold-base text-xs text-slate-550 leading-relaxed font-light">
+                Sempre que a complexidade do caso exigir, os sócios atuam de forma conjunta na definição da estratégia jurídica, proporcionando uma análise técnica criteriosa e uma condução alinhada aos interesses do cliente.
+              </div>
               
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="border-l border-gold-light pl-4 py-1">
-                  <p className="text-sm font-bold text-navy-base">Dr. Felipe Reis (OAB/RJ 211.932)</p>
-                  <p className="text-[10px] text-gold-light uppercase tracking-wider mt-0.5">Previdenciário (INSS), Consumidor e Cível</p>
-                  <p className="text-sm text-slate-750 font-normal mt-2">Como sócio do escritório, é especialista em Direito Previdenciário (INSS), atuando na concessão, revisão e defesa de benefícios de forma ágil e próxima. Também atua nas áreas de Direito do Consumidor e Cível.</p>
+                  <p className="text-sm font-bold text-navy-base">Dr. Felipe Reis</p>
+                  <p className="text-[10px] text-gold-light font-bold uppercase tracking-wider mt-0.5">OAB/RJ 211.932</p>
+                  <p className="text-[11px] text-slate-500 font-semibold mt-1">Direito Previdenciário (INSS), Direito do Consumidor e Direito Cível</p>
+                  <p className="text-xs text-slate-750 font-normal mt-2">Atua com foco em <strong>Direito Previdenciário</strong>, assessorando clientes na obtenção, revisão e restabelecimento de benefícios do INSS, além de realizar planejamento previdenciário. Também presta assessoria em demandas de Direito do Consumidor e Direito Cível, sempre com atendimento próximo e análise individualizada de cada caso.</p>
                 </div>
                 <div className="border-l border-gold-light pl-4 py-1">
-                  <p className="text-sm font-bold text-navy-base">Dr. Saulo Stussi (OAB/RJ 144.040)</p>
-                  <p className="text-[10px] text-gold-light uppercase tracking-wider mt-0.5">Consumidor e Civil</p>
-                  <p className="text-sm text-slate-750 font-normal mt-2">Como sócio do escritório, é especialista em Direito do Consumidor e Direito Civil. Atua focado em proteger seus direitos contra abusos de empresas e buscar indenizações justas por prejuízos sofridos.</p>
+                  <p className="text-sm font-bold text-navy-base">Dr. Saulo Stussi</p>
+                  <p className="text-[10px] text-gold-light font-bold uppercase tracking-wider mt-0.5">OAB/RJ 144.040</p>
+                  <p className="text-[11px] text-slate-500 font-semibold mt-1">Direito do Consumidor e Direito Cível</p>
+                  <p className="text-xs text-slate-750 font-normal mt-2">Atua na defesa dos direitos dos consumidores e na resolução de demandas cíveis, prestando assessoria em casos envolvendo fraudes bancárias, golpes do Pix, cobranças indevidas, contratos, responsabilidade civil e pedidos de indenização, sempre com atuação técnica e estratégica.</p>
                 </div>
               </div>
 
@@ -531,7 +571,7 @@ export default function Home() {
                   href="/sobre"
                   className="flex items-center justify-center gap-2 border border-slate-300 bg-white hover:border-gold-base px-8 py-3.5 text-xs font-bold uppercase tracking-widest text-slate-700 transition-all"
                 >
-                  Conhecer Nossa História
+                  CONHECER NOSSA HISTÓRIA
                 </Link>
                 <WhatsAppCTAButton className="px-8 py-3.5 text-xs font-bold uppercase tracking-widest text-white bg-navy-base hover:bg-navy-dark shadow-sm">
                   Agendar com os Sócios
