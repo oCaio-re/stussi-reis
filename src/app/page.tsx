@@ -136,16 +136,17 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            {/* Left Column: Hero Copy Carousel Container */}
-            <div className="lg:col-span-7 relative min-h-[380px] flex flex-col justify-center">
+            {/* Left Column: Hero Copy Carousel Container (Grid stack ensures fixed height matching the largest slide) */}
+            <div className="lg:col-span-7 grid grid-cols-1 grid-rows-1 items-center min-h-[380px]">
               {slides.map((slide, idx) => (
                 <div
                   key={idx}
-                  className={`transition-all duration-700 flex flex-col justify-center ${
+                  className={`col-start-1 row-start-1 transition-all duration-700 flex flex-col justify-center ${
                     idx === activeSlide
-                      ? "opacity-100 translate-y-0 pointer-events-auto z-10 relative"
-                      : "opacity-0 -translate-y-4 pointer-events-none z-0 absolute inset-0"
+                      ? "opacity-100 translate-y-0 pointer-events-auto z-10"
+                      : "opacity-0 -translate-y-4 pointer-events-none z-0"
                   }`}
+                  aria-hidden={idx !== activeSlide}
                 >
                   <div className="inline-flex items-center gap-2 mb-4">
                     <span className="h-px w-6 bg-gold-light" />
