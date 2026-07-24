@@ -24,25 +24,25 @@ export default function Sobre() {
       initials: "FR",
       photo: "/foto felipe.jpeg",
       description:
-        "Como sócio do escritório, é especialista em Direito Previdenciário (INSS), atuando na concessão, revisão e defesa de benefícios previdenciários, sempre com atendimento técnico e personalizado. Também exerce atuação nas áreas de Direito do Consumidor e Direito Cível, oferecendo soluções jurídicas seguras e eficientes.",
+        "Como sócio do escritório, é especialista em Direito Previdenciário (INSS), atuando na concessão, revisão e defesa de benefícios previdenciários, sempre com atendimento técnico e personalizado.",
       education: [
         "Bacharel em Direito",
-        "Especialista em Direito do Consumidor e Responsabilidade Civil",
+        "Especialista em Direito Previdenciário (INSS)",
         "Membro Ativo da Seccional OAB/RJ",
       ],
-      areas: ["Direito Previdenciário", "Direito do Consumidor", "Direito Cível"],
+      areas: ["Direito Previdenciário (INSS)"],
     },
     {
       name: "Dr. Saulo Pedroso Stussi Júnior",
       role: "Advogado Sócio Fundador",
       oab: "OAB/RJ 144.040",
       initials: "SS",
-      photo: "/saulo.png",
+      photo: "/foto saulo.jpeg",
       description:
         "Como sócio do escritório, é especialista em Direito do Consumidor e Direito Civil, com atuação destacada em Responsabilidade Civil, buscando a reparação de danos materiais e morais decorrentes de falhas na prestação de serviços, acidentes, descumprimentos contratuais e demais situações que gerem prejuízos aos clientes, sempre com uma atuação técnica e estratégica.",
       education: [
         "Bacharel em Direito",
-        "Especialista em Direito Processual Civil e Obrigações",
+        "Especialista em Direito do Consumidor e Responsabilidade Civil",
         "Membro Ativo da Seccional OAB/RJ",
       ],
       areas: ["Direito do Consumidor", "Direito Cível"],

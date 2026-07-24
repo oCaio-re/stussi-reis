@@ -462,7 +462,7 @@ export default function Home() {
                     <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                   <WhatsAppCTAButton className="px-5 py-2.5 text-[10px] font-bold uppercase tracking-wider" variant="outline">
-                    Falar com Dr. Felipe (OAB/RJ 211.932)
+                    Falar com Dr. Saulo (OAB/RJ 144.040)
                   </WhatsAppCTAButton>
                 </div>
               </div>
@@ -556,13 +556,13 @@ export default function Home() {
                 <div className="border-l border-gold-light pl-4 py-1">
                   <p className="text-sm font-bold text-navy-base">Dr. Felipe Reis</p>
                   <p className="text-[10px] text-gold-light font-bold uppercase tracking-wider mt-0.5">OAB/RJ 211.932</p>
-                  <p className="text-[11px] text-slate-500 font-semibold mt-1">Direito Previdenciário (INSS), Direito do Consumidor e Direito Cível</p>
-                  <p className="text-xs text-slate-750 font-normal mt-2">Atua com foco em <strong>Direito Previdenciário</strong>, assessorando clientes na obtenção, revisão e restabelecimento de benefícios do INSS, além de realizar planejamento previdenciário. Também presta assessoria em demandas de Direito do Consumidor e Direito Cível, sempre com atendimento próximo e análise individualizada de cada caso.</p>
+                  <p className="text-[11px] text-slate-500 font-semibold mt-1">Especialista em Direito Previdenciário (INSS)</p>
+                  <p className="text-xs text-slate-750 font-normal mt-2">Atua com foco em <strong>Direito Previdenciário</strong>, assessorando clientes na obtenção, revisão e restabelecimento de benefícios do INSS, além de realizar planejamento previdenciário minucioso para cada segurado.</p>
                 </div>
                 <div className="border-l border-gold-light pl-4 py-1">
                   <p className="text-sm font-bold text-navy-base">Dr. Saulo Stussi</p>
                   <p className="text-[10px] text-gold-light font-bold uppercase tracking-wider mt-0.5">OAB/RJ 144.040</p>
-                  <p className="text-[11px] text-slate-500 font-semibold mt-1">Direito do Consumidor e Direito Cível</p>
+                  <p className="text-[11px] text-slate-500 font-semibold mt-1">Especialista em Direito do Consumidor e Direito Cível</p>
                   <p className="text-xs text-slate-750 font-normal mt-2">Atua na defesa dos direitos dos consumidores e na resolução de demandas cíveis, prestando assessoria em casos envolvendo fraudes bancárias, golpes do Pix, cobranças indevidas, contratos, responsabilidade civil e pedidos de indenização, sempre com atuação técnica e estratégica.</p>
                 </div>
               </div>
