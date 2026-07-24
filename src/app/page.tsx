@@ -40,8 +40,8 @@ export default function Home() {
         </>
       ),
       description: "Cada caso previdenciário exige uma análise cuidadosa. Nossa equipe avalia seu histórico de contribuições, identifica o benefício mais vantajoso e acompanha todo o procedimento perante o INSS, desde o pedido administrativo até a atuação judicial, quando necessária.",
-      image: "/office_interior.jpg",
-      imageAlt: "Interior do escritório",
+      image: "/balanca_justica_premium.png",
+      imageAlt: "Balança da Justiça dourada sobre mesa de mármore",
       isSeal: false,
       ctaText: "Consultar Especialista em INSS",
       ctaType: "whatsapp",
@@ -58,8 +58,8 @@ export default function Home() {
         </>
       ),
       description: "Atuamos na proteção de consumidores que enfrentam problemas com bancos, empresas e prestadores de serviços. Cada caso é analisado de forma individual para definir a estratégia jurídica mais adequada, buscando a defesa dos seus direitos com segurança e transparência. Prestamos assessoria em demandas envolvendo golpes do Pix, fraudes bancárias, empréstimos consignados indevidos, cobranças abusivas, negativação indevida, planos de saúde, responsabilidade civil e questões contratuais.",
-      image: "/legal_desk.jpg",
-      imageAlt: "Mesa de trabalho jurídica",
+      image: "/foto_clientes_saulo.jpeg",
+      imageAlt: "Dr. Saulo Stussi em atendimento jurídico",
       isSeal: false,
       ctaText: "Tratar de Contrato ou Fraude",
       ctaType: "modal",
@@ -376,8 +376,8 @@ export default function Home() {
                 <div className="absolute top-0 right-0 w-20 h-20 bg-gold-base/5 blur-2xl z-0" />
                 <div className="relative w-full h-full overflow-hidden border border-slate-200">
                   <Image
-                    src="/office_interior.jpg"
-                    alt="Escritório Stussi & Reis"
+                    src="/foto_clientes_idosos_felipe.jpg"
+                    alt="Dr. Felipe Reis atendendo clientes idosos"
                     fill
                     className="object-cover transition-transform duration-700 hover:scale-103"
                     sizes="(max-w-1024px) 100vw, 550px"

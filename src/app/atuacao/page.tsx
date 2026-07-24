@@ -104,8 +104,8 @@ export default function Atuacao() {
             <div className="border border-slate-200 p-4 bg-white shadow-md">
               <div className="relative w-full h-56 bg-slate-100 border border-slate-200 overflow-hidden mb-6">
                 <Image
-                  src="/legal_desk.jpg"
-                  alt="Mesa de trabalho de Direito"
+                  src="/saulo e felipe.jpeg"
+                  alt="Sócios Felipe Reis e Saulo Stussi"
                   fill
                   className="object-cover"
                   sizes="(max-w-1024px) 100vw, 350px"
