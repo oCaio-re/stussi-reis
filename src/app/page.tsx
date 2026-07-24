@@ -630,28 +630,28 @@ export default function Home() {
               {[
                 {
                   step: 1,
-                  title: "Contato inicial",
-                  description: "Entre em contato pelo WhatsApp para uma breve apresentação do seu caso e esclarecimento das primeiras dúvidas.",
+                  title: "Agendamento da consulta",
+                  description: "Entre em contato com nossa equipe para agendar sua consulta presencial ou por videoconferência, conforme sua disponibilidade.",
                   icon: MessageSquare,
-                  active: true, // First card highlighted as in the image
+                  active: true,
                 },
                 {
                   step: 2,
-                  title: "Atendimento agendado",
-                  description: "Agendamos uma consulta presencial ou por videochamada, conforme sua preferência e disponibilidade.",
-                  icon: Video,
+                  title: "Consulta jurídica",
+                  description: "Durante a consulta, um advogado realizará a análise do seu caso, esclarecerá suas dúvidas e apresentará as possíveis soluções jurídicas.",
+                  icon: Scale,
                 },
                 {
                   step: 3,
                   title: "Análise documental",
-                  description: "Após o atendimento, organizamos a documentação necessária para análise técnica do seu caso.",
+                  description: "Após a consulta, realizamos a conferência da documentação necessária e definimos a estratégia jurídica mais adequada para o seu caso.",
                   icon: FileText,
                 },
                 {
                   step: 4,
-                  title: "Protocolo do processo",
-                  description: "Realizamos o protocolo administrativo ou judicial e mantemos você informado sobre cada etapa.",
-                  icon: PenTool,
+                  title: "Acompanhamento do caso",
+                  description: "Após a contratação, iniciamos as medidas administrativas ou judiciais cabíveis e mantemos você informado sobre cada etapa do procedimento.",
+                  icon: ShieldCheck,
                 },
               ].map((item, idx) => {
                 const Icon = item.icon;
