@@ -1,8 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { Scale, ShieldCheck, Landmark, HelpCircle, ArrowRight } from "lucide-react";
+import { Scale, ShieldCheck, Landmark } from "lucide-react";
 import WhatsAppCTAButton from "@/components/WhatsAppCTAButton";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -92,7 +91,7 @@ export default function Atuacao() {
           </h1>
           <div className="mt-4 h-[1px] w-20 bg-gold-base mx-auto" />
           <p className="mt-6 text-sm text-slate-500 leading-relaxed font-light">
-            O escritório Stussi & Reis presta assessoria informativa e representação estratégica focada em soluções ágeis. Nossos textos e pareceres são redigidos de forma clara para que o cliente compreenda perfeitamente cada etapa processual.
+            Na Stussi & Reis Advocacia e Consultoria, oferecemos assessoria jurídica personalizada nas áreas de Direito Previdenciário, Direito do Consumidor e Direito Cível. Atuamos com estratégia, transparência e excelência técnica, sempre buscando a solução mais adequada para cada caso e mantendo nossos clientes informados em todas as etapas do atendimento.
           </p>
         </div>
 
@@ -112,17 +111,17 @@ export default function Atuacao() {
                 />
               </div>
               <h3 className="font-serif text-base font-bold text-navy-base uppercase tracking-wider mb-2">
-                Advocacia Ética & Informativa
+                Advocacia Ética e Estratégica
               </h3>
               <p className="text-xs text-slate-500 font-light leading-relaxed">
-                Todas as consultas e análises de viabilidade são pautadas no Código de Ética e Disciplina da OAB. Não garantimos êxitos antecipados em processos judiciais, mas nos comprometemos com o rigor técnico de cada tese.
+                Cada caso é analisado de forma individualizada, com rigor técnico e observância às normas do Código de Ética e Disciplina da OAB. Nosso compromisso é prestar uma orientação jurídica clara, segura e transparente, para que você compreenda seus direitos e tome decisões com confiança.
               </p>
               <div className="mt-6 pt-6 border-t border-slate-100">
                 <p className="text-[10px] font-bold text-gold-light uppercase tracking-wider mb-1">
-                  Atendimento Direto
+                  Atendimento Personalizado
                 </p>
-                <p className="text-xs text-slate-600 font-semibold mb-3">
-                  Debate conjunto dos sócios em todas as causas.
+                <p className="text-xs text-slate-600 font-normal leading-relaxed mb-3">
+                  Você será atendido diretamente por advogados, que acompanharão seu caso desde a consulta inicial até a conclusão do procedimento, oferecendo suporte jurídico próximo, responsável e alinhado às suas necessidades.
                 </p>
                 <WhatsAppCTAButton className="w-full text-xs font-bold uppercase tracking-wider py-3" />
               </div>
@@ -193,7 +192,7 @@ export default function Atuacao() {
                         <WhatsAppCTAButton 
                           className="w-full sm:w-auto px-6 py-3 text-xs font-bold uppercase tracking-widest text-white bg-navy-base hover:bg-[#070b19]"
                         >
-                          Conversar sobre esta Área
+                          Falar com um advogado especialista
                         </WhatsAppCTAButton>
                       </div>
                     </div>
@@ -203,29 +202,6 @@ export default function Atuacao() {
             })}
           </div>
 
-        </div>
-
-        {/* FAQ prompt */}
-        <div className="mt-28 text-center max-w-2xl mx-auto border border-slate-200 bg-white p-8 md:p-10 shadow-sm relative">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gold-base text-white p-2 rounded-none border border-gold-dark shadow-md">
-            <HelpCircle className="h-5 w-5" />
-          </div>
-          <h3 className="font-serif text-lg font-bold text-navy-base mt-4 mb-2">
-            Caso sua demanda não esteja explicitada acima
-          </h3>
-          <p className="text-xs text-slate-500 font-light leading-relaxed mb-6">
-            O ordenamento jurídico abrange uma gama extensa de situações. Fale conosco para uma orientação preliminar. Caso a matéria necessite de outro especialista, faremos a recomendação ética adequada.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <WhatsAppCTAButton className="px-6 py-3 text-xs font-bold uppercase tracking-wider" />
-            <Link
-              href="/contato"
-              className="group flex items-center justify-center gap-2 border border-slate-200 bg-white px-6 py-3 text-xs font-bold uppercase tracking-wider text-slate-600 hover:border-gold-base transition-all"
-            >
-              <span>Enviar Mensagem Escrita</span>
-              <ArrowRight className="h-3.5 w-3.5 text-gold-light transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
-          </div>
         </div>
 
       </div>

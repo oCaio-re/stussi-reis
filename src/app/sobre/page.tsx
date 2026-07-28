@@ -244,7 +244,7 @@ export default function Sobre() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
               <WhatsAppCTAButton className="px-8 py-3.5 text-xs font-bold uppercase tracking-widest text-white bg-navy-base hover:bg-[#070b19]">
-                FALAR COM UM ADVOGADO
+                Falar com um advogado especialista
               </WhatsAppCTAButton>
               <Link
                 href="/contato"

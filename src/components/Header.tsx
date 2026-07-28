@@ -98,7 +98,7 @@ export default function Header() {
               className="flex items-center gap-2 rounded-none border border-gold-base/50 bg-gold-base/5 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-gold-light transition-all duration-300 hover:bg-gold-base hover:text-white hover:border-gold-base cursor-pointer shadow-sm active:scale-98"
             >
               <Phone className="h-3.5 w-3.5" />
-              <span>Falar com Advogado</span>
+              <span>Falar com um advogado especialista</span>
             </button>
           </nav>
 

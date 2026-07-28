@@ -26,13 +26,14 @@ export default function Home() {
       image: "/foto_clientes_idosos_felipe.jpg",
       imageAlt: "Dr. Felipe Reis atendendo clientes idosos",
       isSeal: false,
-      ctaText: "Falar com Advogado pelo WhatsApp",
+      ctaText: "Falar com um advogado especialista",
       ctaType: "modal",
       secondaryText: "Conhecer Áreas de Atuação",
       secondaryHref: "/atuacao",
     },
     {
       badge: "Área de Foco Principal",
+      hideImageOverlay: true,
       title: (
         <>
           Direito Previdenciário:{" "}
@@ -43,7 +44,7 @@ export default function Home() {
       image: "/balanca_justica_premium.png",
       imageAlt: "Balança da Justiça dourada sobre mesa de mármore",
       isSeal: false,
-      ctaText: "Consultar Especialista em INSS",
+      ctaText: "Falar com um advogado especialista",
       ctaType: "whatsapp",
       ctaLink: "https://wa.me/5521988961729?text=Ol%C3%A1%20Dr.%20Felipe%2C%20gostaria%20de%20conversar%20sobre%20benef%C3%ADcio%20previdenci%C3%A1rio%20do%20INSS.",
       secondaryText: "Detalhes dos Serviços",
@@ -78,7 +79,7 @@ export default function Home() {
       image: "/saulo e felipe.jpeg",
       imageAlt: "Sócios Felipe Reis e Saulo Stussi",
       isSeal: false,
-      ctaText: "Falar com os Sócios",
+      ctaText: "Falar com um advogado especialista",
       ctaType: "modal",
       secondaryText: "Conhecer Nossa História",
       secondaryHref: "/sobre",
@@ -97,7 +98,7 @@ export default function Home() {
 
   const highlights = [
     {
-      title: "Atendimento feito pelos Advogados",
+      title: "Atendimento realizado pelos Advogados",
       description: "No Stussi & Reis, seu atendimento é realizado diretamente pelos advogados responsáveis pelo caso. Você recebe orientação jurídica personalizada, acompanhamento próximo e acesso direto aos profissionais durante toda a sua jornada.",
       icon: Phone,
     },
@@ -221,14 +222,16 @@ export default function Home() {
                       />
                       
                       {/* Floating Badge */}
-                      <div className="absolute bottom-4 right-4 bg-[#070b19]/90 backdrop-blur-sm border border-gold-base/30 px-4 py-2 shadow-lg rounded-sm z-20 flex flex-col items-end">
-                        <span className="font-serif text-[11px] font-bold text-white tracking-wide">
-                          {slide.badge}
-                        </span>
-                        <span className="text-[7px] text-gold-light tracking-[0.2em] font-semibold uppercase mt-0.5">
-                          Stussi & Reis
-                        </span>
-                      </div>
+                      {!slide.hideImageOverlay && (
+                        <div className="absolute bottom-4 right-4 bg-[#070b19]/90 backdrop-blur-sm border border-gold-base/30 px-4 py-2 shadow-lg rounded-sm z-20 flex flex-col items-end">
+                          <span className="font-serif text-[11px] font-bold text-white tracking-wide">
+                            {slide.badge}
+                          </span>
+                          <span className="text-[7px] text-gold-light tracking-[0.2em] font-semibold uppercase mt-0.5">
+                            Stussi & Reis
+                          </span>
+                        </div>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -358,7 +361,7 @@ export default function Home() {
 
               <div className="pt-2 flex flex-col sm:flex-row gap-4">
                 <WhatsAppCTAButton className="px-8 py-3.5 text-xs font-bold uppercase tracking-widest text-white bg-navy-base hover:bg-navy-dark shadow-sm">
-                  Consultar Meu Caso no WhatsApp
+                  Falar com um advogado especialista
                 </WhatsAppCTAButton>
                 <Link
                   href="/atuacao"
@@ -462,7 +465,7 @@ export default function Home() {
                     <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                   <WhatsAppCTAButton className="px-5 py-2.5 text-[10px] font-bold uppercase tracking-wider" variant="outline">
-                    Falar com Dr. Saulo (OAB/RJ 144.040)
+                    Falar com um advogado especialista
                   </WhatsAppCTAButton>
                 </div>
               </div>
@@ -510,7 +513,7 @@ export default function Home() {
                     <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                   <WhatsAppCTAButton className="px-5 py-2.5 text-[10px] font-bold uppercase tracking-wider" variant="outline">
-                    FALAR COM UM ADVOGADO
+                    Falar com um advogado especialista
                   </WhatsAppCTAButton>
                 </div>
               </div>
@@ -575,7 +578,7 @@ export default function Home() {
                   CONHECER NOSSA HISTÓRIA
                 </Link>
                 <WhatsAppCTAButton className="px-8 py-3.5 text-xs font-bold uppercase tracking-widest text-white bg-navy-base hover:bg-navy-dark shadow-sm">
-                  Agendar com os Sócios
+                  Falar com um advogado especialista
                 </WhatsAppCTAButton>
               </div>
             </div>
@@ -689,7 +692,7 @@ export default function Home() {
           <div className="mt-16 flex justify-center">
             <ScrollReveal animation="fade-in-up" delayClass="delay-400">
               <WhatsAppCTAButton className="px-10 py-4 text-xs font-bold uppercase tracking-widest text-gold-light bg-[#0a1128] border border-gold-base/50 hover:bg-gold-base hover:text-[#070b19] hover:border-gold-base shadow-md transition-all duration-300">
-                Iniciar Atendimento
+                Falar com um advogado especialista
               </WhatsAppCTAButton>
             </ScrollReveal>
           </div>
@@ -721,7 +724,7 @@ export default function Home() {
               
               <div className="flex flex-col sm:flex-row items-center gap-4 w-full justify-center">
                 <WhatsAppCTAButton className="w-full sm:w-auto px-8 py-4 text-xs font-bold uppercase tracking-widest text-white bg-navy-base border border-navy-base hover:bg-navy-dark hover:border-navy-dark shadow-md transition-all duration-300">
-                  Iniciar Atendimento no WhatsApp
+                  Falar com um advogado especialista
                 </WhatsAppCTAButton>
                 <Link
                   href="/contato"

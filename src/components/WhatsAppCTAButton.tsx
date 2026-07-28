@@ -48,7 +48,7 @@ export default function WhatsAppCTAButton({
         variant === "outline" ? "group-hover:text-white" : ""
       }`}>
         <Phone className="h-3.5 w-3.5 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12 text-current" />
-        <span>{children || "Falar com Advogado"}</span>
+        <span>{children || "Falar com um advogado especialista"}</span>
       </span>
     </button>
   );

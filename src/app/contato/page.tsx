@@ -110,7 +110,7 @@ export default function Contato() {
                         className="inline-flex w-full items-center justify-center gap-2 bg-[#128c7e] hover:bg-[#075e54] text-white text-[11px] font-bold uppercase tracking-wider py-3 mt-2 shadow-sm transition-all cursor-pointer"
                       >
                         <MessageSquare className="h-4 w-4" />
-                        <span>Conversar via WhatsApp</span>
+                        <span>Falar com um advogado especialista</span>
                       </a>
                     </div>
                   ))}
