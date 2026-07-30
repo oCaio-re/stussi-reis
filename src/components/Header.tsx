@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone } from "lucide-react";
@@ -9,8 +9,18 @@ import { useWhatsApp } from "@/context/WhatsAppContext";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const { open: openWhatsApp } = useWhatsApp();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { name: "Início", href: "/" },
@@ -22,7 +32,11 @@ export default function Header() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/95 backdrop-blur-md shadow-sm">
+    <header className={`sticky top-0 z-40 w-full animate-fade-in-down transition-all duration-300 ${
+      scrolled 
+        ? "border-b border-slate-200/90 bg-white/95 backdrop-blur-md shadow-md" 
+        : "border-b border-slate-200/50 bg-white/85 backdrop-blur-sm shadow-none"
+    }`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-22 items-center justify-between">
           {/* Logo */}
