@@ -125,7 +125,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 shrink-0 text-gold-base mt-0.5" />
                 <div>
-                  <p className="font-semibold text-gray-300">Atendimento INSS:</p>
+                  <p className="font-semibold text-gray-300">Atendimento Previdenciário:</p>
                   <p>(21) 98896-1729</p>
                   <p className="font-semibold text-gray-300 mt-2">Atendimento Consumidor e Cível:</p>
                   <p>(21) 98731-0837</p>
