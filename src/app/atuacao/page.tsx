@@ -91,7 +91,7 @@ export default function Atuacao() {
           </h1>
           <div className="mt-4 h-[1px] w-20 bg-gold-base mx-auto" />
           <p className="mt-6 text-sm text-slate-500 leading-relaxed font-light">
-            Na Stussi & Reis Advocacia e Consultoria, oferecemos assessoria jurídica personalizada nas áreas de Direito Previdenciário, Direito do Consumidor e Direito Cível. Atuamos com estratégia, transparência e excelência técnica, sempre buscando a solução mais adequada para cada caso e mantendo nossos clientes informados em todas as etapas do atendimento.
+            No Stussi & Reis Advocacia e Consultoria, prestamos assessoria jurídica especializada nas áreas de Direito Previdenciário, Direito do Consumidor e Direito Cível. Atuamos com estratégia, excelência técnica e atendimento personalizado, desenvolvendo soluções jurídicas adequadas às necessidades de cada cliente. Nosso compromisso é oferecer um atendimento transparente, próximo e eficiente, mantendo nossos clientes informados em todas as etapas da atuação jurídica.
           </p>
         </div>
 
@@ -111,17 +111,17 @@ export default function Atuacao() {
                 />
               </div>
               <h3 className="font-serif text-base font-bold text-navy-base uppercase tracking-wider mb-2">
-                Advocacia Ética e Estratégica
+                ADVOCACIA ÉTICA E ESTRATÉGICA
               </h3>
               <p className="text-xs text-slate-500 font-light leading-relaxed">
-                Cada caso é analisado de forma individualizada, com rigor técnico e observância às normas do Código de Ética e Disciplina da OAB. Nosso compromisso é prestar uma orientação jurídica clara, segura e transparente, para que você compreenda seus direitos e tome decisões com confiança.
+                Cada demanda é analisada de forma criteriosa e individualizada, com rigor técnico e absoluto respeito às normas da Ordem dos Advogados do Brasil. Nosso compromisso é oferecer orientação jurídica clara, transparente e segura, proporcionando aos clientes confiança para tomar decisões bem fundamentadas.
               </p>
               <div className="mt-6 pt-6 border-t border-slate-100">
                 <p className="text-[10px] font-bold text-gold-light uppercase tracking-wider mb-1">
-                  Atendimento Personalizado
+                  ATENDIMENTO PERSONALIZADO
                 </p>
                 <p className="text-xs text-slate-600 font-normal leading-relaxed mb-3">
-                  Você será atendido diretamente por advogados, que acompanharão seu caso desde a consulta inicial até a conclusão do procedimento, oferecendo suporte jurídico próximo, responsável e alinhado às suas necessidades.
+                  Aqui, você é atendido diretamente por advogados, que acompanham seu caso desde a consulta inicial até a conclusão da atuação jurídica. Valorizamos um atendimento próximo, transparente e personalizado, com foco nas necessidades e objetivos de cada cliente.
                 </p>
                 <WhatsAppCTAButton className="w-full text-xs font-bold uppercase tracking-wider py-3" />
               </div>

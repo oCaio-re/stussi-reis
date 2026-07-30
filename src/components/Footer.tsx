@@ -38,9 +38,15 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-            <p className="text-sm leading-relaxed max-w-md text-gray-400">
-              Escritório especializado com atuação ética e focada em Direito Previdenciário, Consumidor e Cível. Comprometidos com a excelência jurídica e o atendimento personalizado em Niterói - RJ.
-            </p>
+            <div className="text-sm leading-relaxed max-w-md text-gray-400 space-y-3">
+              <p>
+                Escritório especializado em Direito Previdenciário, Consumidor e Cível, oferecendo soluções jurídicas personalizadas para proteger o que é seu por direito.
+              </p>
+              <div className="text-xs text-gray-300 space-y-1 pt-1">
+                <p>🏛️ <strong className="text-white font-medium">Presencial:</strong> Atendimento exclusivo no Centro de Niterói – RJ</p>
+                <p>📲 <strong className="text-white font-medium">Online:</strong> Consultoria ágil, segura e sem burocracia para todo o Brasil</p>
+              </div>
+            </div>
             <div className="mt-6 flex items-center gap-4">
               <a
                 href="https://www.instagram.com/stussi_reis_advocacia?utm_source=qr&igsh=OTg0eTd4ZzVlMWVk"
@@ -119,9 +125,9 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Phone className="h-5 w-5 shrink-0 text-gold-base mt-0.5" />
                 <div>
-                  <p className="font-semibold text-gray-300">Felipe Reis:</p>
+                  <p className="font-semibold text-gray-300">Atendimento INSS:</p>
                   <p>(21) 98896-1729</p>
-                  <p className="font-semibold text-gray-300 mt-2">Saulo Stussi:</p>
+                  <p className="font-semibold text-gray-300 mt-2">Atendimento Consumidor e Cível:</p>
                   <p>(21) 98731-0837</p>
                 </div>
               </li>
