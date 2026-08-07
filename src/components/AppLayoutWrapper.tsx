@@ -95,8 +95,7 @@ function AppLayoutInner({ children }: { children: React.ReactNode }) {
         aria-label="Atendimento WhatsApp"
       >
         <MessageSquare className="h-5 w-5 shrink-0" />
-        <span className="text-[11px] font-bold uppercase tracking-widest hidden sm:inline">WhatsApp: Dúvidas sobre INSS</span>
-        <span className="text-[11px] font-bold uppercase tracking-widest sm:hidden">Falar Conosco</span>
+        <span className="text-[11px] font-bold uppercase tracking-widest">WHATSAPP</span>
       </button>
 
       {/* WhatsApp Choose Lawyer Modal */}
