@@ -6,15 +6,56 @@ import WhatsAppCTAButton from "@/components/WhatsAppCTAButton";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Áreas de Atuação | Stussi & Reis Advocacia",
+  title: "Áreas de Atuação - Previdenciário, Consumidor e Cível",
   description:
-    "Serviços jurídicos especializados em Direito Previdenciário (INSS), Direito do Consumidor e Direito Cível em Niterói - RJ. Atendimento focado em ética e conformidade.",
+    "Serviços jurídicos especializados em Direito Previdenciário (INSS, aposentadorias, BPC/LOAS), Direito do Consumidor (fraudes, PIX, consignados) e Cível em Niterói - RJ.",
+  keywords: [
+    "advogado previdenciario niteroi",
+    "aposentadoria inss niteroi",
+    "bpc loas niteroi",
+    "advogado consumidor niteroi",
+    "golpe do pix niteroi",
+    "fraude bancaria niteroi",
+    "advogado civel niteroi",
+  ],
   alternates: {
     canonical: "/atuacao",
+  },
+  openGraph: {
+    title: "Áreas de Atuação | Stussi & Reis Consultoria Jurídica em Niterói",
+    description:
+      "Atuação especializada em Direito Previdenciário (INSS), Consumidor (fraudes e empréstimos) e Direito Cível com os sócios Dr. Felipe Reis e Dr. Saulo Stussi.",
+    url: "https://stussiereis.com.br/atuacao",
+    images: ["/logo_square.jpeg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Áreas de Atuação | Stussi & Reis Consultoria Jurídica",
+    description: "Direito Previdenciário (INSS), Direito do Consumidor e Cível em Niterói - RJ.",
+    images: ["/logo_square.jpeg"],
   },
 };
 
 export default function Atuacao() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Início",
+        "item": "https://stussiereis.com.br"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Áreas de Atuação",
+        "item": "https://stussiereis.com.br/atuacao"
+      }
+    ]
+  };
+
   const areas = [
     {
       title: "Direito Previdenciário",
@@ -76,6 +117,10 @@ export default function Atuacao() {
 
   return (
     <div className="py-20 md:py-28 bg-[#fcfdfd]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* Title Section */}

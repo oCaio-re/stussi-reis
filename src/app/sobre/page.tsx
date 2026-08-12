@@ -7,15 +7,54 @@ import WhatsAppCTAButton from "@/components/WhatsAppCTAButton";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Quem Somos | Stussi & Reis Advocacia",
+  title: "Quem Somos - Conheça os Advogados Sócios",
   description:
-    "Conheça a trajetória e os sócios Dr. Felipe Reis e Dr. Saulo Stussi. Descubra nossa filosofia de responsabilidade técnica conjunta em Niterói - RJ.",
+    "Conheça a história do escritório Stussi & Reis em Niterói - RJ e a trajetória dos sócios Dr. Felipe Reis (OAB/RJ 211.932) e Dr. Saulo Stussi (OAB/RJ 144.040).",
+  keywords: [
+    "advogados niteroi",
+    "escritorio advocacia centro niteroi",
+    "Felipe Reis da Silva Oliveira",
+    "Saulo Pedroso Stussi Junior",
+    "Stussi e Reis",
+  ],
   alternates: {
     canonical: "/sobre",
+  },
+  openGraph: {
+    title: "Quem Somos | Stussi & Reis Consultoria Jurídica em Niterói",
+    description:
+      "Atendimento próximo, sem intermediários. Conheça a história e os advogados fundadores da Stussi & Reis em Niterói - RJ.",
+    url: "https://stussiereis.com.br/sobre",
+    images: ["/logo_square.jpeg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Quem Somos | Stussi & Reis Consultoria Jurídica",
+    description: "Conheça os sócios Dr. Felipe Reis e Dr. Saulo Stussi em Niterói - RJ.",
+    images: ["/logo_square.jpeg"],
   },
 };
 
 export default function Sobre() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Início",
+        "item": "https://stussiereis.com.br"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Quem Somos",
+        "item": "https://stussiereis.com.br/sobre"
+      }
+    ]
+  };
+
   const lawyers = [
     {
       name: "Dr. Felipe Reis da Silva Oliveira",
@@ -51,7 +90,10 @@ export default function Sobre() {
 
   return (
     <div className="relative bg-[#fcfdfd] min-h-screen">
-      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Intro & Story Section */}
       <section className="py-20 md:py-28 bg-white border-b border-slate-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

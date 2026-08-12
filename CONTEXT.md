@@ -37,10 +37,11 @@ Os meios integrados no website para comunicação dos potenciais clientes com o 
 *   **Formulário de e-mail**: Captura de dados (nome, e-mail, telefone, mensagem) localizada na página de Contato para triagem inicial.
 
 ### Estratégia de SEO e Metadados
-O site deve seguir práticas avançadas de SEO técnico e semântico para posicionamento orgânico (especialmente em buscas locais de Niterói/RJ):
-*   **Structured Data (JSON-LD)**: Implementação de esquemas `LegalService` ou `Attorney` da Schema.org em todas as páginas com endereço, telefones, logotipo e áreas de atuação.
-*   **Metadados por Página**: Títulos e descrições otimizados com palavras-chave relevantes (ex: "Advogado Previdenciário em Niterói", "Consultoria Jurídica Cível Niterói").
-*   **Semântica HTML**: Uso correto de tags estruturais (`header`, `main`, `footer`, `section`) e hierarquia de títulos (`h1`, `h2`, `h3`).
+O site segue práticas avançadas de SEO técnico, semântico e local para posicionamento orgânico (foco em Niterói, São Gonçalo, Maricá e Rio de Janeiro):
+*   **Structured Data (JSON-LD)**: Implementação de esquemas completos da Schema.org (`LegalService`, `Person` para os sócios Dr. Felipe Reis e Dr. Saulo Stussi, `FAQPage` e `BreadcrumbList`) em tags invisíveis.
+*   **Infraestrutura de Indexação**: Arquivos dinâmicos via Next.js App Router (`sitemap.ts`, `robots.ts`, `manifest.ts`) e cartões visuais para redes sociais (`openGraph` e `twitter` images).
+*   **SEO Geo-localizado**: Inclusão de meta-tags geo-espaciais (`geo.region: BR-RJ`, `geo.placename: Niterói`, `geo.position`, `ICBM`) para reforçar autoridade em buscas locais.
+*   **Metadados e Desempenho**: Títulos e descrições únicos com canonicals dinâmicos por rota (`/`, `/atuacao`, `/sobre`, `/contato`), priorização de carregamento de imagens Hero (`priority`, `sizes`) para otimização de Core Web Vitals (LCP/CLS) sem alteração na estrutura visual.
 
 
 

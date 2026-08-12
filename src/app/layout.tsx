@@ -18,37 +18,73 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Stussi & Reis Consultoria Jurídica | Advogados em Niterói - RJ",
+  title: {
+    default: "Stussi & Reis Consultoria Jurídica | Advogados em Niterói - RJ",
+    template: "%s | Stussi & Reis Consultoria Jurídica",
+  },
   description:
-    "Escritório de advocacia em Niterói especializado em Direito Previdenciário, Consumidor e Cível. Atendimento ágil e consultoria jurídica de excelência com os sócios Dr. Felipe Reis e Dr. Saulo Stussi.",
+    "Escritório de advocacia em Niterói especializado em Direito Previdenciário (INSS), Consumidor e Cível. Atendimento ágil e consultoria jurídica de excelência com os sócios Dr. Felipe Reis e Dr. Saulo Stussi.",
   keywords: [
     "advogado niterói",
-    "escritorio de advocacia niteroi",
-    "direito civil niterói",
-    "direito do consumidor niterói",
+    "escritório de advocacia niteroi",
     "advogado previdenciario niteroi",
     "aposentadoria INSS niterói",
-    "benefício INSS niterói",
+    "planejamento previdenciário niteroi",
+    "bpc loas niterói",
+    "revisão benefício INSS niterói",
+    "advogado direito do consumidor niterói",
+    "golpe do pix advogado niterói",
+    "fraude bancária advogado niteroi",
+    "consignado não contratado niteroi",
+    "direito civil niterói",
     "Felipe Reis da Silva Oliveira",
     "Saulo Pedroso Stussi Júnior",
-    "Stussi e Reis",
+    "Stussi e Reis consultoria jurídica",
   ],
-  metadataBase: new URL("https://stussiereis.com.br"), // Substitua pela URL final se necessário
+  metadataBase: new URL("https://stussiereis.com.br"),
   alternates: {
-    canonical: "/",
+    canonical: "./",
   },
   openGraph: {
     title: "Stussi & Reis Consultoria Jurídica | Advogados em Niterói - RJ",
     description:
-      "Consultoria especializada nas áreas de Direito Previdenciário, Consumidor e Cível. Conte com a dedicação profissional dos sócios Dr. Felipe Reis e Dr. Saulo Stussi.",
-    url: "/",
-    siteName: "Stussi & Reis",
+      "Consultoria especializada nas áreas de Direito Previdenciário, Consumidor e Cível. Conte com a dedicação profissional dos sócios Dr. Felipe Reis (OAB/RJ 211.932) e Dr. Saulo Stussi (OAB/RJ 144.040).",
+    url: "https://stussiereis.com.br",
+    siteName: "Stussi & Reis Consultoria Jurídica",
     locale: "pt_BR",
     type: "website",
+    images: [
+      {
+        url: "/logo_square.jpeg",
+        width: 1200,
+        height: 1200,
+        alt: "Stussi & Reis Consultoria Jurídica em Niterói - RJ",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Stussi & Reis Consultoria Jurídica | Advogados em Niterói - RJ",
+    description:
+      "Consultoria especializada em Direito Previdenciário, Consumidor e Cível em Niterói - RJ.",
+    images: ["/logo_square.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  other: {
+    "geo.region": "BR-RJ",
+    "geo.placename": "Niterói",
+    "geo.position": "-22.8943;-43.1221",
+    ICBM: "-22.8943, -43.1221",
   },
 };
 
@@ -57,34 +93,139 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Schema.org JSON-LD structured data for SEO
-  const jsonLd = {
+  // Schema.org JSON-LD structured data graph for SEO (YMYL / E-E-A-T)
+  const jsonLdGraph = {
     "@context": "https://schema.org",
-    "@type": "LegalService",
-    "name": "Stussi & Reis Consultoria Jurídica",
-    "description": "Escritório de advocacia em Niterói especializado em Direito Previdenciário, Consumidor e Cível.",
-    "url": "https://stussiereis.com.br",
-    "logo": "https://stussiereis.com.br/new_logo.svg",
-    "telephone": ["+55-21-98896-1729", "+55-21-98731-0837"],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Av. Ernani do Amaral Peixoto nº. 300, Sala 1002, Centro",
-      "addressLocality": "Niterói",
-      "addressRegion": "RJ",
-      "addressCountry": "BR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "-22.8943",
-      "longitude": "-43.1221"
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "18:00"
-    },
-    "priceRange": "$$"
+    "@graph": [
+      {
+        "@type": "LegalService",
+        "@id": "https://stussiereis.com.br/#organization",
+        "name": "Stussi & Reis Consultoria Jurídica",
+        "alternateName": "Stussi & Reis Advocacia",
+        "description":
+          "Escritório de advocacia em Niterói especializado em Direito Previdenciário (INSS), Direito do Consumidor e Direito Cível.",
+        "url": "https://stussiereis.com.br",
+        "logo": "https://stussiereis.com.br/new_logo.svg",
+        "image": "https://stussiereis.com.br/logo_square.jpeg",
+        "telephone": ["+55-21-98896-1729", "+55-21-98731-0837"],
+        "email": ["felipefrso@gmail.com", "saulostussi.adv@gmail.com"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Ernani do Amaral Peixoto nº. 300, Sala 1002, Centro",
+          "addressLocality": "Niterói",
+          "addressRegion": "RJ",
+          "postalCode": "24020-070",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "-22.8943",
+          "longitude": "-43.1221"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Niterói" },
+          { "@type": "City", "name": "São Gonçalo" },
+          { "@type": "City", "name": "Maricá" },
+          { "@type": "City", "name": "Rio de Janeiro" },
+          { "@type": "State", "name": "Rio de Janeiro" }
+        ],
+        "knowsAbout": [
+          "Direito Previdenciário",
+          "Aposentadoria INSS",
+          "Benefício de Prestação Continuada BPC LOAS",
+          "Auxílio-Doença e Invalidez",
+          "Revisão de Benefícios do INSS",
+          "Direito do Consumidor",
+          "Fraudes Bancárias e Golpe do PIX",
+          "Empréstimos Consignados Indevidos",
+          "Direito Cível"
+        ],
+        "priceRange": "$$",
+        "founder": [
+          {
+            "@type": "Person",
+            "@id": "https://stussiereis.com.br/#felipe-reis",
+            "name": "Felipe Reis da Silva Oliveira",
+            "jobTitle": "Advogado Sócio Fundador",
+            "identifier": "OAB/RJ 211.932"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://stussiereis.com.br/#saulo-stussi",
+            "name": "Saulo Pedroso Stussi Júnior",
+            "jobTitle": "Advogado Sócio Fundador",
+            "identifier": "OAB/RJ 144.040"
+          }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://stussiereis.com.br/#felipe-reis",
+        "name": "Dr. Felipe Reis da Silva Oliveira",
+        "jobTitle": "Advogado Sócio - Direito Previdenciário e Cível",
+        "identifier": "OAB/RJ 211.932",
+        "worksFor": {
+          "@id": "https://stussiereis.com.br/#organization"
+        },
+        "knowsAbout": [
+          "Direito Previdenciário",
+          "Benefícios do INSS",
+          "Aposentadorias",
+          "Direito Cível"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://stussiereis.com.br/#saulo-stussi",
+        "name": "Dr. Saulo Pedroso Stussi Júnior",
+        "jobTitle": "Advogado Sócio - Direito do Consumidor e Cível",
+        "identifier": "OAB/RJ 144.040",
+        "worksFor": {
+          "@id": "https://stussiereis.com.br/#organization"
+        },
+        "knowsAbout": [
+          "Direito do Consumidor",
+          "Fraudes Bancárias",
+          "Golpes do PIX",
+          "Direito Cível"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Como agendar uma consulta com um advogado em Niterói?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Você pode agendar sua consulta diretamente pelo WhatsApp do escritório Stussi & Reis ou através do formulário de contato disponível no site."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quais são as áreas de atuação do escritório Stussi & Reis?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O escritório atua de forma dedicada nas áreas de Direito Previdenciário (aposentadorias, auxílios e BPC/LOAS no INSS), Direito do Consumidor (fraudes bancárias, PIX, consignados indevidos) e Direito Cível em Niterói e região."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "O escritório Stussi & Reis realiza atendimento online?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim, além do atendimento presencial no Centro de Niterói (Av. Amaral Peixoto 300, Sala 1002), o escritório realiza consultoria e acompanhamento jurídico 100% online via WhatsApp e videochamada."
+            }
+          }
+        ]
+      }
+    ]
   };
 
   return (
@@ -95,7 +236,7 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
         />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">

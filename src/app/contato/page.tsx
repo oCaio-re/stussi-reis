@@ -6,15 +6,53 @@ import ContactForm from "@/components/ContactForm";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
-  title: "Contato | Stussi & Reis Advocacia",
+  title: "Contato - Agende uma Consulta Jurídica em Niterói",
   description:
-    "Entre em contato com o escritório Stussi & Reis em Niterói - RJ. Agende sua consulta por WhatsApp ou envie uma mensagem eletrônica pelo formulário.",
+    "Entre em contato com o escritório Stussi & Reis em Niterói - RJ. Atendimento via WhatsApp com Dr. Felipe Reis e Dr. Saulo Stussi ou formulário eletrônico.",
+  keywords: [
+    "contato advogado niteroi",
+    "whatsapp advogado niteroi",
+    "agendar consulta advocacia niteroi",
+    "endereco escritorio advocacia niteroi amaral peixoto",
+  ],
   alternates: {
     canonical: "/contato",
+  },
+  openGraph: {
+    title: "Contato | Stussi & Reis Consultoria Jurídica em Niterói",
+    description:
+      "Agende sua consulta jurídica diretamente no WhatsApp com nossos advogados sócios em Niterói - RJ.",
+    url: "https://stussiereis.com.br/contato",
+    images: ["/logo_square.jpeg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contato | Stussi & Reis Consultoria Jurídica",
+    description: "Atendimento direto com advogados sócios em Niterói - RJ.",
+    images: ["/logo_square.jpeg"],
   },
 };
 
 export default function Contato() {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Início",
+        "item": "https://stussiereis.com.br"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contato",
+        "item": "https://stussiereis.com.br/contato"
+      }
+    ]
+  };
+
   const contacts = [
     {
       name: "Dr. Felipe Reis da Silva Oliveira (OAB/RJ 211.932)",
@@ -36,6 +74,10 @@ export default function Contato() {
 
   return (
     <div className="py-20 md:py-28 bg-[#fcfdfd]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* Title Section */}
