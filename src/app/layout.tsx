@@ -80,6 +80,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: "bgcY2uX3QJ1LJinpok5ZaxnNN7uRaoOqicMUTxD5IWc",
+  },
   other: {
     "geo.region": "BR-RJ",
     "geo.placename": "Niterói",
