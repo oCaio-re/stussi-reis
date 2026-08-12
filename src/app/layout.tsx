@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "Saulo Pedroso Stussi Júnior",
     "Stussi e Reis consultoria jurídica",
   ],
-  metadataBase: new URL("https://stussiereis.com.br"),
+  metadataBase: new URL("https://www.stussireisadvocacia.com.br"),
   alternates: {
     canonical: "./",
   },
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: "Stussi & Reis Consultoria Jurídica | Advogados em Niterói - RJ",
     description:
       "Consultoria especializada nas áreas de Direito Previdenciário, Consumidor e Cível. Conte com a dedicação profissional dos sócios Dr. Felipe Reis (OAB/RJ 211.932) e Dr. Saulo Stussi (OAB/RJ 144.040).",
-    url: "https://stussiereis.com.br",
+    url: "https://www.stussireisadvocacia.com.br",
     siteName: "Stussi & Reis Consultoria Jurídica",
     locale: "pt_BR",
     type: "website",
@@ -99,14 +99,14 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "LegalService",
-        "@id": "https://stussiereis.com.br/#organization",
+        "@id": "https://www.stussireisadvocacia.com.br/#organization",
         "name": "Stussi & Reis Consultoria Jurídica",
         "alternateName": "Stussi & Reis Advocacia",
         "description":
           "Escritório de advocacia em Niterói especializado em Direito Previdenciário (INSS), Direito do Consumidor e Direito Cível.",
-        "url": "https://stussiereis.com.br",
-        "logo": "https://stussiereis.com.br/new_logo.svg",
-        "image": "https://stussiereis.com.br/logo_square.jpeg",
+        "url": "https://www.stussireisadvocacia.com.br",
+        "logo": "https://www.stussireisadvocacia.com.br/new_logo.svg",
+        "image": "https://www.stussireisadvocacia.com.br/logo_square.jpeg",
         "telephone": ["+55-21-98896-1729", "+55-21-98731-0837"],
         "email": ["felipefrso@gmail.com", "saulostussi.adv@gmail.com"],
         "address": {
@@ -150,14 +150,14 @@ export default function RootLayout({
         "founder": [
           {
             "@type": "Person",
-            "@id": "https://stussiereis.com.br/#felipe-reis",
+            "@id": "https://www.stussireisadvocacia.com.br/#felipe-reis",
             "name": "Felipe Reis da Silva Oliveira",
             "jobTitle": "Advogado Sócio Fundador",
             "identifier": "OAB/RJ 211.932"
           },
           {
             "@type": "Person",
-            "@id": "https://stussiereis.com.br/#saulo-stussi",
+            "@id": "https://www.stussireisadvocacia.com.br/#saulo-stussi",
             "name": "Saulo Pedroso Stussi Júnior",
             "jobTitle": "Advogado Sócio Fundador",
             "identifier": "OAB/RJ 144.040"
@@ -166,12 +166,12 @@ export default function RootLayout({
       },
       {
         "@type": "Person",
-        "@id": "https://stussiereis.com.br/#felipe-reis",
+        "@id": "https://www.stussireisadvocacia.com.br/#felipe-reis",
         "name": "Dr. Felipe Reis da Silva Oliveira",
         "jobTitle": "Advogado Sócio - Direito Previdenciário e Cível",
         "identifier": "OAB/RJ 211.932",
         "worksFor": {
-          "@id": "https://stussiereis.com.br/#organization"
+          "@id": "https://www.stussireisadvocacia.com.br/#organization"
         },
         "knowsAbout": [
           "Direito Previdenciário",
@@ -182,12 +182,12 @@ export default function RootLayout({
       },
       {
         "@type": "Person",
-        "@id": "https://stussiereis.com.br/#saulo-stussi",
+        "@id": "https://www.stussireisadvocacia.com.br/#saulo-stussi",
         "name": "Dr. Saulo Pedroso Stussi Júnior",
         "jobTitle": "Advogado Sócio - Direito do Consumidor e Cível",
         "identifier": "OAB/RJ 144.040",
         "worksFor": {
-          "@id": "https://stussiereis.com.br/#organization"
+          "@id": "https://www.stussireisadvocacia.com.br/#organization"
         },
         "knowsAbout": [
           "Direito do Consumidor",

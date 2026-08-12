@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Contato | Stussi & Reis Consultoria Jurídica em Niterói",
     description:
       "Agende sua consulta jurídica diretamente no WhatsApp com nossos advogados sócios em Niterói - RJ.",
-    url: "https://stussiereis.com.br/contato",
+    url: "https://www.stussireisadvocacia.com.br/contato",
     images: ["/logo_square.jpeg"],
   },
   twitter: {
@@ -42,13 +42,13 @@ export default function Contato() {
         "@type": "ListItem",
         "position": 1,
         "name": "Início",
-        "item": "https://stussiereis.com.br"
+        "item": "https://www.stussireisadvocacia.com.br"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Contato",
-        "item": "https://stussiereis.com.br/contato"
+        "item": "https://www.stussireisadvocacia.com.br/contato"
       }
     ]
   };

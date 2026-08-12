@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "Quem Somos | Stussi & Reis Consultoria Jurídica em Niterói",
     description:
       "Atendimento próximo, sem intermediários. Conheça a história e os advogados fundadores da Stussi & Reis em Niterói - RJ.",
-    url: "https://stussiereis.com.br/sobre",
+    url: "https://www.stussireisadvocacia.com.br/sobre",
     images: ["/logo_square.jpeg"],
   },
   twitter: {
@@ -44,13 +44,13 @@ export default function Sobre() {
         "@type": "ListItem",
         "position": 1,
         "name": "Início",
-        "item": "https://stussiereis.com.br"
+        "item": "https://www.stussireisadvocacia.com.br"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Quem Somos",
-        "item": "https://stussiereis.com.br/sobre"
+        "item": "https://www.stussireisadvocacia.com.br/sobre"
       }
     ]
   };

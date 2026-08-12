@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/_next/", "/api/"],
       },
     ],
-    sitemap: "https://stussiereis.com.br/sitemap.xml",
+    sitemap: "https://www.stussireisadvocacia.com.br/sitemap.xml",
   };
 }

@@ -133,7 +133,7 @@ export async function submitContactForm(
           </div>
           
           <div style="background-color: #f8fafc; padding: 16px 24px; text-align: center; font-size: 12px; color: #94a3b8; border-top: 1px solid #e2e8f0; border-radius: 0 0 6px 6px;">
-            Mensagem enviada automaticamente a partir de stussiereis.com.br. Para responder diretamente ao cliente, basta responder a este e-mail.
+            Mensagem enviada automaticamente a partir de stussireisadvocacia.com.br. Para responder diretamente ao cliente, basta responder a este e-mail.
           </div>
         </div>
       `,

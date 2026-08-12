@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     title: "Áreas de Atuação | Stussi & Reis Consultoria Jurídica em Niterói",
     description:
       "Atuação especializada em Direito Previdenciário (INSS), Consumidor (fraudes e empréstimos) e Direito Cível com os sócios Dr. Felipe Reis e Dr. Saulo Stussi.",
-    url: "https://stussiereis.com.br/atuacao",
+    url: "https://www.stussireisadvocacia.com.br/atuacao",
     images: ["/logo_square.jpeg"],
   },
   twitter: {
@@ -45,13 +45,13 @@ export default function Atuacao() {
         "@type": "ListItem",
         "position": 1,
         "name": "Início",
-        "item": "https://stussiereis.com.br"
+        "item": "https://www.stussireisadvocacia.com.br"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Áreas de Atuação",
-        "item": "https://stussiereis.com.br/atuacao"
+        "item": "https://www.stussireisadvocacia.com.br/atuacao"
       }
     ]
   };
