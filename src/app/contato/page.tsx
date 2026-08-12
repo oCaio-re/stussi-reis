@@ -27,7 +27,7 @@ export default function Contato() {
     {
       name: "Dr. Saulo Pedroso Stussi Júnior (OAB/RJ 144.040)",
       phone: "(21) 98731-0837",
-      email: "Saulostussi.adv@gmail.com",
+      email: "saulostussi.adv@gmail.com",
       focus: "Direito do Consumidor e Cível",
       photo: "/foto saulo.jpeg",
       waLink: "https://wa.me/5521987310837?text=Ol%C3%A1%20Dr.%20Saulo%2C%20gostaria%20de%20conversar%20sobre%20um%20caso%20jur%C3%ADdico.",
