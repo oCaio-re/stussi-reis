@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/_next/", "/api/"],
+        disallow: ["/api/"],
       },
     ],
     sitemap: "https://www.stussireisadvocacia.com.br/sitemap.xml",
